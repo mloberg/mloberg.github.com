@@ -1,0 +1,17 @@
+@import "compass/reset";
+@import "_typography";
+
+.float-l {
+	float:left;
+}
+.float-r {
+	float:right;
+}
+.clear {
+	clear:both;
+}
+.hr {
+	border-bottom:1px solid #ccc;
+	margin:10px 0;
+	width:100%;
+}

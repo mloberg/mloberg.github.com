@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>Matthew Loberg{% if page.title %} - {{ page.title }}{% endif %}</title>
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" />
+	<link href="/stylesheets/print.css" media="print" rel="stylesheet" />
+	<!--[if IE]>
+		<link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" />
+	<![endif]-->
+	<link rel="shortcut icon" href="/images/favicon.ico" />
+	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png" />
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+<div class="wrapper">
+	<h1>MATTHEW LOBERG</h1>
+	<h2>Web Developer from Minnesota</h2>
+	<div class="main">
+		<div class="content">
+			<div class="nav">
+				<ul>
+					<li><a href="/index.html">Home</a></li>
+					<li><a href="/about.html">About</a></li>
+					<li><a href="/projects/index.html">Projects</a></li>
+					<li><a href="/portfolio/index.html">Portfolio</a></li>
+					<li><a href="/code/index.html">Code</a></li>
+					<li><a href="/blog/index.html">Blog</a></li>
+					<li><a href="/music.html">What I'm Listening To</a></li>
+				</ul>
+				<select>
+					<option value="#">Menu</option>
+				</select>
+			</div>
+			<div class="hr"></div>
+			<div class="clear"></div>
+			{{content}}
+		</div>
+	</div>
+</div>
+</body>
+</html>

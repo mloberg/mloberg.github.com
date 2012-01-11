@@ -1,0 +1,154 @@
+/*
+Color palette: http://www.colorhunter.com/palette/739677
+*/
+
+@import "_base";
+
+body {
+	background-color: #FFFFDE;
+	background-image: url(../images/stripe.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	margin: 0 auto;
+	max-width: 1250px;
+	overflow-x: hidden;
+	width: 100%;
+}
+.wrapper {
+	margin: 40px auto;
+	width: 95%;
+}
+.main {
+	background-color: #fff;
+	box-shadow: 0 0 2px 2px #ccc;
+	width: 100%;
+}
+.content {
+	padding: 20px;
+}
+.nav {
+	ul {
+		text-align: center;
+		vertical-align: middle;
+		li {
+			display: inline;
+			list-style: none;
+			padding: 7px;
+			vertical-align: middle;
+		}
+	}
+	select {
+		display: none;
+	}
+	a {
+		color: #26c1b6;
+		font-size: 20px;
+		text-decoration: none;
+		&:hover {
+			color: #ff8500;
+		}
+	}
+}
+.home {
+	padding-top: 10px;
+	width: 100%;
+	.column {
+		border-right: 1px solid #ccc;
+		float: left;
+		padding: 1%;
+		width: 30%;
+		&:last-child {
+			border-right: none;
+		}
+		p {
+			padding-bottom: 10px;
+		}
+	}
+	h3 {
+		color: #FF8500;
+		font-size: 20px;
+		text-align: center;
+	}
+	h4 {
+		a {
+			color: #422D37;
+		}
+	}
+	ul {
+		margin-left: 10px;
+		margin-top: 10px;
+		li {
+			padding-bottom: 5px;
+		}
+	}
+}
+
+.skills{
+	margin-bottom: 10px;
+	margin-left: 20px;
+	li {
+		float: left;
+		padding: 5px 20px 5px 5px;
+		width: 100px;
+		&:nth-child(odd){
+			clear: left;
+		}
+	}
+}
+
+@media screen and (max-width:800px){
+	body {
+		background-position-x: -100px;
+	}
+	.wrapper {
+		margin: 20px auto;
+	}
+	h1 {
+		font-size: 30px;
+	}
+	h2 {
+		display: block;
+		margin-left: 0px;
+		font-size: 20px;
+	}
+	.home {
+		.column {
+			border-right: 0;
+			float: none;
+			margin-right: 0;
+			min-height: 0;
+			width: 100%;
+			h3 {
+				border-bottom: 1px solid #ccc;
+			}
+		}
+	}
+	.nav {
+		ul{
+			display: none;
+		}
+		select {
+			display: block;
+			width: 100%;
+		}
+	}
+	.content{
+		padding: 10px;
+	}
+}
+
+@media screen and (max-width:400px){
+	body {
+		background-position-x: -150px;
+	}
+	h2{
+		font-size: 18px;
+	}
+}
+
+* {
+	transition: all .2s linear;
+	-o-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-webkit-transition: all .2s linear;
+}
