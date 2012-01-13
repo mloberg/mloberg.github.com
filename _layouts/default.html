@@ -19,12 +19,16 @@
 	<![endif]-->
 </head>
 <body>
-<div class="wrapper">
-	<h1>MATTHEW LOBERG</h1>
-	<h2>Web Developer from Minnesota</h2>
-	<div class="main">
-		<div class="content">
-			<div class="nav">
+<div class="container">
+	<div class="row">
+		<div class="span12">
+			<h1>MATTHEW LOBERG</h1>
+			<h2>Web Developer from Minnesota</h2>
+		</div>
+	</div>
+	<div class="row main content">
+		<div class="row">
+			<div class="span12 nav">
 				<ul>
 					<li><a href="/index.html">Home</a></li>
 					<li><a href="/about.html">About</a></li>
@@ -38,10 +42,9 @@
 					<option value="#">Menu</option>
 				</select>
 			</div>
-			<div class="hr"></div>
-			<div class="clear"></div>
-			{{content}}
 		</div>
+		<div class="hr"></div>
+		{{content}}
 	</div>
 </div>
 </body>
