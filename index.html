@@ -1,25 +1,38 @@
 ---
 layout: default
 title: Home
+code: 'site.home();'
 ---
 <div class="row">
 	<div class="span4">
-		<img class="profile" src="/images/social_network_picture.jpg" />
+		<img class="center" src="/images/social_network_picture.jpg" />
 	</div>
 	<div class="span8">
-		<p class="main-text">Matthew Loberg is a web developer from St Paul, MN. He works at DKY Inc. developing custom websites and applications to fit client's needs. He specializes in PHP, MySQL, and JavaScript but knows Ruby, Python, and CSS, and always is learning more. When he's not working, he's hacking on one of his many side-projects or blogging.</p>
-		<p class="main-text">You can find Matt on <a href="http://twitter.com/mloberg">Twitter</a> or email him.</p>
+		<p>Matthew Loberg is a web developer from St Paul, MN. He specializes in PHP, MySQL, JavaScript, and server administration but knows Ruby, Python, CSS, and always is learning more. When he's not working, he's hacking on one of his many <a href="/projects/index.html">side-projects</a> or <a href="/blog/index.html">blogging</a>.</p>
+		<p>You can find Matt on <a href="http://twitter.com/mloberg">Twitter</a>, <a href="http://github.com/mloberg">GitHub</a>, <a href="http://forrst.com/people/mloberg">Forrst</a>, or <a href='ma&#105;lto&#58;m&#64;&#109;lo&#98;&#37;65%&#55;2g&#46;&#99;&#111;m'>email him</a>.</p>
 	</div>
 </div>
 <div class="hr hide-small"></div>
 <div class="row home">
 	<div class="span4">
 		<h3>Blog</h3>
+		<ul>
+			{% for post in site.posts limit: 5 %}
+			<li>
+    			<span>{{ post.date | date: "%b. %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
+    		</li>
+			{% endfor %}
+		</ul>
+		<a class="center" href="/blog/index.html">All Posts</a>
 	</div>
 	<div class="span4">
 		<h3>Code</h3>
+		<div id="gists"></div>
+		<a class="center" href="https://gist.github.com/mloberg">All Gists</a>
 	</div>
 	<div class="span4">
 		<h3>Tweets</h3>
+		<div id="tweets"></div>
+		<a class="center" href="http://twitter.com/mloberg">Follow Me</a>
 	</div>
 </div>

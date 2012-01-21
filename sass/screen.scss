@@ -29,7 +29,19 @@ Color palette: http://www.colorhunter.com/palette/739677
 	margin:10px 0;
 	width:100%;
 }
+.center {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+.right {
+	text-align: right;
+}
 
+body, html {
+	overflow-x: hidden;
+	width: 100%;
+}
 body {
 	background-color: #FFFFDE;
 	background-image: url(../images/stripe.png);
@@ -37,8 +49,6 @@ body {
 	background-position: top left;
 	font-family: 'Goudy Bookletter', Helvetica, Arial, sans-serif;
 	max-width: 1250px;
-	overflow-x: hidden;
-	width: 100%;
 }
 
 h1, h2 {
@@ -57,29 +67,35 @@ h2 {
 	color: #696969;
 	text-shadow: 2px 2px 2px #fff;
 }
-a, a:visited {
+h3 {
+	font-size: 22px;
+}
+a, a:visited, a:hover {
 	color: #E70000;
 	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
 }
 p {
 	color: #422D37;
-	padding-bottom: 10px;
-}
-p.main-text {
 	font-size: 18px;
-	padding-bottom: 0;
+	padding-bottom: 10px;
+	small {
+		font-size: 16px;
+	}
 }
 
 .container {
 	margin: 40px auto;
-	width: 95%;
 }
 .main {
 	background-color: #fff;
 	box-shadow: 0 0 2px 2px #ccc;
-}
-.content {
 	padding: 20px;
+	li {
+		font-size: 16px;
+	}
 }
 .nav {
 	ul {
@@ -89,7 +105,7 @@ p.main-text {
 		li {
 			display: inline;
 			list-style: none;
-			padding: 7px;
+			padding: 10px;
 			vertical-align: middle;
 		}
 	}
@@ -99,9 +115,9 @@ p.main-text {
 	a {
 		color: #26c1b6;
 		font-size: 20px;
-		text-decoration: none;
 		&:hover {
 			color: #ff8500;
+			text-decoration: none;
 		}
 	}
 }
@@ -121,6 +137,9 @@ p.main-text {
 			padding-bottom: 10px;
 		}
 	}
+	li {
+		font-size: 14px;
+	}
 	h3 {
 		color: #FF8500;
 		font-size: 20px;
@@ -132,8 +151,7 @@ p.main-text {
 		}
 	}
 	ul {
-		margin-left: 10px;
-		margin-top: 10px;
+		margin: 10px 0 0 10px;
 		li {
 			padding-bottom: 5px;
 		}
@@ -146,10 +164,16 @@ p.main-text {
 	li {
 		float: left;
 		padding: 5px 20px 5px 5px;
-		width: 100px;
+		width: 150px;
 		&:nth-child(odd){
 			clear: left;
 		}
+	}
+}
+
+#music {
+	h4 {
+		line-height: 8px;
 	}
 }
 
@@ -171,6 +195,12 @@ p.main-text {
 		margin-left: 0px;
 		font-size: 20px;
 	}
+	h4 {
+		small {
+			display: block;
+			margin-top: 10px;
+		}
+	}
 	.nav {
 		ul{
 			display: none;
@@ -182,6 +212,9 @@ p.main-text {
 	}
 	.content{
 		padding: 10px;
+		ul {
+			text-align: center;
+		}
 	}
 	.home {
 		.span4 {
@@ -190,6 +223,14 @@ p.main-text {
 				border-bottom: 1px solid #ccc;
 			}
 		}
+	}
+	#music {
+		h3, p {
+			text-align: center;
+		}
+	}
+	.dsq-brlink {
+		display: none;
 	}
 }
 
