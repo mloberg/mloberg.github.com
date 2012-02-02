@@ -4,30 +4,10 @@ Color palette: http://www.colorhunter.com/palette/739677
 
 @import "_base";
 
-@font-face {
-	font-family: 'Bazar';
-	src: url('../fonts/bazar-webfont.eot');
-	src: url('../fonts/bazar-webfont.eot?iefix') format('eot'),
-		url('../fonts/bazar-webfont.woff') format('woff'),
-		url('../fonts/bazar-webfont.ttf') format('truetype'),
-		url('../fonts/bazar-webfont.svg#webfontHB6mZtPd') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Goudy Bookletter';
-	src: url('../fonts/GoudyBookletter1911.eot');
-	src: local('☺'), url('../fonts/GoudyBookletter1911.woff') format('woff'),
-		url('../fonts/GoudyBookletter1911.ttf') format('truetype'),
-		url('../fonts/GoudyBookletter1911.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
 .hr {
-	border-bottom:1px solid #ccc;
-	margin:10px 0;
-	width:100%;
+	border-bottom: 1px solid #ccc;
+	margin: 10px 0;
+	width: 100%;
 }
 .center {
 	display: block;
@@ -47,8 +27,7 @@ body {
 	background-image: url(../images/stripe.png);
 	background-repeat: no-repeat;
 	background-position: top left;
-	font-family: 'Goudy Bookletter', Helvetica, Arial, sans-serif;
-	max-width: 1250px;
+	font-family: "goudy-bookletter-1911", Helvetica, Arial, serif;
 }
 
 h1, h2 {
@@ -56,8 +35,10 @@ h1, h2 {
 }
 h1 {
 	color: #000;
-	font-family: "Bazar";
+	font-family: "mostra-nuova", sans-serif;
 	font-size: 42px;
+	font-weight: 700;
+	margin-left: -12px;
 	text-shadow: 2px 2px 1px #fff;
 }
 h2 {
@@ -92,6 +73,7 @@ p {
 .main {
 	background-color: #fff;
 	box-shadow: 0 0 2px 2px #ccc;
+	margin-top: -5px;
 	padding: 20px;
 	li {
 		font-size: 16px;
@@ -177,7 +159,7 @@ p {
 	}
 }
 
-@media screen and (max-width:767px){
+@media screen and (max-width:768px){
 	.hide-small {
 		display: none;
 	}
@@ -188,7 +170,10 @@ p {
 		margin: 20px auto;
 	}
 	h1 {
+		display: block;
 		font-size: 30px;
+		margin-left: 0;
+		margin-bottom: 0;
 	}
 	h2 {
 		display: block;
