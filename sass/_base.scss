@@ -296,4 +296,7 @@ img, embed, object, video {
 		float: none;
 		width: 100%;
 	}
+	.row > [class*="offset"] {
+		margin-left: 0;
+	}
 }

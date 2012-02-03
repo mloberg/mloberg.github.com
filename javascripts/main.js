@@ -48,7 +48,7 @@ var Site = new Class({
 				format: 'json',
 				method: 'user.getRecentTracks',
 				user: 'mloberg',
-				limit: 10,
+				limit: 12,
 				api_key: '75e65c2142c7c0faa7e4c1094bd06e80'
 			},
 			onRequest: function(){
@@ -74,7 +74,7 @@ var Site = new Class({
 					if(i === 0){
 						str += '<div class="row recent">';
 						str += '<div class="span2 offset4">';
-						str += '<img src="' + artwork + '" alt="' + album + '" />';
+						str += '<img class="center" src="' + artwork + '" alt="' + album + '" />';
 						str += '</div>';
 						str += '<div class="span3">';
 						str += '<h3><a href="' + url + '">' + name + '</a></h3>';
@@ -82,18 +82,17 @@ var Site = new Class({
 						str += '</div>';
 						str += '</div>';
 						str += '<div class="hr"></div>';
-					}else{
 						str += '<div class="row">';
-						str += '<div class="span12">';
-						str += '<h4 class="center">';
-						str += '<a href="' + url + '">' + name + '</a>';
-						str += '<small> ' + artist + '</small>';
-						str += '</h4>';
-						str += '</div>';
-						str += '</div>';
+					}else{
+						str += '  <div class="span2 music">';
+						str += '    <img class="center" src="' + artwork + '" alt="' + album + '" />';
+						str += '    <h4 class="center"><a href="' + url + '">' + name + '</a><br /><small>by ' + artist + '</small></h4>';
+						str += '  </div>';
 					}
 					i++;
 				});
+				str += '</div>';
+				console.log(str);
 				$("music").set("html", str);
 			}
 		}).send();
