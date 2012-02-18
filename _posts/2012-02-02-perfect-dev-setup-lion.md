@@ -242,3 +242,5 @@ brew install nginx
 #### Conclusion
 
 I've been running this setup on my work computer about a month and I haven't had any issue with it. I don't have to open up MAMP's preferences everytime I want to switch sites, or have seperate computers to test different versions of Ruby. I hope you find this setup as useful as I have. If you have any suggestions or comments, please share them.
+
+*Update 2/9/12*: These steps also *mostly* work in Snow Leopard. You'll have to follow the instructions brew prints out for MySQL, but otherwise should be almost step for step.
