@@ -12,7 +12,7 @@ pacman -S memcached
 Memcached is now installed! Let's get it running.
 
 {% highlight bash %}
-memcached -d -m 512 -l 127.0.0.1 -p 11211 -u nobdy
+memcached -d -m 512 -l 127.0.0.1 -p 11211 -u nobody
 {% endhighlight %}
 
 Let's go over this command:
