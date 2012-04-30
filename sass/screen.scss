@@ -50,6 +50,7 @@ h2 {
 }
 h3 {
 	font-size: 22px;
+	clear: both;
 }
 a, a:visited, a:hover {
 	color: #E70000;
@@ -140,20 +141,26 @@ p {
 	}
 }
 
-.skills{
+.skills {
 	margin-bottom: 10px;
 	margin-left: 20px;
 	li {
 		float: left;
 		padding: 5px 20px 5px 5px;
-		width: 150px;
+		width: 250px;
 		&:nth-child(odd){
 			clear: left;
 		}
 	}
 }
 
+p.tools {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
 .music {
+	height: 200px;
 	h4 {
 		line-height: 16px;
 	}
