@@ -48,7 +48,7 @@ var Site = new Class({
 				format: 'json',
 				method: 'user.getRecentTracks',
 				user: 'mloberg',
-				limit: 13,
+				limit: 12,
 				api_key: '75e65c2142c7c0faa7e4c1094bd06e80'
 			},
 			onRequest: function(){
