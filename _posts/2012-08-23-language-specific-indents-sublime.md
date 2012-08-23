@@ -1,5 +1,5 @@
 ---
-layout: Blog
+layout: blog
 title: Language Specific Indents In Sublime Text 2
 ---
 Ask any developer spaces or tabs and you'll get different responses. I was hardcore in the tabs camp until recently. Now I'm trying to use spaces. The biggest issue with using spaces 100% was my text editor. I use Sublime, and tried to set it to use spaces by default, but couldn't seem to get it to work (later I would find out it was a mis-typed option). So every time I would create a new document I would set the tab size (2 for Ruby, 4 for PHP and Python) and covert it to spaces. Half the time I would forget to do this, so I would end up with projects half in spaces and half in tabs. Today I finally got sick of doing this every time, so I set out determined to figure this out once and for all, and I did.
