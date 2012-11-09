@@ -56,7 +56,7 @@ We now have a chat bot, but if we connect, we won't see our chat bot. That's bec
 ...
 bot = new Robot 'RobotName', irc
 
-bot.start
+bot.start()
 {% endhighlight %}
 
 Now if we connect, we'll see that our bot is connected, but if we try to interact with it, it won't do anything. That's because we don't have any modules loaded.
@@ -75,7 +75,7 @@ modules = [ 'join', 'joke', 'weather' ]
 
 bot.loadModules modules
 
-bot.start
+bot.start()
 ...
 {% endhighlight %}
 
