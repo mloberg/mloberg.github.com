@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="keywords" content="Matthew Loberg, web developer, PHP, MySQL, server administration, Minnesota, Minneapolis" />
-  <meta name="description" content="Matthew Loberg is a web developer from Minneota specializing in PHP, MySQL, and server administration." />
   <meta name="author" content="Matthew Loberg" />
+  <meta name="description" content="{% if page.description %}{{page.description}}{% else %}Devops guy from Minneapolis, MN. Writes Ruby, PHP, Node, and can scale cloud applications.{% endif %}" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <title>Matthew Loberg{% if page.title %} - {{ page.title }}{% endif %}</title>
@@ -47,8 +46,11 @@
       </div>
     </div>
   </div>
+<script>
+var _gaq = [['_setAccount', 'UA-9585810-8'], ['_trackPageview']];
+(function(d, t) {var g = d.createElement(t),s = d.getElementsByTagName(t)[0];g.src = '//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g, s);}(document, 'script'));
+</script>
 <script src="//ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
 <script src="/javascripts/site.js"></script>
-<!-- Google Analytics Code -->
 </body>
 </html>
