@@ -6,13 +6,13 @@ layout: rss-feed
 	<channel>
 		<title>Matt Writes Code</title>
 		<description>I'm Matthew Loberg and I write code.</description>
-		<link>http://mattwritescode.com</link>
+		<link>http://mlo.io</link>
 			{% for post in site.posts limit:10 %}
 			<item>
 				<title>{{ post.title }}</title>
 				<description>{{ post.content | xml_escape }}</description>
 				<published>{{ post.date }}</published>
-				<link>http://mattwritescode.com{{ post.url }}</link>
+				<link>http://mlo.io{{ post.url }}</link>
 			</item>
 			{% endfor %}
 	</channel>
