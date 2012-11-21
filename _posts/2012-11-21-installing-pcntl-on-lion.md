@@ -21,6 +21,13 @@ Some people reported that they got an error while running ./configure. I did not
 CFLAGS='-arch x86_64' CXXFLAGS='-arch x86_64' LDFLAGS='-arch x86_64' ./configure --enable-pcntl
 {% endhighlight %}
 
-Now just run `make`, and the pcntl module will be compile to *modules/pcntl.so*. Copy this to your PHP extensions directory (*/usr/lib/php/extensions/*), and enable the extension in php.ini by adding "extensions=pcntl.so".
+All that's left to do is compile, install it, and enable it.
+
+{% highlight bash %}
+make
+make test # optional
+sudo make install
+sudo echo "extension=pcntl.so" >> /etc/php.ini
+{% endhighlight %}
 
 If you are using Apache, you will need to restart it to take affect.
