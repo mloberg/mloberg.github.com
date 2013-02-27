@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Quick Tip: Protect Important EC2 Instances
+title: "Quick Tip: Protect Important EC2 Instances"
 description: Accidentally deleted your production database instance on EC2? Prevent that from happening again.
 ---
 I did something really stupid today. I was doing a load test with [Bees With Machine Guns!](https://github.com/newsapps/beeswithmachineguns) that I thought was only going to hit Apache, and not the database. Turns out there is a small database call on the page I was hitting, and caused the database to spike. I tried exiting out of Bees, but it wouldn't. The site started to crash, so I went to terminate the bee instances in the AWS console, but didn't realize I had the production database selected. After hitting terminate, all hell broke loose.
