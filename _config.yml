@@ -1,4 +1,8 @@
 exclude: ["sass", ".sass-cache", "config.rb"]
 permalink: /blog/:year/:month/:day/:title.html
-pygments: true
+
+# Build settings
+source: site
+destination: dist
 markdown: rdiscount
+highlighter: pygments

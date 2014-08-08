@@ -8,5 +8,5 @@
 .Trashes
 
 .sass-cache
-_site/
-_drafts/
+dist
+site/_drafts
