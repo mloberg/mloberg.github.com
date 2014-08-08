@@ -1,3 +1,5 @@
+---
+---
 # Hide address bar
 setTimeout ->
   window.scrollTo 0, 1
