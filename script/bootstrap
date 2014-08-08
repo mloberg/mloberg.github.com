@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Installing Jekyll and other Rubygems"
+bundle install --path .bundle

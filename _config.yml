@@ -1,8 +1,8 @@
 exclude: ["sass", ".sass-cache", "config.rb"]
-permalink: /blog/:year/:month/:day/:title.html
 
 # Build settings
 source: site
 destination: dist
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title.html
 highlighter: pygments
