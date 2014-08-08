@@ -4,5 +4,5 @@ permalink: /blog/:year/:month/:day/:title.html
 # Build settings
 source: site
 destination: dist
-markdown: rdiscount
+markdown: kramdown
 highlighter: pygments
