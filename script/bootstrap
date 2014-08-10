@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
-echo "Installing Jekyll and other Rubygems"
 bundle install --path .bundle
+npm install
+
+echo "Please install gulp if you haven't already"
+echo "  [sudo] npm install -g gulp"

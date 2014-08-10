@@ -9,5 +9,6 @@
 
 .bundle
 .sass-cache
+node_modules
 dist
 site/_drafts
