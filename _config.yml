@@ -1,4 +1,9 @@
-exclude: ["sass", ".sass-cache", "config.rb"]
+# Site settings
+title: Matthew Loberg
+email: m@mloberg.com
+description: "Web developer from Minnesota"
+baseurl: ""
+url: "http://mlo.io"
 
 # Build settings
 source: site
