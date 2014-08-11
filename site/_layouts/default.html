@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="author" content="Matthew Loberg" />
-  <meta name="description" content="{% if page.description %}{{page.description}}{% else %}Devops guy from Minneapolis, MN. Writes Ruby, PHP, Node, and can scale cloud applications.{% endif %}" />
+  <meta name="description" content="{% if page.description %}{{page.description}}{% else %}{{ site.description }}{% endif %}" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <title>Matthew Loberg{% if page.title %} - {{ page.title }}{% endif %}</title>
+  <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
   <link href="/assets/css/screen.css" media="screen, projection" rel="stylesheet" />
   <link href="/assets/css/print.css" media="print" rel="stylesheet" />
   <!--[if IE]>
@@ -26,7 +26,7 @@
     <div class="row-fluid">
       <div class="span2 sidebar">
         <a href="/index.html"><img src="http://www.gravatar.com/avatar/17b8ee87f71a9fa39679e07aff6e94c4?s=200" alt="Matthew Loberg" class="avatar"></a>
-        <h1>MATTHEW LOBERG</h1>
+        <h1>{{ site.title | upcase }}</h1>
         <p class="social">
           <a href="https://github.com/mloberg">g</a>
           <a href="http://twitter.com/mloberg">l</a>
