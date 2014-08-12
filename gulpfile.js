@@ -29,12 +29,27 @@ gulp.task('styles', function() {
     .pipe($.size({title: 'styles'}));
 });
 
-gulp.task('build', ['styles', 'images'], function(done) {
+gulp.task('lint', function() {
+  return gulp.src('site/_assets/coffee/*.coffee')
+    .pipe($.coffeelint())
+    .pipe($.coffeelint.reporter());
+});
+
+gulp.task('javascript', function() {
+  return gulp.src('site/_assets/coffee/*.coffee')
+    .pipe($.coffee().on('error', $.util.log))
+    .pipe($.concat('site.js'))
+    .pipe($.uglify())
+    .pipe(gulp.dest('site/assets/js/'))
+    .pipe($.size({title: 'javascript'}));
+});
+
+gulp.task('build', ['styles', 'images', 'javascript'], function(done) {
   proc = spawn("bundle", ["exec", "jekyll", "build"]);
   proc.on("exit", done);
 });
 
-gulp.task('serve', ['styles', 'images'], function(cb) {
+gulp.task('serve', ['styles', 'images', 'javascript'], function(cb) {
   proc = spawn("bundle", ["exec", "jekyll", "serve", "--drafts", "--watch"]);
 
   proc.stdout.on('data', function(data) {
@@ -45,9 +60,10 @@ gulp.task('serve', ['styles', 'images'], function(cb) {
     process.stderr.write(data);
   });
 
-  gulp.watch(['site/_assets/sass/**/*.scss'], ['styles']);
+  gulp.watch(['site/_assets/sass/*.scss'], ['styles']);
+  gulp.watch(['site/_assets/coffee/*.coffee'], ['javascript']);
 });
 
 gulp.task('default', function(done) {
-  runSequence(['styles', 'images'], 'build', done);
+  runSequence(['styles', 'images', 'javascript'], 'build', done);
 });

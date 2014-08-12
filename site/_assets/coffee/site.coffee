@@ -1,5 +1,3 @@
----
----
 # Hide address bar
 setTimeout ->
   window.scrollTo 0, 1
@@ -10,10 +8,10 @@ nav = document.querySelectorAll '.sidebar ul > li a'
 nav2 = document.querySelector '.sidebar select'
 
 for item in nav
-    option = document.createElement 'option'
-    option.text = item.innerHTML
-    option.value = item.getAttribute 'href'
-    nav2.appendChild option
+  option = document.createElement 'option'
+  option.text = item.innerHTML
+  option.value = item.getAttribute 'href'
+  nav2.appendChild option
 
 root = exports ? this
 root.mobileNav = (select) ->
