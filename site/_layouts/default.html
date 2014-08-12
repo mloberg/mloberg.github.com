@@ -37,7 +37,7 @@
           <li{% if page.url == '/projects.html' %} class="active"{% endif %}><a href="/projects.html">projects</a></li>
           <li{% if page.url == '/portfolio.html' %} class="active"{% endif %}><a href="/portfolio.html">portfolio</a></li>
         </ul>
-        <select>
+        <select onchange="mobileNav(this)">
           <option value="#">Menu</option>
         </select>
       </div>
@@ -50,7 +50,6 @@
 var _gaq = [['_setAccount', 'UA-9585810-8'], ['_trackPageview']];
 (function(d, t) {var g = d.createElement(t),s = d.getElementsByTagName(t)[0];g.src = '//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g, s);}(document, 'script'));
 </script>
-<script src="//ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
 <script src="/assets/js/site.js"></script>
 </body>
 </html>

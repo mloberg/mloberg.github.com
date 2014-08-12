@@ -6,17 +6,16 @@ setTimeout ->
 , 0
 
 # Mobile navigation
-nav = $$('.sidebar ul > li')
-nav2 = $$('.sidebar select')
+nav = document.querySelectorAll '.sidebar ul > li a'
+nav2 = document.querySelector '.sidebar select'
 
-nav.each (item, index) ->
-  item = item.getFirst 'a'
-  text = item.get('text')
-  nav2.adopt new Element 'option', {
-    value: item.get('href'),
-    html: text.charAt(0).toUpperCase() + text.slice(1)
-  }
+for item in nav
+    option = document.createElement 'option'
+    option.text = item.innerHTML
+    option.value = item.getAttribute 'href'
+    nav2.appendChild option
 
-$$('.sidebar select').addEvent 'change', ->
-  selected = this.getElement(':selected')
-  window.location = selected.get('value')
+root = exports ? this
+root.mobileNav = (select) ->
+  selectedOption = select.options[select.selectedIndex]
+  window.location = selectedOption.value
