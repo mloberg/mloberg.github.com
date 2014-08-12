@@ -1,0 +1,34 @@
+- name: Cargill ProPricing
+  link: "http://cargillpropricing.com/"
+  image: "/assets/images/cpp.png"
+  technologies:
+    - PHP
+    - MySQL
+    - JavaScript
+
+- name: Minnesota Gophers Goal Line Club
+  link: "http://goallineclub.com/"
+  image: "/assets/images/glc.png"
+  technologies:
+    - PHP
+    - MySQL
+    - Authorize.net API
+    - JavaScript
+
+- name: Woodbridge Custom Remodeling
+  link: "http://woodbridgecustomremodeling.com/"
+  image: "/assets/images/wcr.png"
+  technologies:
+    - PHP
+    - MySQL
+    - GD Graphics Library
+
+- name: Dinky Bear Photography
+  link: "http://dinkybearphotography.com/"
+  image: "/assets/images/dbp.png"
+  technologies:
+    - PHP
+    - MySQL
+    - GD Graphics Library
+    - CSS
+
