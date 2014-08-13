@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'jekyll'
+gem 'jekyll-sitemap'
 
 group :development do
   gem 'compass', '0.12.6'

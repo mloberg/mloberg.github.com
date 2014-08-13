@@ -11,3 +11,6 @@ destination: dist
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title.html
 highlighter: pygments
+
+gems:
+  - jekyll-sitemap
