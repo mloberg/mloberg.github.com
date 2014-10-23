@@ -57,3 +57,14 @@ img {
     max-width: 730px;
   }
 }
+
+@media (min-width: 320px) {
+  .date {
+    display: block;
+  }
+
+  .header .nav {
+    display: table;
+    margin: 0 auto;
+  }
+}

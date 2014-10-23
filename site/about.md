@@ -2,7 +2,7 @@
 layout: page
 title: About
 ---
-## About
+<h2 class="text-center-xs">About</h2>
 
 ![Matthew Loberg]({{ site.baseurl }}/assets/images/profile2.jpg)
 
