@@ -81,3 +81,4 @@ DEPENDENCIES
   compass (= 0.12.6)
   font-awesome-sass (~> 4.2.0)
   jekyll
+  jekyll-sitemap
