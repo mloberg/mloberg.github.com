@@ -12,8 +12,8 @@
   <!--[if IE]>
     <link href="/assets/css/ie.css" media="screen, projection" rel="stylesheet" />
   <![endif]-->
-  <link rel="shortcut icon" href="/assets/images/favicon.ico" />
-  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
+  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/images/favicon.ico" />
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ site.baseurl }}/feed.xml" />
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -22,21 +22,21 @@
   <div class="container">
     <div class="header">
       <ul class="nav nav-pills pull-right">
-        <li><a href="{{ '/about.html' | prepend: site.baseurl }}">About</a></li>
-        <li><a href="{{ '/projects.html' | prepend: site.baseurl }}">Projects</a></li>
-        <li><a href="{{ '/portfolio.html' | prepend: site.baseurl }}">Portfolio</a></li>
+        <li><a href="{{ site.baseurl }}/about.html">About</a></li>
+        <li><a href="{{ site.baseurl }}/projects.html">Projects</a></li>
+        <li><a href="{{ site.baseurl }}/portfolio.html">Portfolio</a></li>
       </ul>
-      <h1><a href="{{ '/' | prepend: site.baseurl }}">{{ site.title }}</a></h1>
+      <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
     </div>
   </div>
 
-  <div class="hero" style="background-image: url({{ page.header }});"></div>
+  <div class="hero" style="background-image: url({{ site.baseurl }}/assets/images/{{ page.header }});"></div>
 
   <div class="container content">
     {{ content }}
   </div>
 
-  <div class="footer" style="background-image: url({{ page.header }});">
+  <div class="footer" style="background-image: url({{ site.baseurl }}/assets/images/{{ page.header }});">
     <div class="container">
       <span class="pull-right">
         <a href="https://github.com/mloberg"><i class="fa fa-github fa-2x fa-inverse"></i></a>
