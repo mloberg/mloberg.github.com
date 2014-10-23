@@ -8,36 +8,38 @@ Last week I started writing tests for my [framework](https://github.com/mloberg/
 
 I was always under the impression that writing tests for code was complex. After writing some tests for [PHPUnit](http://www.phpunit.de/manual/3.6/en/index.html), I was wrong. The class extends *PHPUnit_Framework_TestCase* and you've got a bunch of assertions methods. For example take a look at this code I've [pulled](https://github.com/Tea-Fueled-Does/Tests/blob/master/AuthTest.php) right from my tests.
 
-	<?php
+{% highlight php %}
+<?php
 
-		require 'test.bootstrap.php';
+    require 'test.bootstrap.php';
 
-		use TFD\Auth;
+    use TFD\Auth;
 
-		class AuthTest extends PHPUnit_Framework_TestCase {
+    class AuthTest extends PHPUnit_Framework_TestCase {
 
-			/**
-			 * Test Auth::login method.
-			 */
+        /**
+         * Test Auth::login method.
+         */
 
-			public function testLogin() {
-				$fingerprint = Auth::login('username', 'secret');
-				$this->assertInternalType('string', $fingerprint);
+        public function testLogin() {
+            $fingerprint = Auth::login('username', 'secret');
+            $this->assertInternalType('string', $fingerprint);
 
-				return $fingerprint;
-			}
+            return $fingerprint;
+        }
 
-			/**
-			 * Test Auth::valid method.
-			 * 
-			 * @depends testLogin
-			 */
+        /**
+         * Test Auth::valid method.
+         *
+         * @depends testLogin
+         */
 
-			public function testValid($fingerprint) {
-				$this->assertTrue(Auth::valid($fingerprint, 'username', 'secret'));
-			}
+        public function testValid($fingerprint) {
+            $this->assertTrue(Auth::valid($fingerprint, 'username', 'secret'));
+        }
 
-		}
+    }
+{% endhighlight %}
 
 That took me less then ten minutes to write.
 

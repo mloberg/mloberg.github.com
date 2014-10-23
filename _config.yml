@@ -5,6 +5,14 @@ description: "Web developer from Minnesota"
 baseurl: ""
 url: "http://mlo.io"
 
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+      header: /assets/images/background.jpg
+
 # Build settings
 source: site
 destination: dist

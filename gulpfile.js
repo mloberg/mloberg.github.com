@@ -23,7 +23,7 @@ gulp.task('styles', function() {
       font: 'site/assets/fonts',
       style: 'compressed',
       comments: true,
-      require: ['compass_twitter_bootstrap'],
+      require: ['bootstrap-sass', 'font-awesome-sass'],
     }))
     .pipe(gulp.dest('site/assets/css'))
     .pipe($.size({title: 'styles'}));

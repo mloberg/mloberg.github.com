@@ -15,9 +15,9 @@ If you are using PHP 5.2 or earlier, you may not have bcrypt available to you. I
 
 {% highlight php %}
 if (CRYPT_BLOWFISH == 1) {
-	echo "Yes";
+    echo "Yes";
 } else {
-	echo "No";
+    echo "No";
 }
 {% endhighlight %}
 
@@ -27,13 +27,13 @@ Bcrypt's salt starts with '$2a$' followed by a two digit cost, another '$' and 2
 
 {% highlight php %}
 function generate_salt($cost = 12) {
-	return '$2a$' . str_pad($cost, 2, '0', STR_PAD_LEFT) . '$' . substr(sha1(mt_rand()),0,22);
+    return '$2a$' . str_pad($cost, 2, '0', STR_PAD_LEFT) . '$' . substr(sha1(mt_rand()),0,22);
 }
 
 function secure_generate_salt($cost = 12) {
-	$salt = '$2a$' . str_pad($cost, 2, '0', STR_PAD_LEFT) . '$';
-	$salt .= substr(str_replace('+', '.', base64_encode(openssl_random_pseudo_bytes(16))), 0, 22);
-	return $salt
+    $salt = '$2a$' . str_pad($cost, 2, '0', STR_PAD_LEFT) . '$';
+    $salt .= substr(str_replace('+', '.', base64_encode(openssl_random_pseudo_bytes(16))), 0, 22);
+    return $salt
 }
 {% endhighlight %}
 
@@ -50,7 +50,7 @@ Now you're storing secure passwords, congratulations. But how do we verify if th
 
 {% highlight php %}
 function verify_hash($input, $hash) {
-	return crypt($password, $hash) === $hash;
+    return crypt($password, $hash) === $hash;
 }
 {% endhighlight %}
 
@@ -59,23 +59,23 @@ As simple as that. If you put that together in a class, you can have a really ha
 {% highlight php %}
 class Crypter {
 
-	private static $cost = 12;
+    private static $cost = 12;
 
-	public static function generate_salt($cost = null) {
-		if (is_null($cost)) $cost = self::$cost;
-		if ($cost < 4 || $cost > 31) throw new Exception('Cost must be between 4 and 31');
-		$salt = '$2a$' . str_pad($cost, 2, '0', STR_PAD_LEFT) . '$';
-		$salt .= substr(str_replace('+', '.', base64_encode(openssl_random_pseudo_bytes(16))), 0, 22);
-		return $salt
-	}
+    public static function generate_salt($cost = null) {
+        if (is_null($cost)) $cost = self::$cost;
+        if ($cost < 4 || $cost > 31) throw new Exception('Cost must be between 4 and 31');
+        $salt = '$2a$' . str_pad($cost, 2, '0', STR_PAD_LEFT) . '$';
+        $salt .= substr(str_replace('+', '.', base64_encode(openssl_random_pseudo_bytes(16))), 0, 22);
+        return $salt
+    }
 
-	public static function hash($input, $cost = null) {
-		return crypt($input, self::generate_salt($cost));
-	}
+    public static function hash($input, $cost = null) {
+        return crypt($input, self::generate_salt($cost));
+    }
 
-	public static function verify($input, $hash) {
-		return crypt($input, $hash) === $hash;
-	}
+    public static function verify($input, $hash) {
+        return crypt($input, $hash) === $hash;
+    }
 
 }
 {% endhighlight %}

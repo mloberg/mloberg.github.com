@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Matthew Loberg" />
   <meta name="description" content="{% if page.description %}{{page.description}}{% else %}{{ site.description }}{% endif %}" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes" />
   <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
   <link href="/assets/css/screen.css" media="screen, projection" rel="stylesheet" />
   <link href="/assets/css/print.css" media="print" rel="stylesheet" />
@@ -13,43 +13,42 @@
     <link href="/assets/css/ie.css" media="screen, projection" rel="stylesheet" />
   <![endif]-->
   <link rel="shortcut icon" href="/assets/images/favicon.ico" />
-  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/apple-touch-icon-114x114.png" />
   <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="row-fluid">
-      <div class="span2 sidebar">
-        <a href="/index.html"><img src="http://www.gravatar.com/avatar/17b8ee87f71a9fa39679e07aff6e94c4?s=200" alt="Matthew Loberg" class="avatar"></a>
-        <h1>{{ site.title | upcase }}</h1>
-        <p class="social">
-          <a href="https://github.com/mloberg">g</a>
-          <a href="http://twitter.com/mloberg">l</a>
-          <a href="http://www.last.fm/user/mloberg">6</a></p>
-        <ul class="nav nav-pills nav-stacked">
-          <li{% if page.url == '/index.html' %} class="active"{% endif %}><a href="/index.html">home</a></li>
-          <li{% if page.url == '/about.html' %} class="active"{% endif %}><a href="/about.html">about</a></li>
-          <li{% if page.url == '/projects.html' %} class="active"{% endif %}><a href="/projects.html">projects</a></li>
-          <li{% if page.url == '/portfolio.html' %} class="active"{% endif %}><a href="/portfolio.html">portfolio</a></li>
-        </ul>
-        <select onchange="mobileNav(this)">
-          <option value="#">Menu</option>
-        </select>
-      </div>
-      <div class="span10">
-        {{ content }}
-      </div>
+  <div class="container">
+    <div class="header">
+      <ul class="nav nav-pills pull-right">
+        <li><a href="{{ '/about.html' | prepend: site.baseurl }}">About</a></li>
+        <li><a href="{{ '/projects.html' | prepend: site.baseurl }}">Projects</a></li>
+        <li><a href="{{ '/portfolio.html' | prepend: site.baseurl }}">Portfolio</a></li>
+      </ul>
+      <h1><a href="{{ '/' | prepend: site.baseurl }}">{{ site.title }}</a></h1>
     </div>
   </div>
+
+  <div class="hero" style="background-image: url({{ page.header }});"></div>
+
+  <div class="container content">
+    {{ content }}
+  </div>
+
+  <div class="footer" style="background-image: url({{ page.header }});">
+    <div class="container">
+      <span class="pull-right">
+        <a href="https://github.com/mloberg"><i class="fa fa-github fa-2x fa-inverse"></i></a>
+        <a href="http://twitter.com/mloberg"><i class="fa fa-twitter fa-2x fa-inverse"></i></a>
+        <a href="http://www.last.fm/user/mloberg"><i class="fa fa-lastfm-square fa-2x fa-inverse"></i></a>
+      </span>
+    </div>
+  </div>
+
 <script>
 var _gaq = [['_setAccount', 'UA-9585810-8'], ['_trackPageview']];
 (function(d, t) {var g = d.createElement(t),s = d.getElementsByTagName(t)[0];g.src = '//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g, s);}(document, 'script'));
 </script>
-<script src="/assets/js/site.js"></script>
 </body>
 </html>

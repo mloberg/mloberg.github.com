@@ -1,1 +1,1 @@
-(function(){var e,t,n,o,l,r,i;for(setTimeout(function(){return window.scrollTo(0,1)},0),t=document.querySelectorAll(".sidebar ul > li a"),n=document.querySelector(".sidebar select"),r=0,i=t.length;i>r;r++)e=t[r],o=document.createElement("option"),o.text=e.innerHTML,o.value=e.getAttribute("href"),n.appendChild(o);l="undefined"!=typeof exports&&null!==exports?exports:this,l.mobileNav=function(e){var t;return t=e.options[e.selectedIndex],window.location=t.value}}).call(this);
+(function(){setTimeout(function(){return window.scrollTo(0,1)},0)}).call(this);

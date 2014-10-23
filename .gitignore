@@ -9,6 +9,8 @@
 
 .bundle
 .sass-cache
+.ruby-version
 node_modules
 dist
+vendor
 site/_drafts
