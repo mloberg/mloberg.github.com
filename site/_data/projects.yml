@@ -10,6 +10,10 @@
   description: Database-less wiki rendered from Markdown
   github: "https://github.com/mloberg/Simple-Wiki"
 
+- name: Sifter-PHP
+  description: PHP wrapper for the Sifter API
+  github: "https://github.com/mloberg/Sifter-PHP"
+
 - name: Tea-Fueled Does
   description: A PHP framework designed to be awesome.
   github: "https://github.com/mloberg/Tea-Fueled-Does"
