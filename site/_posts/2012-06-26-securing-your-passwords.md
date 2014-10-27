@@ -14,6 +14,8 @@ I personally use [bcrypt](http://en.wikipedia.org/wiki/Bcrypt) to hash all my pa
 If you are using PHP 5.2 or earlier, you may not have bcrypt available to you. In these versions it was implemented on the system side rather then in PHP itself (as in 5.3 and later). You can check if it is available on your system.
 
 {% highlight php %}
+<?php
+
 if (CRYPT_BLOWFISH == 1) {
     echo "Yes";
 } else {
@@ -26,6 +28,8 @@ To implement, we'll use PHP's [crypt](http://us.php.net/manual/en/function.crypt
 Bcrypt's salt starts with '$2a$' followed by a two digit cost, another '$' and 22 characters from './0-9A-Za-z'. The cost parameter relates to how much load it will take to crypt the password. You'll have to find a number (04 to 31) that isn't too slow or too fast on your system. Here are two different ways to generate a bcrypt salt.
 
 {% highlight php %}
+<?php
+
 function generate_salt($cost = 12) {
     return '$2a$' . str_pad($cost, 2, '0', STR_PAD_LEFT) . '$' . substr(sha1(mt_rand()),0,22);
 }
@@ -42,6 +46,8 @@ The `secure_generate_salt` is a little more secure as it used openssl to generat
 Once you have a salt, hashing your password is simple.
 
 {% highlight php %}
+<?php
+
 $salt = secure_generate_salt();
 $hash = crypt('password', $salt);
 {% endhighlight %}
@@ -49,6 +55,8 @@ $hash = crypt('password', $salt);
 Now you're storing secure passwords, congratulations. But how do we verify if the user's input matches our stored hash?
 
 {% highlight php %}
+<?php
+
 function verify_hash($input, $hash) {
     return crypt($password, $hash) === $hash;
 }
@@ -57,6 +65,8 @@ function verify_hash($input, $hash) {
 As simple as that. If you put that together in a class, you can have a really handy tool.
 
 {% highlight php %}
+<?php
+
 class Crypter {
 
     private static $cost = 12;
