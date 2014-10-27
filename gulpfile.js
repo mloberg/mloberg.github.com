@@ -1,8 +1,11 @@
-var gulp = require('gulp'),
-    $ = require('gulp-load-plugins')(),
-    runSequence = require('run-sequence'),
-    spawn = require('child_process').spawn;
+var gulp = require('gulp');
+var $ = require('gulp-load-plugins')();
+var runSequence = require('run-sequence');
+var browserSync = require('browser-sync');
+var spawn = require('child_process').spawn;
+var reload = browserSync.reload;
 
+// Optimize images
 gulp.task('images', function() {
   return gulp.src('site/_assets/images/**/*')
     .pipe($.cache($.imagemin({
@@ -13,6 +16,7 @@ gulp.task('images', function() {
     .pipe($.size({title: 'images'}));
 });
 
+// Compile Sass with Compass
 gulp.task('styles', function() {
   return gulp.src('site/_assets/sass/*.scss')
     .pipe($.compass({
@@ -29,41 +33,45 @@ gulp.task('styles', function() {
     .pipe($.size({title: 'styles'}));
 });
 
+// Lint CoffeeScript
 gulp.task('lint', function() {
   return gulp.src('site/_assets/coffee/*.coffee')
     .pipe($.coffeelint())
     .pipe($.coffeelint.reporter());
 });
 
-gulp.task('javascript', function() {
+// Compile and compress CoffeeScript
+gulp.task('scripts', ['lint'], function() {
   return gulp.src('site/_assets/coffee/*.coffee')
     .pipe($.coffee().on('error', $.util.log))
     .pipe($.concat('site.js'))
     .pipe($.uglify())
     .pipe(gulp.dest('site/assets/js/'))
-    .pipe($.size({title: 'javascript'}));
+    .pipe($.size({title: 'scripts'}));
 });
 
-gulp.task('build', ['styles', 'images', 'javascript'], function(done) {
-  proc = spawn("bundle", ["exec", "jekyll", "build"]);
+// Build the site
+gulp.task('build', function(done) {
+  var proc = spawn("bundle", ["exec", "jekyll", "build"]);
   proc.on("exit", done);
 });
 
-gulp.task('serve', ['styles', 'images', 'javascript'], function(cb) {
-  proc = spawn("bundle", ["exec", "jekyll", "serve", "--drafts", "--watch"]);
-
-  proc.stdout.on('data', function(data) {
-    process.stdout.write(data);
-  });
-
-  proc.stderr.on('data', function(data) {
-    process.stderr.write(data);
+// Serve the site. Watch for changes and reload
+gulp.task('serve', ['default'], function(cb) {
+  browserSync({
+    notify: false,
+    server: {
+      baseDir: 'dist'
+    }
   });
 
   gulp.watch(['site/_assets/sass/*.scss'], ['styles']);
-  gulp.watch(['site/_assets/coffee/*.coffee'], ['javascript']);
+  gulp.watch(['site/_assets/coffee/*.coffee'], ['scripts']);
+  gulp.watch(['site/_assets/images/**/*'], ['images']);
+  gulp.watch(['site/**/*', '!site/_assets/**/*'], ['build', reload]);
 });
 
+// Build site
 gulp.task('default', function(done) {
-  runSequence(['styles', 'images', 'javascript'], 'build', done);
+  runSequence(['styles', 'scripts', 'images'], 'build', done);
 });
