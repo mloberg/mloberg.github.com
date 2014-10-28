@@ -5,14 +5,13 @@ title: Portfolio
 <h2 class="text-center-xs">Portfolio</h2>
 <p>Here are some of the sites I have been involved in creating.</p>
 
-<hr>
-
 {% for item in site.data.portfolio %}
-  <div class="row-fluid portfolio">
-    <div class="span5">
+  <hr>
+  <div class="row portfolio">
+    <div class="col-md-7">
       <a href="{{ item.link }}" target="_blank"><img src="{{ item.image }}" alt="{{ item.name }}"></a>
     </div>
-    <div class="span7">
+    <div class="col-md-5">
       <h3>{{ item.name }}</h3>
       <p><strong>Technologies used:</strong></p>
       <ul>
