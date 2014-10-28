@@ -1,5 +1,7 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var del = require('del');
+var glob = require('glob');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var spawn = require('child_process').spawn;
@@ -25,8 +27,7 @@ gulp.task('styles', function() {
       css: 'site/assets/css',
       images: 'site/assets/images',
       font: 'site/assets/fonts',
-      style: 'compressed',
-      comments: true,
+      comments: false,
       require: ['bootstrap-sass', 'font-awesome-sass'],
     }))
     .pipe(gulp.dest('site/assets/css'))
@@ -65,13 +66,49 @@ gulp.task('serve', ['default'], function(cb) {
     }
   });
 
-  gulp.watch(['site/_assets/sass/*.scss'], ['styles']);
+  gulp.watch(['site/_assets/sass/*.scss'], ['styles', 'build', reload]);
   gulp.watch(['site/_assets/coffee/*.coffee'], ['scripts']);
   gulp.watch(['site/_assets/images/**/*'], ['images']);
   gulp.watch(['site/**/*', '!site/_assets/**/*'], ['build', reload]);
 });
 
+// Build site for distribution
+gulp.task('dist', function(done) {
+  runSequence('default', 'dist:css', 'dist:html', done);
+});
+
+// Minify and optimize CSS
+gulp.task('dist:css', ['dist:uncss'], function() {
+  return gulp.src('dist/assets/css/**/*.css')
+    .pipe($.csso())
+    .pipe($.size({title: 'dist:css'}))
+    .pipe(gulp.dest('dist/assets/css'));
+});
+
+// Remove unused CSS
+gulp.task('dist:uncss', function() {
+  return gulp.src('dist/assets/css/main.css')
+    .pipe($.uncss({
+      html: glob.sync('dist/**/*.html'),
+    }))
+    .pipe(gulp.dest('dist/assets/css'))
+    .pipe($.size({title: 'dist:uncss'}));
+});
+
+// Validate and minify HTML
+gulp.task('dist:html', function() {
+  return gulp.src('dist/**/*.html')
+    .pipe($.htmlhint())
+    .pipe($.htmlhint.reporter())
+    .pipe($.minifyHtml())
+    .pipe(gulp.dest('dist'))
+    .pipe($.size({title: 'dist:html'}));
+});
+
+// Remove output directory
+gulp.task('clean', del.bind(null, ['site/assets/css', 'site/assets/images', 'site/assets/js', 'dist']));
+
 // Build site
-gulp.task('default', function(done) {
+gulp.task('default', ['clean'], function(done) {
   runSequence(['styles', 'scripts', 'images'], 'build', done);
 });
