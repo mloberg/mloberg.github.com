@@ -56,6 +56,10 @@ img {
   .container {
     max-width: 730px;
   }
+
+  .portfolio img {
+    margin-top: 25px;
+  }
 }
 
 @media (min-width: 320px) {
@@ -66,5 +70,23 @@ img {
   .header .nav {
     display: table;
     margin: 0 auto;
+  }
+}
+
+@media print {
+  body {
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  img {
+    page-break-inside: avoid;
+  }
+
+  .nav, .hero, .footer {
+    display: none !important;
   }
 }
