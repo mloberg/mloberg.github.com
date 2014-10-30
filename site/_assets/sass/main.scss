@@ -11,7 +11,6 @@ img {
 
 /* Make the masthead heading the same height as the navigation */
 .header h1 {
-  padding-bottom: 19px;
   margin-top: 0;
   margin-bottom: 0;
   line-height: 40px;
@@ -22,11 +21,16 @@ img {
   }
 }
 
-.nav > li > a {
-  color: $text-color;
-  &:hover, &:focus {
-    background-color: #fff;
-    color: $link-hover-color;
+.nav {
+  display: table;
+  margin: 0 auto;
+
+  & > li > a {
+    color: $text-color;
+    &:hover, &:focus {
+      background-color: #fff;
+      color: $link-hover-color;
+    }
   }
 }
 
@@ -38,6 +42,10 @@ img {
 
 .posts li {
   padding-bottom: 15px;
+}
+
+.date {
+  display: block;
 }
 
 .footer {
@@ -57,25 +65,12 @@ img {
     max-width: 730px;
   }
 
+  .header h1 {
+    padding-bottom: 19px;
+  }
+
   .portfolio img {
     margin-top: 25px;
-  }
-}
-
-@media (min-width: 320px) {
-  .date {
-    display: block;
-  }
-
-  .header {
-    h1 {
-      padding-bottom: 0;
-    }
-
-    .nav {
-      display: table;
-      margin: 0 auto;
-    }
   }
 }
 
@@ -84,15 +79,23 @@ img {
     color: #000;
     background: #fff;
     margin: 0;
+    margin-top: 30px;
     padding: 0;
     width: 100%;
+
+    &:after {
+      content: url(http://chart.googleapis.com/chart?cht=qr&chs=100x100&choe=UTF-8&chld=H&chl=http://mlo.io);
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 
   img {
     page-break-inside: avoid;
   }
 
-  .nav, .hero, .footer {
+  .nav, .hero, .about img, .footer, #disqus_thread {
     display: none !important;
   }
 }
