@@ -67,9 +67,15 @@ img {
     display: block;
   }
 
-  .header .nav {
-    display: table;
-    margin: 0 auto;
+  .header {
+    h1 {
+      padding-bottom: 0;
+    }
+
+    .nav {
+      display: table;
+      margin: 0 auto;
+    }
   }
 }
 
