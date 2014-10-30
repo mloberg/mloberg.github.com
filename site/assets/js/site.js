@@ -1,1 +1,0 @@
-(function(){setTimeout(function(){return window.scrollTo(0,1)},0)}).call(this);

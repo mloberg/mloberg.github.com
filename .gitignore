@@ -10,7 +10,11 @@
 .bundle
 .sass-cache
 .ruby-version
+s3_website.yml
 node_modules
 dist
 vendor
 site/_drafts
+site/assets/css
+site/assets/images
+site/assets/js
