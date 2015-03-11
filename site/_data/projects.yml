@@ -1,18 +1,18 @@
+- name: puppet-python
+  description: Manage Python with Boxen and pyenv
+  github: "https://github.com/mloberg/puppet-python"
+
+- name: Web Starter Kit
+  description: Starting point for a static site. Comes with Sass and CoffeeScript support.
+  github: "https://github.com/mloberg/web-starter-kit"
+
 - name: Launch Page
   description: Create a viral launching soon page that integrates with MailChimp
   github: "https://github.com/mloberg/Launch-Page"
 
-- name: puppet-python
-  description: Manage Python with pyenv and Boxen
-  github: "https://github.com/mloberg/puppet-python"
-
 - name: Simple Wiki
   description: Database-less wiki rendered from Markdown
   github: "https://github.com/mloberg/Simple-Wiki"
-
-- name: Sifter-PHP
-  description: PHP wrapper for the Sifter API
-  github: "https://github.com/mloberg/Sifter-PHP"
 
 - name: Tea-Fueled Does
   description: A PHP framework designed to be awesome.
