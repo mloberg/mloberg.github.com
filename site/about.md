@@ -4,11 +4,10 @@ title: About
 ---
 <h2 class="text-center-xs">About</h2>
 
-![Matthew Loberg]({{ site.baseurl }}/assets/images/profile2.jpg)
+<img class="center-block" src="{{ site.baseurl }}/assets/images/profile3.jpg" alt="Matthew Loberg">
 
-I'm Matt, a developer from Minnesota. I write Python during the day, but you'll find me hacking on projects in Ruby, PHP, Node, Bash, and more.
-I've worked on small static sites to complex high-availability web applications, deploying applications to the cloud, and everything in between.
-In my free time I enjoy writing and playing music.
+I'm Matt, a software engineer at [The Nerdery](http://www.nerdery.com/people#rb). My main language is PHP, but I also know Python, Ruby, JavaScript, Bash, and more. I've worked on small static sites to complex high-availability web applications. Everything from HTML, CSS, and JavaScript, to APIs, database design, system administration and everything in between.
+In my free time I enjoy writing, recording, and playing music.
 
 ### Skills
 
@@ -20,11 +19,11 @@ In my free time I enjoy writing and playing music.
 * Node.js
 * HTML
 * CSS
-* Devops
+* DevOps
 * Amazon Web Services
 * Puppet
 
-You can check out some of my code on [Github](https://github.com/mloberg) or see samples of projects of worked on at my [portfolio]({{ site.baseurl }}/portfolio.html).
+Check out a few of my [projects]({{ site.baseurl }}/projects.html) or checkout all of my public code on [Github](https://github.com/mloberg).
 
 ### Contact
 
