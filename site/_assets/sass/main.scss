@@ -1,5 +1,17 @@
 @import "_base";
 
+$footer-height: 90px;
+
+html, body {
+  height: 100%;
+}
+
+.wrap {
+  min-height: 100%;
+  overflow: auto;
+  padding-bottom: $footer-height;
+}
+
 /* Space out content a bit */
 body {
   padding-top: 20px;
@@ -40,6 +52,10 @@ img {
   height: 200px;
 }
 
+.content {
+  padding-bottom: 15px;
+}
+
 .posts li {
   padding-bottom: 15px;
 }
@@ -49,8 +65,11 @@ img {
 }
 
 .footer {
-  margin-top: 150px;
   background-size: cover;
+  position: relative;
+  margin-top: -$footer-height;
+  height: $footer-height;
+  clear: both;
   padding: 25px;
 
   a {
