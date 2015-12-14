@@ -4,8 +4,6 @@ gem 'jekyll'
 gem 'jekyll-sitemap'
 
 group :development do
-  gem 'compass', '0.12.6'
-  gem 'bootstrap-sass', '~> 3.2.0'
-  gem 'font-awesome-sass', '~> 4.2.0'
+  gem 'html-proofer'
   gem 's3_website'
 end

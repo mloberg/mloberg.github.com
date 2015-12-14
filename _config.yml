@@ -15,10 +15,10 @@ defaults:
 
 # Build settings
 source: site
-destination: dist
-markdown: kramdown
+destination: build
 permalink: /blog/:year/:month/:day/:title.html
-highlighter: pygments
+markdown: kramdown
+highlighter: rouge
 
 gems:
   - jekyll-sitemap

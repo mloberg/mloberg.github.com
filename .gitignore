@@ -10,11 +10,13 @@
 .bundle
 .sass-cache
 .ruby-version
+.tmp
 s3_website.yml
 node_modules
+bower_components
+build
 dist
 vendor
+tmp
 site/_drafts
-site/assets/css
-site/assets/images
-site/assets/js
+site/assets

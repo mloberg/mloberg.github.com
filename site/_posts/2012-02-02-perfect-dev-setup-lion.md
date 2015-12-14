@@ -118,7 +118,7 @@ sudo pecl install apc
 
 You'll need to add these lines to the end of /etc/php.ini to active APC.
 
-{% highlight apache %}
+```
 extension=apc.so
 apc.enabled = 1
 apc.shm_segments = 1
@@ -127,7 +127,7 @@ apc.cache_by_default = 1
 apc.stat = 1
 apc.rfc1867 = 1
 apc.stat = 3600
-{% endhighlight %}
+```
 
 Finally, toggle Web Sharing off and on to enable PHP.
 

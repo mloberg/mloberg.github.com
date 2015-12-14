@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-bundle install --path vendor --standalone
-npm install
-
-echo "Please install gulp if you haven't already"
-echo "  [sudo] npm install -g gulp"
