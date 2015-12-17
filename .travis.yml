@@ -4,6 +4,7 @@ rvm:
     - 2.1
 
 before_script:
+    - nvm use 0.12
     - npm install
     - ./node_modules/.bin/bower install
 
