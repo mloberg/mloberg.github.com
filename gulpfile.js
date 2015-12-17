@@ -96,7 +96,6 @@ gulp.task('images', function() {
       interlaced: true
     })))
     .pipe(gulp.dest('site/assets/images'))
-    .pipe(gulp.dest('dist/assets/images'))
     .pipe($.size({title: 'images'}));
 });
 
@@ -106,7 +105,6 @@ gulp.task('fonts', function() {
 
   return gulp.src(vendor_fonts.concat('site/_assets/fonts/**/*'))
     .pipe(gulp.dest('site/assets/fonts'))
-    .pipe(gulp.dest('dist/assets/fonts'))
     .pipe($.size({title: 'fonts'}));
 });
 
@@ -134,8 +132,8 @@ gulp.task('serve', ['default'], function(done) {
 
 // Build site for distribution (everything minified)
 gulp.task('dist', ['default'], function() {
-  return gulp.src('build/**/*.html')
-    .pipe($.useref({searchPath: 'build'}))
+  return gulp.src(['build/**/*', '!build/**/*.{css,js}'])
+    .pipe($.if('*.html', $.useref({searchPath: 'build'})))
     .pipe($.if('*.js', $.uglify({preserveComments: 'some'})))
     // .pipe($.if('*.css', $.uncss({html: 'build/**/*.html'})))
     .pipe($.if('*.css', $.csso()))
