@@ -28,7 +28,7 @@ brew install git
 
 #### Apache
 
-Lion ships with Apache and PHP, but require some setup to get them to work how we want. It's at this point you'll need to decide where you want to keep your code at. I chose to keep all my code in a folder *Code* underneath my home directory and seperated it by language from there.
+Lion ships with Apache and PHP, but require some setup to get them to work how we want. It's at this point you'll need to decide where you want to keep your code at. I chose to keep all my code in a folder *Code* underneath my home directory and separated it by language from there.
 
 We need to create a vhosts file that tells Apache about each of our sites. Let's create that file now.
 
@@ -74,7 +74,7 @@ NameVirtualHost *:80
 
 <p><small><strong>Note</strong>: Some tutorials out there will use domain.local, do not use .local in your domains, this will slow down Apache incredibly!</small></p>
 
-We need to turn on Apache now. Go to **System Preferences** > **Sharing** and turn on **Web Sharing**. Visit [http://localhost/](http://localhost/). If you see "It Works!", you have successfully installed Apache.
+We need to turn on Apache now. Go to **System Preferences** > **Sharing** and turn on **Web Sharing**. Visit `http://localhost/`. If you see "It Works!", you have successfully installed Apache.
 
 To add a site, you'll need to copy the template, remove the comments, fill in the data, add an entry to /etc/hosts (*127.0.0.1 domain.dev*), and reload Apache (toggle Web Sharing off and on).
 
