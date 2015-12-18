@@ -6,7 +6,7 @@ Last week I started writing tests for my [framework](https://github.com/mloberg/
 
 #### It's Easy
 
-I was always under the impression that writing tests for code was complex. After writing some tests for [PHPUnit](http://www.phpunit.de/manual/3.6/en/index.html), I was wrong. The class extends *PHPUnit_Framework_TestCase* and you've got a bunch of assertions methods. For example take a look at this code I've [pulled](https://github.com/Tea-Fueled-Does/Tests/blob/master/AuthTest.php) right from my tests.
+I was always under the impression that writing tests for code was complex. After writing some tests for [PHPUnit](http://www.phpunit.de/manual/3.6/en/index.html), I was wrong. The class extends *PHPUnit_Framework_TestCase* and you've got a bunch of assertions methods. For example take a look at this code I've pulled right from my tests.
 
 {% highlight php %}
 <?php
@@ -59,4 +59,4 @@ How many times have you released something with bugs in it? I've done a couple c
 
 #### Getting Started
 
-[PHPUnit's docs](http://www.phpunit.de/manual/3.6/en/index.html) are a great place to start. NetTuts's also has an [article](http://net.tutsplus.com/tutorials/php/the-newbies-guide-to-test-driven-development/) on it SimpleTest, another PHP test suite. And if you need real life examples, check out my [tests for Tea-Fueled Does](https://github.com/Tea-Fueled-Does/Tests).
+[PHPUnit's docs](http://www.phpunit.de/manual/3.6/en/index.html) are a great place to start. NetTuts's also has an [article](http://net.tutsplus.com/tutorials/php/the-newbies-guide-to-test-driven-development/) on it SimpleTest, another PHP test suite.

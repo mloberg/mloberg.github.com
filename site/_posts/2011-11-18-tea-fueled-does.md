@@ -2,6 +2,8 @@
 layout: blog
 title: Tea-Fueled Does
 ---
+_Editor's Note: Since posting this, Tea-Fueled Does has been deprecated. We recommend to check out [Symfony](https://symfony.com/doc/current/book/index.html) or [Laravel](http://laravel.com/). These are awesome and modern PHP frameworks._
+
 Earlier this week I publicly released [Tea-Fueled Does version 2](https://github.com/mloberg/Tea-Fueled-Does). An open-source PHP 5.3 framework written by myself.
 
 #### A Little History
@@ -38,21 +40,7 @@ I've licensed TFD under the unlicense, so you can do whatever you want with it. 
 
 #### Getting TFD
 
-TFD must have you at least a little interested, you're still reading. The next step is to get a copy of TFD and start playing with it. Getting TFD is really easy. It's hosted on [GitHub](https://github.com/mloberg/Tea-Fueled-Does), so you can download it there. Or, even better, you can use Tea, TFD's command line interface, just by running the below command in a command line.
-
-{% highlight bash %}
-curl get.teafueleddoes.com/tea | sh
-{% endhighlight %}
-
-Then to create a new TFD project.
-
-{% highlight bash %}
-tea create project_name # replace project_name with the folder to save TFD to
-{% endhighlight %}
-
-You'll need Git for this command, but it's worth the (minimal) effort to install it. This command will also run [tea init](http://teafueleddoes.com/docs/tea/index.html#init), which will ask you for some config options, set up your database, and other goodies.
-
-Once you have TFD installed, I recommend reading through the [docs](http://teafueleddoes.com/) to get a better idea of how TFD works. I will also be posting a demo installation of TFD with source code examples, posts on TFD, and possibly some screencasts. You can follow me on Twitter ([@mloberg](http://twitter.com/mloberg)) for more TFD updates (and my other work and ramblings).
+TFD must have you at least a little interested, you're still reading. The next step is to get a copy of TFD and start playing with it. Getting TFD is really easy. It's hosted on [GitHub](https://github.com/mloberg/Tea-Fueled-Does), so you can download it there.
 
 #### Getting Involved
 
