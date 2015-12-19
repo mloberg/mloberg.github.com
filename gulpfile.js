@@ -135,7 +135,7 @@ gulp.task('dist', ['default'], function() {
   return gulp.src(['build/**/*', '!build/**/*.{css,js}'])
     .pipe($.if('*.html', $.useref({searchPath: 'build'})))
     .pipe($.if('*.js', $.uglify({preserveComments: 'some'})))
-    // .pipe($.if('*.css', $.uncss({html: 'build/**/*.html'})))
+    .pipe($.if('*.css', $.uncss({html: ['build/**/*.html']})))
     .pipe($.if('*.css', $.csso()))
     .pipe($.if('*.html', $.htmlhint()))
     .pipe($.if('*.html', $.htmlhint.reporter()))
