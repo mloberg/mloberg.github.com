@@ -11,7 +11,6 @@
 .sass-cache
 .ruby-version
 .tmp
-s3_website.yml
 node_modules
 bower_components
 build
