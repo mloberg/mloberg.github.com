@@ -15,7 +15,7 @@ script:
 
 deploy:
   provider: script
-  script: bundle exec s3_website push
+  script: bin/deploy
   on:
     branch: master
 
