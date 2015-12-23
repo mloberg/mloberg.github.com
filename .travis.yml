@@ -22,3 +22,7 @@ script:
   - bundle exec htmlproof dist
 
 after_script: bundle exec s3_website push
+
+branches:
+  only:
+    - master
