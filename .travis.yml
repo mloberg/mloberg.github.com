@@ -13,11 +13,7 @@ script:
   - "./node_modules/.bin/gulp dist"
   - bundle exec htmlproof dist
 
-deploy:
-  provider: script
-  script: bin/deploy
-  on:
-    branch: master
+after_script: bundle exec s3_website push
 
 env:
   global:

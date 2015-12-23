@@ -35,7 +35,7 @@ cloudfront_distribution_config:
 
 # cloudfront_invalidate_root: true
 
-# concurrency_level: 5
+concurrency_level: 5
 
 redirects:
   portfolio/index.html: projects.html
