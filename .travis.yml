@@ -3,21 +3,22 @@ sudo: false
 rvm:
   - 2.1
 
-before_script:
-  - nvm install 0.12
-  - nvm use 0.12
-  - npm install
-  - "./node_modules/.bin/bower install"
-
-script:
-  - "./node_modules/.bin/gulp dist"
-  - bundle exec htmlproof dist
-
-after_script: bundle exec s3_website push
-
 env:
   global:
+    - TZ=America/Chicago
     - secure: wiulWfzfXHy5leCVG46LtZ11kwKOxE3nKAClOLITw4kxM4wtrt+PPsOyf6NdLk0bX1tclRlp2yuHNfJdbARxDAozgbSuXYNYLdV9Upg4FkqYqJ0KOtlQ9snyaHiqDYWhWdT8N5qh/skV21JhbI37LLP38/G6v/FpQ5DeRvV1qAg=
     - secure: V716sAdlKESMrWOioq+ICI6k6Mcte7DFUMgqf90p7pkIDm5N8iz/smy0gl00sEHWNq99nKVbBJ8TAimnNOjWnLioVrAzK559fLnKzphlIb0zt8/C5YKD80L+/SNZWVxSC9TjDUFpVh/q0PzyBLUKVGvvbgUDNeMCacfV9r5uHA0=
     - secure: GMSeCDEYsOZj40mE2D1EfTzzAjM9xsjjwCcxDT4wG/N5OKs3NkIC+sLfpmbLOp4vKx8neojp0ejdfZuuyBU7mCbSzneo0qm+i6/4+KXaWOKiiSWaJVpPnDx07zOD4bMAxdEIKGQ7pmyL5c8IY/f51brgvJdoZrx69PIKGWK1zYE=
     - secure: CbYfo0fr8A4mL7OARn4oh+oFvhBd6ifZ+5yzi48+JawBNcuXRqI22sBzs/7t5zelTOD9QTTMxQhAXs/ll2g/uaStwX7jkWmsJoh3kgmI/wiWB3arZtzFr5pV62ZVaEx1yeB7jPVLBk9NViAsEYIPXyV3nq90KhwEWbl1xLCsHGE=
+
+before_script:
+  - nvm install 0.12
+  - nvm use 0.12
+  - npm install
+  - ./node_modules/.bin/bower install
+
+script:
+  - ./node_modules/.bin/gulp dist
+  - bundle exec htmlproof dist
+
+after_script: bundle exec s3_website push
