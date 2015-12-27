@@ -162,6 +162,9 @@ after_success:
   - travis_retry php $HOME/.composer/vendor/bin/coveralls -v
 {% endhighlight %}
 
+_Update 12/27/15_: As some commenters have pointed out, Symfony 2.4, 2.5, and 2.6
+are no longer supported. You can skip these in your Travis builds if you please.
+
 [file-loader]: https://github.com/mloberg/FileLoader
 [travis]: https://travis-ci.org/
 [travis-env-variables]: https://docs.travis-ci.com/user/environment-variables/
