@@ -3,6 +3,12 @@ sudo: false
 rvm:
   - 2.1
 
+cache:
+  directories:
+    - vendor/bundle
+    - node_modules
+    - bower_components
+
 env:
   global:
     - TZ=America/Chicago
