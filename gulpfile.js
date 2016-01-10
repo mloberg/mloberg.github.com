@@ -110,7 +110,10 @@ gulp.task('fonts', function() {
 
 // Build the Jekyll site
 gulp.task('build', function(done) {
-  var proc = spawn("bundle", ["exec", "jekyll", "build"]);
+  var jekyllArgs = __.filter(process.argv, function(arg) {
+      return '-' === arg.charAt(0)
+  });
+  var proc = spawn("bundle", ["exec", "jekyll", "build"].concat(jekyllArgs));
   proc.on("exit", done);
 });
 
