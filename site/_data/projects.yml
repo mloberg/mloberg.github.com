@@ -7,6 +7,22 @@ own:
     description: Create a viral launching soon page that integrates with MailChimp
     url: "https://github.com/mloberg/Launch-Page"
 
+  - name: Web Starter Kit
+    description: Starting point for a static site. Comes with Sass and CoffeeScript support.
+    url: "https://github.com/mloberg/web-starter-kit"
+
+  - name: ConsoleBundle
+    description: Interact with Symfony's container through the command line.
+    url: "https://github.com/mloberg/ConsoleBundle"
+
+  - name: FileLoader
+    description: File loader with built in caching
+    url: "https://github.com/mloberg/FileLoader"
+
+  - name: Babl
+    description: Toolkit for working with translations in Symfony
+    url: "https://github.com/mloberg/Babl"
+
   - name: Concert Hall
     description: VM for PHP development
     url: "https://github.com/Concert-Hall/concert-hall"
@@ -15,21 +31,9 @@ own:
     description: Jekyll framework for API documentation
     url: "https://github.com/JekyllPress/Driftwood"
 
-  - name: ConsoleBundle
-    description: Interact with Symfony's container through the command line.
-    url: "https://github.com/mloberg/ConsoleBundle"
-
   - name: PHPObjectMapper
     description: Map objects to objects in PHP using annotations
     url: "https://github.com/mloberg/PHPObjectMapper"
-
-  - name: FileLoader
-    description: File loader with built in caching
-    url: "https://github.com/mloberg/FileLoader"
-
-  - name: Web Starter Kit
-    description: Starting point for a static site. Comes with Sass and CoffeeScript support.
-    url: "https://github.com/mloberg/web-starter-kit"
 
   - name: Simple Wiki
     description: Database-less wiki rendered from Markdown
