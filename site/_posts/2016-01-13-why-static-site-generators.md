@@ -5,8 +5,8 @@ layout: blog
 This is a 3 part series about static site generators and [Jekyll][jekyll] in
 specific.
 
-1. Why Static Site Generators (You are here)
-2. Getting Starting With Jekyll (_coming soon_)
+1. Why Static Site Generators (_You are here_)
+2. [Getting Starting With Jekyll]({% post_url 2016-01-27-getting-started-with-jekyll %})
 3. Advance Jekyll (_coming soon_)
 
 What the hell is a static site generator? First we need to understand how most
@@ -118,8 +118,9 @@ to do the same thing assuming your site code is in a Github repo.
 
 ## Making The Switch
 
-I hope I've at least interested you in static site generators. In the next post
-I'm going to walk through setting up a Jekyll site and Github Pages.
+I hope I've at least interested you in static site generators. In the
+[next post]({% post_url 2016-01-27-getting-started-with-jekyll %}) I'm going to
+walk through setting up a Jekyll site and Github Pages.
 
 [jekyll]: http://jekyllrb.com/
 [gh-pages]: https://pages.github.com/
