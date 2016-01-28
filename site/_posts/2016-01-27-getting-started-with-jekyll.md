@@ -36,7 +36,7 @@ To look at what's in a Jekyll site, we are going to create a new site using the
     $ cd myblog
     $ jekyll serve
 
-This will start a development server at [http://localhost:4000](http://localhost:4000).
+This will start a development server at `http://localhost:4000`.
 
 ### Directory Structure
 
