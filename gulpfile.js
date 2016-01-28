@@ -91,10 +91,10 @@ gulp.task('styles:vendor', function() {
 // Optimize images
 gulp.task('images', function() {
   return gulp.src('site/_assets/images/**/*')
-    .pipe($.cache($.imagemin({
+    .pipe($.imagemin({
       progressive: true,
       interlaced: true
-    })))
+    }))
     .pipe(gulp.dest('site/assets/images'))
     .pipe($.size({title: 'images'}));
 });
@@ -113,7 +113,9 @@ gulp.task('build', function(done) {
   var jekyllArgs = __.filter(process.argv, function(arg) {
       return '-' === arg.charAt(0)
   });
+
   var proc = spawn("bundle", ["exec", "jekyll", "build"].concat(jekyllArgs));
+
   proc.on("exit", done);
 });
 
