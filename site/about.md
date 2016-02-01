@@ -10,7 +10,7 @@ I'm Matt, a developer, nerd, musician, vegetarian, and bad joke connoisseur.
 I live in Minneapolis, which is pretty awesome most of the year if you can
 survive the snow.
 
-I work as a software engineer at [The Nerdery](http://www.nerdery.com/people#rb)
+I work as a software engineer at [The Nerdery](https://nerdery.com/)
 doing PHP. The Nerdery is an awesome place and if you need any software design
 or development, [contact them](http://nerdery.com/contact).
 
