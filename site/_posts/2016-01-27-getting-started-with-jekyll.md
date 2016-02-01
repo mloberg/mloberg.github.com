@@ -216,6 +216,10 @@ the idea of a static site. In the next post, I'm going to go through some more
 advance Jekyll features and hopefully show you that Jekyll is a lot more
 powerful than you think.
 
+**Update 2/1/16**: GitHub Pages just upgraded to Jekyll 3.0 along with a few
+other changes to the service. You can view their [blog post][ghpages-jekyll3]
+for more information.
+
 [jekyll]: http://jekyllrb.com/
 [docs]: http://jekyllrb.com/docs/home/
 [requirements]: http://jekyllrb.com/docs/installation/#requirements
@@ -236,4 +240,5 @@ powerful than you think.
 [ghpages-plugins]: https://pages.github.com/versions/
 [ghpages-cname]: https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/
 [ghpages-arecord]: https://help.github.com/articles/tips-for-configuring-an-a-record-with-your-dns-provider/
+[ghpages-jekyll3]: https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 [babl]: https://github.com/mloberg/Babl/tree/gh-pages
