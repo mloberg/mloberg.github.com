@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-set -e
-
-bundle install --path vendor --standalone
-npm install
-./node_modules/.bin/bower install
-
-echo "Please install gulp if you haven't already"
-echo "  [sudo] npm install -g gulp"
