@@ -15,6 +15,10 @@ group :assets do
   gem 'image_optim_pack'
 end
 
+group :production do
+  gem 'htmlcompressor'
+end
+
 group :development do
   gem 'html-proofer'
   gem 's3_website'
