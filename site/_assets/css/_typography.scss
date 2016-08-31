@@ -1,0 +1,13 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+@import url(http://fonts.googleapis.com/css?family=Average+Sans);
+
+body {
+  font-family: 'Average Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fjalla One', sans-serif;
+}

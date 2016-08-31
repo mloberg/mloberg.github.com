@@ -4,7 +4,7 @@ title: About
 ---
 <h2 class="text-center-xs">About</h2>
 
-<img class="center-block" src="{{ site.baseurl }}/assets/images/profile3.jpg" alt="Matthew Loberg">
+{% img profile3.jpg alt:'Matthew Loberg' class:'center-block' %}
 
 I'm Matt, a developer, nerd, musician, vegetarian, and bad joke connoisseur.
 I live in Minneapolis, which is pretty awesome most of the year if you can

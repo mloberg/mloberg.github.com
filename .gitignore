@@ -9,6 +9,7 @@
 
 .bundle
 .sass-cache
+.asset-cache
 .ruby-version
 .tmp
 node_modules
