@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-set -e
-
-./node_modules/.bin/gulp dist || exit 1
-bundle exec htmlproof dist

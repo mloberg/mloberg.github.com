@@ -3,7 +3,7 @@ s3_secret: <%= ENV['S3_SECRET'] %>
 s3_bucket: <%= ENV['S3_BUCKET'] %>
 cloudfront_distribution_id: <%= ENV['CF_ID'] %>
 
-site: dist
+site: build
 
 max_age:
   "assets/*": 6000

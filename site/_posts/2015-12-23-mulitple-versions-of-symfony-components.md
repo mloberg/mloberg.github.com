@@ -86,7 +86,7 @@ For each one of the `env` values and PHP version we are testing against, Travis
 will create a build. This is our build Matrix. Every time we push, it will
 create our Matrix and look something like this.
 
-![Travis builds](/assets/images/travis-builds.png)
+ {% img travis-builds.png alt:'Travis builds' %}
 
 Our Matrix can also be customized manually using the `matrix` option in our
 Travis config. We are going to do that to tell Travis not to create a build for

@@ -8,11 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
 
-    <!-- build:css {{ site.baseurl }}/assets/styles/main.min.css -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/main.css">
-    <!-- endbuild -->
+    {% css main %}
 
-    <link rel="shortcut icon" href="{{ site.baseurl }}/assets/images/favicon.ico" />
+    <link rel="shortcut icon" href="{{ 'favicon.ico'|asset_path }}" />
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ site.baseurl }}/feed.xml" />
   </head>
   <body>
@@ -28,14 +26,14 @@
         </div>
       </div>
 
-      <div class="hero" style="background-image: url({{ site.baseurl }}/assets/images/{{ page.header }});"></div>
+      <div class="hero" style="background-image: url({{ page.header|asset_path }});"></div>
 
       <div class="container content">
         {{ content }}
       </div>
     </div>
 
-    <div class="footer" style="background-image: url({{ site.baseurl }}/assets/images/{{ page.header }});">
+    <div class="footer" style="background-image: url({{ page.header|asset_path }});">
       <div class="container">
         <div class="col-sm-7">
           <p class="copyright">Copyright &copy; {{ site.time | date: '%Y' }} Matthew Loberg</p>
