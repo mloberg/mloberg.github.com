@@ -27,7 +27,6 @@ All other directories and files are MIT Licensed, unless otherwise specified in 
 
 # TODO
 
-* BrowserSync/LiveReload
 * Minify JS/CSS in HTML
 * CSSO (?)
 * UnCSS (?)
