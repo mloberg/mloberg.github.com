@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/mloberg/jekyll-compose.git
+  revision: 696a74c200fcb1f502d1c4b4f3e988002d8e4e8d
+  branch: feature/site-source-fix
+  specs:
+    jekyll-compose (0.4.1)
+      jekyll (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -131,5 +139,6 @@ DEPENDENCIES
   jekyll
   jekyll-assets
   jekyll-browsersync
+  jekyll-compose!
   jekyll-sitemap
   s3_website
