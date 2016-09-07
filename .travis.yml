@@ -9,7 +9,8 @@ cache:
 
 env:
   global:
-    - TZ=America/Chicago
+    - TZ=America/Chicago # Makes sure posts are generated with the right timestamp
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
     - JEKYLL_ENV=production
     - secure: wiulWfzfXHy5leCVG46LtZ11kwKOxE3nKAClOLITw4kxM4wtrt+PPsOyf6NdLk0bX1tclRlp2yuHNfJdbARxDAozgbSuXYNYLdV9Upg4FkqYqJ0KOtlQ9snyaHiqDYWhWdT8N5qh/skV21JhbI37LLP38/G6v/FpQ5DeRvV1qAg=
     - secure: V716sAdlKESMrWOioq+ICI6k6Mcte7DFUMgqf90p7pkIDm5N8iz/smy0gl00sEHWNq99nKVbBJ8TAimnNOjWnLioVrAzK559fLnKzphlIb0zt8/C5YKD80L+/SNZWVxSC9TjDUFpVh/q0PzyBLUKVGvvbgUDNeMCacfV9r5uHA0=
