@@ -2,8 +2,9 @@
 title: Matthew Loberg
 email: m@mloberg.com
 description: "Web developer from Minnesota"
-baseurl: ""
 url: "http://mlo.io"
+baseurl: ""
+author: Matthew Loberg
 
 defaults:
   -
@@ -19,6 +20,8 @@ destination: build
 permalink: /blog/:year/:month/:day/:title.html
 markdown: kramdown
 highlighter: rouge
+
+# Plugin settings
 
 assets:
   autoprefixer:

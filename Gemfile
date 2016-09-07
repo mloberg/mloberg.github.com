@@ -5,6 +5,8 @@ gem 'jekyll'
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'jekyll-assets'
+  gem 'jekyll-feed'
+  gem 'jekyll-redirect-from'
   gem 'jekyll-browsersync'
   gem 'jekyll-compose', :git => 'https://github.com/mloberg/jekyll-compose.git', :branch => 'feature/site-source-fix'
 end
