@@ -22,7 +22,7 @@ script:
   - bundle exec jekyll build
   - bundle exec htmlproof build
 
-after_script: bundle exec s3_website push
+after_success: bundle exec s3_website push
 
 branches:
   only:
