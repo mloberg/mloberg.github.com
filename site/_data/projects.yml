@@ -3,6 +3,10 @@ own:
     description: Manage Python with Boxen and pyenv
     url: "https://github.com/mloberg/puppet-python"
 
+  - name: Jekyll Browsersync
+    description: Add live reloading to your Jekyll development
+    url: "https://github.com/mloberg/jekyll-browsersync"
+
   - name: Launch Page
     description: Create a viral launching soon page that integrates with MailChimp
     url: "https://github.com/mloberg/Launch-Page"
@@ -55,3 +59,7 @@ contribute:
   - name: Retrofit
     description: REST client creation in PHP
     url: "https://github.com/tebru/retrofit-php"
+
+  - name: Jekyll::Compose
+    description: Streamline your writing in Jekyll
+    url: "https://github.com/jekyll/jekyll-compose"
