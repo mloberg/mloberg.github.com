@@ -7,11 +7,10 @@
     <meta name="description" content="{% if page.description %}{{page.description}}{% else %}{{ site.description }}{% endif %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
-
     {% css main %}
-
     <link rel="shortcut icon" href="{{ 'favicon.ico'|asset_path }}" />
-    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ site.baseurl }}/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ site.baseurl }}/rss.xml" />
+    {% feed_meta %}
   </head>
   <body>
     <div class="wrap">
@@ -36,7 +35,7 @@
     <div class="footer" style="background-image: url({{ page.header|asset_path }});">
       <div class="container">
         <div class="col-sm-7">
-          <p class="copyright">Copyright &copy; {{ site.time | date: '%Y' }} Matthew Loberg</p>
+          <p class="copyright">Copyright &copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
         </div>
         <div class="col-sm-5">
           <p class="text-center">

@@ -1,4 +1,7 @@
 ---
+redirect_from:
+  - /blog.html
+  - /blog/
 ---
 <div class="row">
   <div class="col-sm-12">
@@ -12,6 +15,9 @@
       {% endfor %}
     </ul>
 
-    <p class="pull-right">subscribe <a href="{{ site.baseurl }}/feed.xml">via RSS</a></p>
+    <p class="pull-right">
+      subscribe <a href="{{ site.baseurl }}/rss.xml">via RSS</a><br>
+      subscribe <a href="{{ site.baseurl }}/feed.xml">via Atom</a>
+    </p>
   </div>
 </div>
