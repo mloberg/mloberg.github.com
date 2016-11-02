@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: "Quick Tip: Protect Important EC2 Instances"
 description: Accidentally deleted your production database instance on EC2? Prevent that from happening again.
 ---

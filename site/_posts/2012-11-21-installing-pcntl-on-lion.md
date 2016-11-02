@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: Installing pcntl On Lion
 description: Install the pcntl PHP module on OS X Lion.
 ---

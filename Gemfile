@@ -1,11 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'jekyll'
+gem 'chronic'
 
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'jekyll-assets'
   gem 'jekyll-feed'
+  gem 'jekyll-paginate'
   gem 'jekyll-redirect-from'
   gem 'jekyll-browsersync'
   gem 'jekyll-compose', :git => 'https://github.com/mloberg/jekyll-compose.git', :branch => 'feature/site-source-fix'
@@ -17,10 +19,7 @@ group :assets do
   gem 'font-awesome-sass'
   gem 'image_optim'
   gem 'image_optim_pack'
-end
-
-group :production do
-  gem 'htmlcompressor'
+  gem 'uglifier'
 end
 
 group :development do

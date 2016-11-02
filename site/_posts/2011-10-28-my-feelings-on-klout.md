@@ -1,5 +1,6 @@
 ---
-layout: blog
+layout: post
+title: My Feelings On Klout
 ---
 After the overwhelming amount of buzz about Klout, I finally signed up for Klout the other day, and I have some issues with it.
 

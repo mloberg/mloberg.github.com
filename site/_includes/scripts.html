@@ -1,0 +1,29 @@
+<!--[if gt IE 8]><!---->
+<script>loadJSDeferred('{% asset_path lanyon.js %}')</script>
+
+<!-- Web fonts -->
+<script>
+WebFontConfig = {
+  google: {
+    families: ['PT+Serif:400,400italic,700', 'PT+Sans:400']
+  },
+  custom: {
+    families: ['fontawesome'],
+    urls: ['{% asset_path icons.css %}']
+  },
+  classes: false,
+  events: false
+};
+</script>
+<script>loadJSDeferred('https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js')</script>
+
+<!-- Google Analytics -->
+{% if site.google_analytics_id %}
+  <script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', '{{ site.google_analytics_id }}', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <script>loadJSDeferred('https://www.google-analytics.com/analytics.js')</script>
+{% endif %}
+<!--<![endif]-->

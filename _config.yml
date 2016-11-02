@@ -1,10 +1,36 @@
 # Site settings
 title: Matthew Loberg
-email: m@mloberg.com
-description: "Web developer from Minnesota"
+tagline: Software Engineer
+description: "Software Engineer from Minnesota"
 url: "http://mlo.io"
 baseurl: ""
-author: Matthew Loberg
+
+author:
+  name: Matthew Loberg
+  email: m@mloberg.com
+
+  photo: ~
+  about: ~
+
+  social:
+    - name: Twitter
+      icon: twitter
+      url: "https://twitter.com/mloberg"
+    - name: Github
+      icon: github
+      url: "https://github.com/mloberg"
+    # google:          _number_
+    # youtube:         _string___string___string_
+    # vimeo:           _username_
+    # soundcloud:      _username_
+    # lastfm:          _username_
+    # instagram:       _username_
+    # flickr:          _string_@_string_
+    # stackoverflow:   _number_/_username_
+    # npm:             _username_
+    # hackernews:      _username_
+    # linkedin:        _firstname_-_lastname_-_string_
+    # paypal:          _username_
 
 defaults:
   -
@@ -12,7 +38,22 @@ defaults:
       path: ""
     values:
       layout: default
-      header: background.jpg
+
+navigation:
+  - title: Home
+    url: /
+    relative: true
+  - title: About
+    url: /about
+    relative: true
+  - title: Projects
+    url: /projects
+    relative: true
+  - title: Archive
+    url: /archive
+    relative: true
+
+google_analytics_id: UA-9585810-14
 
 # Build settings
 source: site
@@ -22,6 +63,15 @@ markdown: kramdown
 highlighter: rouge
 
 # Plugin settings
+compress_html:
+  comments: ["<!-- ", " -->"]
+  clippings: all
+  endings: all
+  ignore:
+    envs: [development]
+
+paginate: 5
+paginate_path: "/blog/page:num/"
 
 assets:
   autoprefixer:

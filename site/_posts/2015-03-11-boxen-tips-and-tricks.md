@@ -1,8 +1,7 @@
 ---
-layout: blog
+layout: post
 title: Boxen Tips and Tricks
 ---
-
 {% img automate-all-the-things.jpg alt:'Automate all the things!' class:'center-block' %}
 
 A while back I wrote about [The Perfect Dev Setup]({{ site.baseurl }}/blog/2012/02/02/perfect-dev-setup-lion.html) that walked through what I considered to be (at the time), the perfect development setup. Part of the reason I wrote a post about it so that I could repeat it on any machine that I used, but it would still take time and copy/pasting commands. Surely there must be a better way?

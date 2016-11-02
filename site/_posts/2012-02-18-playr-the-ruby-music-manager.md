@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: Playr - The Ruby Music Manager
 ---
 A while back I started to learn Ruby. When I learn something I have to be actively working with it. That's why I started Playr. The goal was to create a webapp that could manage music. After a month I got a basic webapp that you could upload music to and queue up music, and after a little more work, I actually got it to play music.

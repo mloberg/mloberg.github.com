@@ -1,5 +1,6 @@
 ---
-layout: blog
+layout: post
+title: Using Git Commit Messages As Your Changelog
 ---
 I love git. It's a powerful tool that I keep discovering new commands for. Pair git with GitHub and you've got a near perfect way to manage code.
 

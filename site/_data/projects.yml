@@ -60,6 +60,10 @@ contribute:
     description: REST client creation in PHP
     url: "https://github.com/tebru/retrofit-php"
 
-  - name: Jekyll::Compose
+  - name: "Jekyll::Compose"
     description: Streamline your writing in Jekyll
     url: "https://github.com/jekyll/jekyll-compose"
+
+  - name: Jekyll 3 Assets
+    description: Asset pipeline for Jekyll 3
+    url: "https://github.com/jekyll/jekyll-assets"
