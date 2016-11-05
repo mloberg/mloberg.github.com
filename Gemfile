@@ -15,7 +15,6 @@ end
 
 group :assets do
   gem 'autoprefixer-rails'
-  gem 'bootstrap-sass'
   gem 'font-awesome-sass'
   gem 'image_optim'
   gem 'image_optim_pack'

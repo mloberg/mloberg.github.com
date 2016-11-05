@@ -21,4 +21,3 @@ Jekyll site for [mlo.io](http://mlo.io)
 * Minify JS/CSS in HTML
 * CSSO (?)
 * UnCSS (?)
-* favicon
