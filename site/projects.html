@@ -2,11 +2,9 @@
 layout: page
 title: Projects
 ---
-<h2 class="text-center-xs">Projects</h2>
-
 <p>These are a couple of my open source projects. I don't always keep this list up to date, so check out <a href="https://github.com/mloberg">GitHub</a> for all my projects.</p>
 
-<ul>
+<ul class="projects">
   {% for item in site.data.projects.own %}
     <li><a href="{{ item.url }}">{{ item.name }}</a> {{ item.description }}</li>
   {% endfor %}
@@ -14,7 +12,7 @@ title: Projects
 
 <p>I've also contributed to some amazing projects.</p>
 
-<ul>
+<ul class="projects">
   {% for item in site.data.projects.contribute %}
     <li><a href="{{ item.url }}">{{ item.name }}</a> {{ item.description }}</li>
   {% endfor %}

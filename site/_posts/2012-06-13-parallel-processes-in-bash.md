@@ -1,5 +1,6 @@
 ---
-layout: blog
+layout: post
+title: Parallel Processes In Bash
 ---
 I wrote a script to speed up MySQL imports. I'll write more on this later, but for now I want to focus on background and parallel processes in Bash. Part of the script loads tables at the same time, trying to speed up the import. You can have multiple processes in Bash by sending them to the background using the `&` character.
 

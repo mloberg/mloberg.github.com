@@ -1,5 +1,6 @@
 ---
-layout: blog
+layout: post
+title: Securing Your Passwords
 ---
 Today TutsPlus Premium got hacked. They used a third party plugin that stored passwords in plaintext. This is ironic, because NetTuts+, a sibling company posts about [security](http://net.tutsplus.com/tutorials/php/understanding-hash-functions-and-keeping-passwords-safe/) once in a while. It's also very frustrating for users (both present and past) because they have to change their password not only on Tuts+, but other sites as well.
 
@@ -124,4 +125,3 @@ If you find that the costs you've been using are either too fast or too slow you
 #### So Why Aren't You Using bcrypt?
 
 As you can see, bcrypt is both secure and easy to use. You have no good reason to continue storing passwords in plaintext.
-

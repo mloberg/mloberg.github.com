@@ -6,6 +6,7 @@ rvm:
 cache:
   directories:
     - vendor
+    - node_modules
 
 env:
   global:
@@ -19,9 +20,17 @@ env:
 
 install: bundle install --jobs=3 --retry=3 --path vendor --standalone --deployment
 
+before_script:
+  - nvm install 6.6.0
+  - nvm use 6.6.0
+  - npm install
+  - bundle exec jekyll serve &
+  - sleep 5
+
 script:
-  - bundle exec jekyll build
+  - bundle exec jekyll doctor
   - bundle exec htmlproof build
+  - npm test
 
 after_success: bundle exec s3_website push
 

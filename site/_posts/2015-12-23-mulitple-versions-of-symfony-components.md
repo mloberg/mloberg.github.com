@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: Supporting Multiple Versions of Symfony Components
 ---
 Symfony recently released version 3.0 of their components and framework. I use
