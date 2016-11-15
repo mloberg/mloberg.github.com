@@ -12,7 +12,7 @@ casper.test.begin('Homepage', 7, function suite(test) {
     this.click('.sidebar-toggle');
   }).then(function() {
     test.assertVisible('#sidebar', 'Sidebar should be visible after clicking hamburger.');
-    test.assertElementCount('#sidebar .social ul li', 2);
+    test.assertElementCount('#sidebar .social ul li', 3);
   }).run(function() {
     test.done();
   });

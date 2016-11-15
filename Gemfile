@@ -7,10 +7,11 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'jekyll-assets'
   gem 'jekyll-feed'
+  gem 'jekyll-seo-tag'
   gem 'jekyll-paginate'
   gem 'jekyll-redirect-from'
   gem 'jekyll-browsersync'
-  gem 'jekyll-compose', :git => 'https://github.com/mloberg/jekyll-compose.git', :branch => 'feature/site-source-fix'
+  gem 'jekyll-compose'
 end
 
 group :assets do

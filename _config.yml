@@ -8,9 +8,7 @@ baseurl: ""
 author:
   name: Matthew Loberg
   email: m@mloberg.com
-
-  photo: ~
-  about: ~
+  twitter: mloberg
 
   social:
     - name: Twitter
@@ -19,18 +17,29 @@ author:
     - name: Github
       icon: github
       url: "https://github.com/mloberg"
+    - name: Instagram
+      icon: instagram
+      url: "https://www.instagram.com/mloberg/"
     # google:          _number_
     # youtube:         _string___string___string_
     # vimeo:           _username_
     # soundcloud:      _username_
     # lastfm:          _username_
-    # instagram:       _username_
     # flickr:          _string_@_string_
     # stackoverflow:   _number_/_username_
     # npm:             _username_
     # hackernews:      _username_
     # linkedin:        _firstname_-_lastname_-_string_
     # paypal:          _username_
+
+twitter:
+  username: mloberg
+
+social:
+   name: Matthew Loberg
+   links:
+     - https://twitter.com/mloberg
+     - https://github.com/mloberg
 
 defaults:
   -
