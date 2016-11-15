@@ -6,15 +6,15 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} &middot; {{ site.tagline }}
-    {% else %}
-      {{ page.title }} &middot; {{ site.title }}
-    {% endif %}
-  </title>
-
   {% seo title=false %}
+
+  {% if page.title == "Home" %}
+	{% assign title = site.title | append: " &middot; " | append: site.tagline %}
+  {% else %}
+    {% assign title = page.title | append: " &middot; " | append: site.title %}
+  {% endif %}
+
+  <title>{{ title }}</title>
 
   {% css main %}
 

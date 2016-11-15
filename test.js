@@ -25,7 +25,7 @@ casper.test.begin('We can force the sidebar open with a query parameter', 3, fun
   }).then(function() {
     test.assertTitle('About · Matthew Loberg');
     test.assertResourceExists(function(resource) {
-      return resource.url.match('profile3.jpg');
+      return resource.url.match(/profile3(?:-\w+)?.jpg/);
     }, 'Profile picture is loaded.');
   }).run(function() {
     test.done();
