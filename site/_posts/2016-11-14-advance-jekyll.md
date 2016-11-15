@@ -8,7 +8,7 @@ This is part two in a three part series on static site generators.
 2. [Getting Starting With Jekyll]({% post_url 2016-01-27-getting-started-with-jekyll %})
 3. Advance Jekyll (_You are here_)
 
-In the previous post I talked about [Jekyll](jekyll), a popular static site
+In the previous post I talked about [Jekyll][jekyll], a popular static site
 generator written in Ruby. In fact, it's what this site has been using for a
 while. During that time, I've picked up some tips and tricks that I want to
 share with you today.
@@ -43,14 +43,14 @@ platform that you have control over.
 
 Because Jekyll outputs static files, the options for where you can deploy your
 site are endless. You could manually upload the files to a web server you own or
-even automate that process with a tool like [rsync](rsync).
+even automate that process with a tool like [rsync][rsync].
 
-This site is hosted on [Amazon S3](awsS3). It was a product I was already using
+This site is hosted on [Amazon S3][awsS3]. It was a product I was already using
 and I don't have to worry about security, updates, or any of the other things
 you have to with a normal web server. They have
-[static website hosting](s3WebsiteHosting) built in, but it can be a bit
+[static website hosting][s3WebsiteHosting] built in, but it can be a bit
 confusing to get setup. Instead, I recommend using a tool called
-[s3_website](s3_website). Not only does it manage S3 static hosting
+[s3_website][s3_website]. Not only does it manage S3 static hosting
 configuration, it can upload your site for you (and only the files that changed),
 use AWS CloudFront to distribute your website, manage HTTP cache control and
 gzipping, and much more. Obviously you don't want to commit your AWS access or
@@ -61,7 +61,7 @@ without those values.
 
 As you dive deeper into customizing and streamlining your Jekyll site, you'll
 find yourself using lots of different tools. Using a dependency management tool
-like [Bundler](bundler) can help easy that and provide consistency between any
+like [Bundler][bundler] can help easy that and provide consistency between any
 different environments you may be using.
 
 To get you started, here is a starting `Gemfile` for Jekyll.
@@ -86,7 +86,7 @@ of dependencies.
 ## Stop Excluding Files
 
 We've added two more files to our directory that we probably don't want to be a
-part of our final site. If we add more tools like [Gulp](gulp) or [Yarn](yarn),
+part of our final site. If we add more tools like [Gulp][gulp] or [Yarn][yarn],
 we would need to add more files to exclude from our site. Jekyll allows you to
 define the source of your site. By default this is the current directory (`.`),
 we can change that with the `source` option. Either on the command line or even
@@ -104,9 +104,9 @@ you won't have to worry about extra files getting into your build.
 Now that we have all the boring stuff out of the way, we can start getting to
 the cool parts. Arguably one of the most powerful features of Jekyll is it's
 plugin system. There are plugins out there to
-[generate sitemaps](jekyll-sitemap), [RSS feeds](jekyll-feed),
-[add SEO tags](jekyll-seo), and more. There's even support for some plugins on
-[GitHub Pages](pages-gem).
+[generate sitemaps][jekyll-sitemap], [RSS feeds][jekyll-feed],
+[add SEO tags][jekyll-seo], and more. There's even support for some plugins on
+[GitHub Pages][pages-gem].
 
 There are a couple different ways to install plugins in Jekyll. The first is to
 list it in your `_config.yml`.
@@ -127,11 +127,11 @@ group :jekyll_plugins do
 end
 {% endhighlight %}
 
-You can find out all about Jekyll plugins at their [documentation](plugins).
+You can find out all about Jekyll plugins at their [documentation][plugins].
 
 ## Custom Liquid Tags
 
-[Liquid](liquid) is a pretty powerful templating language. With Jekyll we can
+[Liquid][liquid] is a pretty powerful templating language. With Jekyll we can
 build on top of that and add custom tags. This is done by as a Jekyll plugin,
 all we need is a little Ruby.
 
@@ -194,7 +194,7 @@ luckily that's all changed and adding Sass to your site is easy. Concatenating
 CSS/JS, optimizing images, and adding in third-party assets aren't as easy. If
 Jekyll out of the box works for you, that's great. If you need something a little
 bit more advance, read on. I'm going to go over two different options.
-[Gulp](gulp) or [Jekyll Assets](jekyll-assets).
+[Gulp][gulp] or [Jekyll Assets][jekyll-assets].
 
 ### Gulp
 
@@ -202,7 +202,7 @@ Gulp is a build system for JavaScript. I've personally used it for other
 projects and I love it. I'm not a front-end developer by any means, but it's
 really easy to use. Unfortunately, there's a million different ways to configure
 your build. If you're looking for a place to start, I would check out
-[generator-jekyllized](generator-jekyllized).
+[generator-jekyllized][generator-jekyllized].
 
 I was never able to get a build pipeline that I liked in Gulp, so I don't have
 much insight here, but there are tons of sites out there that have done this.
@@ -210,7 +210,7 @@ much insight here, but there are tons of sites out there that have done this.
 ### Jekyll Assets
 
 I was never able to get a build pipeline in Gulp that I liked, so I decided to
-go with a pure Ruby option of [Jekyll 3 Assets](jekyll-assets). If you're not
+go with a pure Ruby option of [Jekyll 3 Assets][jekyll-assets]. If you're not
 comfortable with NodeJS or Gulp, but need something better than what Jekyll
 provides out of the box, this might be a good solution for you. Jekyll Assets is
 an asset pipeline for Jekyll 3 using Sprockets, the same system Rails uses. With
@@ -229,7 +229,7 @@ the `doctor` command.
     $ jekyll doctor
 
 We should also test that all the links in our site are going to resolve to a
-working page. To do this, we use the [html-proofer](html-proofer) gem. This will
+working page. To do this, we use the [html-proofer][html-proofer] gem. This will
 scan all links in HTML pages and make sure they return a real page. I've had
 this catch links that were broken on old posts.
 
@@ -238,8 +238,8 @@ this catch links that were broken on old posts.
 
 For most sites, this is probably sufficient. Let's say you have a site that uses
 a lot of custom plugins or logic in your templates that you want to test. We
-could use a tool like [Selenium](selenium) or a lighter tool like
-[PhantomJS](phantomjs). I used [CasperJS](casperjs) for this site. It offers
+could use a tool like [Selenium][selenium] or a lighter tool like
+[PhantomJS][phantomjs]. I used [CasperJS][casperjs] for this site. It offers
 some really useful tools specific for testing. Here is an example test:
 
 {% highlight javascript %}
@@ -262,10 +262,10 @@ casper.test.begin('Homepage', 7, function suite(test) {
 });
 {% endhighlight %}
 
-You can check out the full test for this site on [GitHub](test-script).
+You can check out the full test for this site on [GitHub][test-script].
 
 Additionally you could do some CSS regression testing using a tool like
-[BackstopJS](backstopjs), [Wraith](wraith), or [PhantomCSS](phantomcss).
+[BackstopJS][backstopjs], [Wraith][wraith], or [PhantomCSS][phantomcss].
 
 ## Automated Deployments
 
@@ -276,7 +276,7 @@ change with GitHub's interface and have it automatically build.
 
 Or can I?
 
-With a tool such as [TravisCI](travisci) it is possible to have automatic
+With a tool such as [TravisCI][travisci] it is possible to have automatic
 deploys on push. First let's create a `.travis.yml` that just builds and tests
 our site.
 
@@ -306,11 +306,11 @@ script:
 Here we're using a Ruby 2.1 Travis container to build our site. I've set a
 custom install script that installs gems to `vendor` and then caches that
 directory to speed up the installation process. For our test script, we build
-the site and then run [html-proofer](html-proofer) against the build.
+the site and then run [html-proofer][html-proofer] against the build.
 
 Travis has an `after_script` option that will run after a successful build. We
 don't want to expose our AWS access and secret key, so we need to add them as
-[encrypted variables](encrypted-variables). Then change our `s3_website.yml` to
+[encrypted variables][encrypted-variables]. Then change our `s3_website.yml` to
 load those from the environment instead.
 
 {% highlight yaml %}
@@ -369,6 +369,7 @@ please share them in the comments.
 [awsS3]: https://aws.amazon.com/s3/
 [rsync]: https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-on-a-vps
 [s3WebsiteHosting]: http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html
+[s3_website]: https://github.com/laurilehmijoki/s3_website
 [bundler]: http://bundler.io/
 [gulp]: http://gulpjs.com/
 [yarn]: https://yarnpkg.com/
