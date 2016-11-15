@@ -25,7 +25,7 @@ before_script:
   - nvm use 6.6.0
   - npm install
   - bundle exec jekyll serve &
-  - sleep 5
+  - sleep 30
 
 script:
   - bundle exec jekyll doctor
