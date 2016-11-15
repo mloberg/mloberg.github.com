@@ -53,13 +53,13 @@ navigation:
     url: /
     relative: true
   - title: About
-    url: /about
+    url: /about.html
     relative: true
   - title: Projects
-    url: /projects
+    url: /projects.html
     relative: true
   - title: Archive
-    url: /archive
+    url: /archive.html
     relative: true
 
 google_analytics_id: UA-9585810-14
