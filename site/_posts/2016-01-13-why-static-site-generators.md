@@ -7,7 +7,7 @@ specific.
 
 1. Why Static Site Generators (_You are here_)
 2. [Getting Starting With Jekyll]({% post_url 2016-01-27-getting-started-with-jekyll %})
-3. Advance Jekyll (_coming soon_)
+3. [Advance Jekyll]({% post_url 2016-11-14-advance-jekyll %})
 
 What the hell is a static site generator? First we need to understand how most
 web sites work. Most web sites you visit are dynamic sites, which means the
