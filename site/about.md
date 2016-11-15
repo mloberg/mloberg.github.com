@@ -37,7 +37,7 @@ In my free time I enjoy writing, recording, and playing [music](https://soundclo
 * Puppet & Chef
 * Git
 
-Check out a few of my [projects]({{ site.baseurl }}/projects.html) or my code on
+Check out a few of my [projects]({{ "projects.html" | relative_url }}) or my code on
 [Github](https://github.com/mloberg).
 
 ### Contact

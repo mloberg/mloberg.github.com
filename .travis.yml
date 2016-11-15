@@ -24,11 +24,13 @@ before_script:
   - nvm install 6.6.0
   - nvm use 6.6.0
   - npm install
-  - bundle exec jekyll serve --detach
+  - bundle exec jekyll build
+  - ./node_modules/.bin/http-server -a localhost -p 4000 build
+  - sleep 5
 
 script:
   - bundle exec jekyll doctor
-  - bundle exec htmlproof build
+  - bundle exec htmlproof --href-swap //mlo.io://localhost:4000 build
   - npm test
 
 after_success: bundle exec s3_website push

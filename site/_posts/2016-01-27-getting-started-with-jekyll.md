@@ -6,7 +6,7 @@ This is part two in a three part series on static site generators.
 
 1. [Why Static Site Generators]({% post_url 2016-01-13-why-static-site-generators %})
 2. Getting Starting With Jekyll (_You are here_)
-3. [Advance Jekyll]({% post_url 2016-11-14-advance-jekyll %})
+3. [Advance Jekyll]({% post_url 2016-11-15-advance-jekyll %})
 
 In the first post I talked about what static sites are and a little bit about
 static site generators. I talked a lot about [Jekyll][jekyll], which what we are
