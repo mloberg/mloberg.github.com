@@ -38,9 +38,10 @@ cloudfront_distribution_config:
 concurrency_level: 5
 
 redirects:
-  portfolio/index.html: projects.html
-  portfolio.html: projects.html
-  projects/index.html: projects.html
+  portfolio/index.html: https://github.com/mloberg
+  portfolio.html: https://github.com/mloberg
+  projects/index.html: https://github.com/mloberg
+  projects.html: https://github.com/mloberg
 
 # routing_rules:
 #   - condition:
