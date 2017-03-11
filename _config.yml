@@ -12,7 +12,7 @@ author:
 
   social:
     - name: Twitter
-      icon: twitter
+      icon: twitter-square
       url: "https://twitter.com/mloberg"
     - name: Github
       icon: github
@@ -35,12 +35,6 @@ author:
 twitter:
   username: mloberg
 
-social:
-   name: Matthew Loberg
-   links:
-     - https://twitter.com/mloberg
-     - https://github.com/mloberg
-
 defaults:
   -
     scope:
@@ -49,18 +43,12 @@ defaults:
       layout: default
 
 navigation:
-  - title: Home
-    url: /
-    relative: true
   - title: About
     url: /about.html
-    relative: true
-  - title: Projects
-    url: /projects.html
-    relative: true
+    internal: true
   - title: Archive
     url: /archive.html
-    relative: true
+    internal: true
 
 google_analytics_id: UA-9585810-14
 
@@ -71,19 +59,13 @@ permalink: /blog/:year/:month/:day/:title.html
 markdown: kramdown
 highlighter: rouge
 
-# Plugin settings
-compress_html:
-  comments: ["<!-- ", " -->"]
-  clippings: all
-  endings: all
-  ignore:
-    envs: [development]
-
 paginate: 5
 paginate_path: "/blog/page:num/"
 
-assets:
-  autoprefixer:
-    browsers:
-      - "last 2 versions"
-      - "IE > 9"
+jekyll-archives:
+  enabled:
+    - categories
+  layouts:
+    category: category
+  permalinks:
+    category: '/category/:name/'

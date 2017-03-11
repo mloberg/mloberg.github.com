@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Why Static Site Generators
+category: jekyll
 ---
 This is a 3 part series about static site generators and [Jekyll][jekyll] in
 specific.

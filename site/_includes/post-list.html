@@ -1,0 +1,25 @@
+<section class="post">
+  <header class="post-header">
+    <!-- {% img avatar.jpg class="post-avatar" alt="Matthew Loberg" width="48" height="48" %} -->
+
+    <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
+    <p class="post-meta">
+      Published {{ post.date | date_to_string }}
+      {% for category in post.categories %}
+        {% assign slug = category|url_encode %}
+        <a class="post-category post-category-{{ slug }}" href="{{ site.baseurl }}/category/{{ slug }}">{{ category }}</a>
+      {% endfor %}
+    </p>
+  </header>
+
+  <div class="post-description">
+    {% if post.description %}
+      <p>{{ post.description }}</p>
+    {% else %}
+      {{ post.excerpt }}
+    {% endif %}
+
+    <p><a href="{{ post.url }}">Continue reading</a></p>
+  </div>
+</section>

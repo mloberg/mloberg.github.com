@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting Started With Jekyll
+category: jekyll
 ---
 This is part two in a three part series on static site generators.
 

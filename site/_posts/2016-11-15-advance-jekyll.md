@@ -1,6 +1,10 @@
 ---
 layout: post
 title: Advance Jekyll
+category: jekyll
+description: >
+  Learn how to get the most out of your Jekyll site.
+  Add plugins, build assets, test, and automatically deploy your site like a boss.
 ---
 This is part two in a three part series on static site generators.
 
