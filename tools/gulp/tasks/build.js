@@ -6,6 +6,7 @@ gulp.task('build', function(done) {
     'clean',
     [
       'css',
+      'js',
       'images',
       'fonts',
     ],

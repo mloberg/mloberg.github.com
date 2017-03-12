@@ -30,6 +30,11 @@ module.exports = {
       },
     },
   },
+  js: {
+    src: assetsSrc + '/js/*.js',
+    dest: assetsDest + '/js',
+    watch: assetsSrc + '/js/**/*.js',
+  },
   images: {
     src: assetsSrc + '/images/*',
     dest: assetsDest + '/img',

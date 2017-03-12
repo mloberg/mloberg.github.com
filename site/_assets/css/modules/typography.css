@@ -2,6 +2,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
 }
 
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
 a {
   text-decoration: none;
   color: rgb(61, 146, 201);
