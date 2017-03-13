@@ -3,8 +3,9 @@ layout: post
 title: Advance Jekyll
 category: jekyll
 description: >
-  Learn how to get the most out of your Jekyll site.
-  Add plugins, build assets, test, and automatically deploy your site like a boss.
+  Bring your Jekyll site to the next level. Learn how to manage dependencies,
+  organize your site, write your own plugins, build assets, test your site, and
+  deploy changes automatically.
 ---
 This is part two in a three part series on static site generators.
 

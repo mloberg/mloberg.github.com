@@ -38,17 +38,26 @@
   background: #999;
   font-size: 80%;
 }
-.post-category-green {
+.post-category-jekyll {
   background: #5aba59; /* Green */
 }
-.post-category-blue {
+.post-category-devops {
   background: #4d85d1; /* Blue */
 }
 .post-category-symfony {
   background: #8156a7; /* Purple */
 }
-.post-category-jekyll {
+.post-category-security {
   background: #df2d4f; /* Red */
+}
+.post-category-js {
+  background: rgb(223, 117, 20); /* orange */
+}
+.post-category-ruby {
+  background: #8a6d3b; /* brown */
+}
+.post-category-php {
+  background: rgb(66, 184, 221); /* light blue */
 }
 
 .post-images {
