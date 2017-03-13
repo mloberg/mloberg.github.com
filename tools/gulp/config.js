@@ -5,7 +5,6 @@ var assetsSrc = src + '/_assets';
 var assetsDest = src + '/assets';
 
 module.exports = {
-  env: process.env.JEKYLL_ENV || "development",
   css: {
     src: assetsSrc + '/css/*.css',
     dest: assetsDest + '/css',

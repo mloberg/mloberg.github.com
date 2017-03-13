@@ -7,7 +7,7 @@ var mqpacker = require('css-mqpacker');
 var cssnano = require('cssnano');
 var browserSync = require('browser-sync');
 var config = require('../config').css;
-var env = require('../config').env;
+var env = require('../utilities/env');
 
 gulp.task('css', function() {
   browserSync.notify('Rebuilding CSS&hellip;');
@@ -19,7 +19,7 @@ gulp.task('css', function() {
     mqpacker(config.processors.mqpacker),
   ];
 
-  if ('production' === env) {
+  if (env.prod()) {
     plugins.push(cssnano());
   }
 
