@@ -6,7 +6,7 @@ WebFont.load({
   },
   custom: {
     families: ['fontawesome'],
-    urls: [document.currentScript.src.replace('js/main.js', 'css/icons.css')],
+    urls: ['https://use.fontawesome.com/3236ff4b0c.css'],
   },
   classes: false,
   events: false,
