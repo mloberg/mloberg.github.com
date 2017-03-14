@@ -30,8 +30,8 @@ before_script:
 
 script:
   - bundle exec jekyll doctor
-  - bundle exec htmlproof --href-swap //mlo.io://localhost:4000 build
   - npm test
+  - bundle exec htmlproofer --url-swap //mlo.io://localhost:3000 build
 
 after_success: bundle exec s3_website push
 

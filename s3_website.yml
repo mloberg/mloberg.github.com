@@ -9,31 +9,21 @@ max_age:
   "assets/*": 6000
   "*": 300
 
-gzip:
-  - .html
-  - .css
+gzip: true
 gzip_zopfli: true
-
-# See http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region for valid endpoints
-# s3_endpoint: ap-northeast-1
-
-# ignore_on_server: that_folder_of_stuff_i_dont_keep_locally
-
-# exclude_from_upload:
-#   - those_folders_of_stuff
-#   - i_wouldnt_want_to_upload
 
 s3_reduced_redundancy: true
 
 cloudfront_distribution_config:
   default_cache_behavior:
-    min_TTL: <%= 60 * 60 * 24 %>
+    min_ttl: <%= 60 * 60 * 24 %>
   aliases:
     quantity: 1
     items:
-      CNAME: mlo.io
+      - mlo.io
 
-# cloudfront_invalidate_root: true
+cloudfront_invalidate_root: true
+cloudfront_wildcard_invalidation: true
 
 concurrency_level: 5
 
@@ -42,11 +32,3 @@ redirects:
   portfolio.html: https://github.com/mloberg
   projects/index.html: https://github.com/mloberg
   projects.html: https://github.com/mloberg
-
-# routing_rules:
-#   - condition:
-#       key_prefix_equals: blog/some_path
-#     redirect:
-#       host_name: blog.example.com
-#       replace_key_prefix_with: some_new_path/
-#       http_redirect_code: 301
