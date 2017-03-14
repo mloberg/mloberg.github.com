@@ -1,6 +1,8 @@
 ---
 layout: page
 title: About
+redirect_from:
+  - /about/
 ---
 {% img profile3.jpg alt="Matthew Loberg" class="pure-img-responsive img-center" %}
 
