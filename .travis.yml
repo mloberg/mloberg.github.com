@@ -30,7 +30,7 @@ before_script:
 
 script:
   - bundle exec jekyll doctor
-  - bundle exec htmlproofer --url-swap //mlo.io://localhost:3000 build
+  - bundle exec htmlproofer --http-status-ignore 301,302 --url-swap //mlo.io://localhost:3000 build
   - yarn run test
 
 after_success: bundle exec s3_website push
