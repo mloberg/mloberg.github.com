@@ -7,6 +7,7 @@ baseurl: ""
 
 author:
   name: Matthew Loberg
+  picture: /assets/img/profile3.jpg
   email: m@mloberg.com
   twitter: mloberg
 
@@ -32,9 +33,6 @@ author:
     # linkedin:        _firstname_-_lastname_-_string_
     # paypal:          _username_
 
-twitter:
-  username: mloberg
-
 defaults:
   -
     scope:
@@ -58,6 +56,7 @@ destination: build
 permalink: /blog/:year/:month/:day/:title.html
 markdown: kramdown
 highlighter: rouge
+timezone: America/Chicago
 
 paginate: 5
 paginate_path: "/blog/page:num/"
@@ -69,3 +68,14 @@ jekyll-archives:
     category: category
   permalinks:
     category: '/category/:name/'
+
+# Jekyll SEO
+twitter:
+  username: mloberg
+
+social:
+  name: Matthew Loberg
+  links:
+    - https://twitter.com/mloberg
+    - https://github.com/mloberg
+    - https://www.instagram.com/mloberg/
