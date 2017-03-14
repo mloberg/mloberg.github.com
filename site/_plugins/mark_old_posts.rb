@@ -33,7 +33,7 @@ module Jekyll
     def initialize(tag_name, cut_off, tokens)
       super
       @cut_off_date = Chronic.parse(cut_off)
-      @cut_off = cut_off
+      @cut_off = cut_off.strip
     end
 
     def render(context)
@@ -56,14 +56,15 @@ module Jekyll
 
     def html_output_for(post_date)
       post_date = post_date.strftime("%A, %B %d, %Y")
+
       return <<-HTML
-<div class="message message-alert">
+<div class="alert alert-warning">
   <p>
-    This article was published on <strong>#{post_date}</strong> which was
-    <strong>more than #{@cut_off}</strong>, this means the content may be
-    out of date or no longer relevant.  You should <strong>verify that the
-    technical information in this article is still current</strong> before
-    relying upon it for your own purposes.
+    This article was published on <strong>#{post_date}</strong>; more than
+    <strong>#{@cut_off}</strong>. This means the content may be out of date or
+    no longer relevant. You should <strong>verify that the technical information
+    in this article is still current</strong> before relying upon it for your
+    own purposes.
   </p>
 </div>
       HTML

@@ -1,8 +1,10 @@
 ---
 layout: page
 title: About
+redirect_from:
+  - /about/
 ---
-{% img profile3.jpg alt:'Matthew Loberg' class:'center-block' %}
+{% img profile3.jpg alt="Matthew Loberg" class="pure-img-responsive img-center" %}
 
 I'm Matt, a software engineer, nerd, musician, vegetarian, and bad joke
 connoisseur. I live in Minneapolis, which is pretty awesome most of the year if
@@ -37,8 +39,7 @@ In my free time I enjoy writing, recording, and playing [music](https://soundclo
 * Puppet & Chef
 * Git
 
-Check out a few of my [projects]({{ "projects.html" | relative_url }}) or my code on
-[Github](https://github.com/mloberg).
+Check out a few of my projects on [Github](https://github.com/mloberg).
 
 ### Contact
 

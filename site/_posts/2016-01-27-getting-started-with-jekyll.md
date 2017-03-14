@@ -1,6 +1,10 @@
 ---
 layout: post
 title: Getting Started With Jekyll
+category: jekyll
+description: >
+  Learn how to setup a Jekyll site complete with layouts, includes, and basic assets.
+  Then dive into how to create a post and publish it to GitHub pages.
 ---
 This is part two in a three part series on static site generators.
 

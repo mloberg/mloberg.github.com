@@ -1,16 +1,14 @@
 language: ruby
 sudo: false
 rvm:
-  - 2.1
+  - 2.3
 
 cache:
-  directories:
-    - vendor
-    - node_modules
+  yarn: true
+  bundler: true
 
 env:
   global:
-    - TZ=America/Chicago # Makes sure posts are generated with the right timestamp
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
     - JEKYLL_ENV=production
     - secure: wiulWfzfXHy5leCVG46LtZ11kwKOxE3nKAClOLITw4kxM4wtrt+PPsOyf6NdLk0bX1tclRlp2yuHNfJdbARxDAozgbSuXYNYLdV9Upg4FkqYqJ0KOtlQ9snyaHiqDYWhWdT8N5qh/skV21JhbI37LLP38/G6v/FpQ5DeRvV1qAg=
@@ -23,15 +21,15 @@ install: bundle install --jobs=3 --retry=3 --path vendor --standalone --deployme
 before_script:
   - nvm install 6.6.0
   - nvm use 6.6.0
-  - npm install
-  - bundle exec jekyll build
-  - ./node_modules/.bin/http-server -a localhost -p 4000 build &
+  - yarn install
+  - ./node_modules/.bin/gulp production
+  - ./node_modules/.bin/http-server -a localhost -p 3000 build &
   - sleep 5
 
 script:
   - bundle exec jekyll doctor
-  - bundle exec htmlproof --href-swap //mlo.io://localhost:4000 build
-  - npm test
+  - bundle exec htmlproofer --url-swap //mlo.io://localhost:3000 build
+  - yarn run test
 
 after_success: bundle exec s3_website push
 

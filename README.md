@@ -4,20 +4,14 @@ Jekyll site for [mlo.io](http://mlo.io)
 
 ## Install
 
-    bundle install --path vendor --standalone --deployment
+    bundle install
+    yarn install
 
-## Build
+## Develop
 
-    bundle exec jekyll build
-    # Production mode
-    JEKYLL_ENV=production bundle exec jekyll build
+    gulp watch
 
 ## Testing
 
-    bundle exec htmlproof build
-
-# TODO
-
-* Minify JS/CSS in HTML
-* CSSO (?)
-* UnCSS (?)
+    yarn run test
+    bundle exec htmlproofer --url-swap //mlo.io://localhost:3000 build

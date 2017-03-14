@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installing pcntl On Lion
-description: Install the pcntl PHP module on OS X Lion.
+category: devops
 ---
 I needed the [pcntl](http://www.php.net/manual/en/book.pcntl.php) module for a project I'm working on in PHP. By default this module is not installed when you install PHP, so you'll need to compile it. There is a brew package for it, but I couldn't get it to work, and I think it's just as simple to compile it.
 

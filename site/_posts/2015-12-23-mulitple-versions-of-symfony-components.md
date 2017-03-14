@@ -1,6 +1,11 @@
 ---
 layout: post
 title: Supporting Multiple Versions of Symfony Components
+category: symfony
+descriptions: >
+  With the release of Symfony 3.0 how do you support users that may be running
+  either 2 or 3? We talk about how to support multiple versions of Symfony
+  components and dive into how to test it on TravisCI.
 ---
 Symfony recently released version 3.0 of their components and framework. I use
 these components in a couple of my own packages, along with a bunch of other
@@ -86,7 +91,7 @@ For each one of the `env` values and PHP version we are testing against, Travis
 will create a build. This is our build Matrix. Every time we push, it will
 create our Matrix and look something like this.
 
- {% img travis-builds.png alt:'Travis builds' %}
+ {% img travis-builds.png alt="Travis builds" %}
 
 Our Matrix can also be customized manually using the `matrix` option in our
 Travis config. We are going to do that to tell Travis not to create a build for
