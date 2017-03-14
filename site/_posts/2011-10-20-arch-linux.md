@@ -3,7 +3,7 @@ layout: post
 title: Arch Linux
 category: devops
 ---
-The past couple of weeks I've been working with [Arch Linux](http://www.archlinux.org/), and all I really have to say is wow! If you've worked with Linux at all, I bet it's been Ubuntu, and don't get me wrong, Ubuntu is great, but Arch is awesome. Arch focuses on simplicity and it does a good job of it. As a beginner, you could set up a server with Arch and not run into any issues. It's also has a unique release system that's always up-to-date. Everyday I've logged in any there's always a new update, with this update system, you can make sure you are always running the latest and greatest, with other systems you'd have to wait 6 or more months for a update.
+The past couple of weeks I've been working with [Arch Linux](https://www.archlinux.org/), and all I really have to say is wow! If you've worked with Linux at all, I bet it's been Ubuntu, and don't get me wrong, Ubuntu is great, but Arch is awesome. Arch focuses on simplicity and it does a good job of it. As a beginner, you could set up a server with Arch and not run into any issues. It's also has a unique release system that's always up-to-date. Everyday I've logged in any there's always a new update, with this update system, you can make sure you are always running the latest and greatest, with other systems you'd have to wait 6 or more months for a update.
 
 You can follow this [guide](http://lifehacker.com/5680453/build-a-killer-customized-arch-linux-installation-and-learn-all-about-linux-in-the-process) and get an idea of how easy Arch is to use, all while you gain an understanding of what's going on underneath the surface. If you're installing a server, don't worry about installing ASLA or X.
 
