@@ -60,7 +60,7 @@ Now you're storing secure passwords, congratulations. But how do we verify if th
 <?php
 
 function verify_hash($input, $hash) {
-    return crypt($password, $hash) === $hash;
+    return crypt($input, $hash) === $hash;
 }
 {% endhighlight %}
 
