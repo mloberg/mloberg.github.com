@@ -94,7 +94,7 @@ class Crypter {
 
 #### Ruby
 
-Why yes there is a [bcrypt gem](http://bcrypt-ruby.rubyforge.org/), which makes it super simple to implement in your application. Install it with `gem install bcrypt-ruby` and require `bcrypt`.
+Why yes there is a [bcrypt gem](https://rubygems.org/gems/bcrypt-ruby), which makes it super simple to implement in your application. Install it with `gem install bcrypt-ruby` and require `bcrypt`.
 
 Generate a hash with `BCrypt::Password.create`.
 
