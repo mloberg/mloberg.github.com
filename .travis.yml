@@ -1,7 +1,7 @@
 language: ruby
 sudo: false
 rvm:
-  - 2.3.3
+  - 2.4
 
 cache:
   yarn: true
@@ -24,17 +24,19 @@ before_script:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH=$HOME/.yarn/bin:$PATH
   - yarn install
-  - ./node_modules/.bin/gulp production
-  - ./node_modules/.bin/http-server -a localhost -p 3000 build &
-  - sleep 5
+  - yarn run build
+  - bundle exec jekyll build
+  - ./node_modules/.bin/http-server -a localhost -p 4000 build &
+  - sleep 3
 
 script:
   - bundle exec jekyll doctor
-  - bundle exec htmlproofer --http-status-ignore 301,302 --url-swap //mlo.io://localhost:3000 build
+  - bundle exec htmlproofer --http-status-ignore 301,302 --url-swap //mlo.io://localhost:4000 build
   - yarn run test
 
-after_success: bundle exec s3_website push
-
-branches:
-  only:
-    - master
+# https://docs.travis-ci.com/user/deployment/script
+deploy:
+  provider: script
+  script: bundle exec s3_website push
+  on:
+    branch: master
