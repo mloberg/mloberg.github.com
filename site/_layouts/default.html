@@ -3,13 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   {% seo %}
-
-  {% css main.css %}
-
+  <link type="text/css" rel="stylesheet" href="{% asset assets/css/main.css %}">
   <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
-
   {% feed_meta %}
 </head>
 <body>
@@ -54,7 +50,7 @@
     </div><!-- /.content -->
   </div><!-- /#layout -->
 
-  {% js main.js %}
+  <script src="{% asset assets/js/main.js %}"></script>
 
   {% if site.google_analytics_id and jekyll.environment == "production" %}
     <script>

@@ -1,4 +1,4 @@
-var WebFont = require('webfontloader');
+const WebFont = require('webfontloader');
 
 WebFont.load({
   google: {

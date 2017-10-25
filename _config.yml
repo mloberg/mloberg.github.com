@@ -79,3 +79,5 @@ social:
     - https://twitter.com/mloberg
     - https://github.com/mloberg
     - https://www.instagram.com/mloberg/
+
+assets: site/assets/manifest.json

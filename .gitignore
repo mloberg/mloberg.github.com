@@ -21,3 +21,5 @@ vendor
 tmp
 site/_drafts
 site/assets
+tests/reports
+selenium-debug.log

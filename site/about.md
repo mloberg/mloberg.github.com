@@ -4,7 +4,7 @@ title: About
 redirect_from:
   - /about/
 ---
-{% img profile3.jpg alt="Matthew Loberg" class="pure-img-responsive img-center" %}
+<img src="{% asset assets/images/profile3.jpg %}" alt="Matthew Loberg" class="pure-img-responsive img-center profile">
 
 I'm Matt, a software engineer, nerd, musician, vegetarian, and bad joke
 connoisseur. I'm passionate about using software to improve people's lives.

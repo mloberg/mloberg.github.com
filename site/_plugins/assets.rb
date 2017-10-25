@@ -1,36 +1,24 @@
+require "json"
+
 module Jekyll
-  class AssetTag < Liquid::Tag
-
-    Tags = {
-      "css" => %(<link type="text/css" rel="stylesheet" href="%s"%s>),
-      "js"  => %(<script type="text/javascript" src="%s"%s></script>),
-      "img" => %(<img src="%s"%s>)
-    }.freeze
-
-    def initialize(tag, input, tokens)
+  class AssetUrlTag < Liquid::Tag
+    def initialize(tag_name, src, tokens)
       super
-      @tag = tag.to_s
-      @tokens = tokens
-
-      args = input.split(" ")
-
-      @path = args.shift
-      @args = args.unshift(" ").join(" ").rstrip
+      @src = src.strip
     end
 
     def render(context)
-      baseurl = context.registers[:site].config['baseurl']
+      assets = context.registers[:site].config['assets']
 
-      format(Tags[@tag], asset_url(baseurl), @args)
-    end
-
-    private
-    def asset_url(prefix)
-      "#{prefix}/assets/#{@tag}/#{@path}"
+      assets.key?(@src) ? assets[@src] : @src
     end
   end
 end
 
-Jekyll::AssetTag::Tags.each_key do |tag|
-  Liquid::Template.register_tag(tag, Jekyll::AssetTag)
+Jekyll::Hooks.register :site, :after_init do |site|
+  assets = JSON.parse(File.read(site.config['assets']))
+
+  site.config['assets'] = assets
 end
+
+Liquid::Template.register_tag('asset', Jekyll::AssetUrlTag)
