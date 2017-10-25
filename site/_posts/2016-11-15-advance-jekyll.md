@@ -244,8 +244,9 @@ this catch links that were broken on old posts.
 For most sites, this is probably sufficient. Let's say you have a site that uses
 a lot of custom plugins or logic in your templates that you want to test. We
 could use a tool like [Selenium][selenium] or a lighter tool like
-[PhantomJS][phantomjs]. I used [CasperJS][casperjs] for this site. It offers
-some really useful tools specific for testing. Here is an example test:
+[PhantomJS][phantomjs]. ~~I used [CasperJS][casperjs] for this site.~~
+(_see below_) It offers some really useful tools specific for testing. Here is
+an example test:
 
 {% highlight javascript %}
 casper.test.begin('Homepage', 7, function suite(test) {
@@ -271,6 +272,10 @@ You can check out the full test for this site on [GitHub][test-script].
 
 Additionally you could do some CSS regression testing using a tool like
 [BackstopJS][backstopjs], [Wraith][wraith], or [PhantomCSS][phantomcss].
+
+__Update 10/25/17__: With ChromeDriver now supporting headless mode, I switched
+to [Nightwatch.js][nightwatch]. The documentation feels lacking at points, but
+it's very powerful and easier than Casper to write tests.
 
 ## Automated Deployments
 
@@ -390,9 +395,10 @@ please share them in the comments.
 [selenium]: http://docs.seleniumhq.org/
 [phantomjs]: http://phantomjs.org/
 [casperjs]: http://casperjs.org/
-[test-script]: https://github.com/mloberg/mlo.io/blob/master/test.js
+[test-script]: https://github.com/mloberg/mlo.io/blob/cb1e3bca2b1e9c1d303570431d2d1f180eeccc60/test.js
 [backstopjs]: https://github.com/garris/BackstopJS
 [wraith]: http://bbc-news.github.io/wraith/index.html
 [phantomcss]: https://github.com/Huddle/PhantomCSS
 [travisci]: https://travis-ci.org/
 [encrypted-variables]: https://docs.travis-ci.com/user/environment-variables/#Defining-encrypted-variables-in-.travis.yml
+[nightwatch]: http://nightwatchjs.org/
