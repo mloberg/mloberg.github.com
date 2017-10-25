@@ -26,7 +26,7 @@ before_script:
   - yarn install
   - yarn run build
   - bundle exec jekyll build
-  - ./node_modules/.bin/http-server -a localhost -p 4000 build &
+  - ./node_modules/.bin/http-server -s -g -a localhost -p 4000 build &
   - sleep 3
 
 script:
