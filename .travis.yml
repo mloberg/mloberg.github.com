@@ -37,6 +37,6 @@ script:
 # https://docs.travis-ci.com/user/deployment/script
 deploy:
   provider: script
-  script: bundle exec s3_website push
+  script: rvm use $TRAVIS_RUBY_VERSION do bundle exec s3_website push
   on:
     branch: master
