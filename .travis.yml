@@ -36,6 +36,7 @@ script:
 
 # https://docs.travis-ci.com/user/deployment/script
 deploy:
+  skip_cleanup: true
   provider: script
   script: rvm use $TRAVIS_RUBY_VERSION do bundle exec s3_website push
   on:
