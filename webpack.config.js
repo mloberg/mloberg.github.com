@@ -11,6 +11,7 @@ Encore
     })
     .addEntry('images/assets', './assets/js/assets.js')
     .addEntry('js/main', './assets/js/main.js')
+    .addEntry('js/post', './assets/js/post.js')
     .addStyleEntry('css/main', './assets/css/main.css')
     .enableSourceMaps(!Encore.isProduction())
     .enableVersioning(Encore.isProduction())

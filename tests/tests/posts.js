@@ -27,7 +27,7 @@ module.exports = {
       .url('http://localhost:4000/blog/2012/11/21/installing-pcntl-on-lion.html')
       .assert.containsText('.post-meta', 'Published 21 Nov 2012')
       .assert.elementPresent('.alert-warning')
-      .assert.containsText('.alert-warning', 'This article was published on Wednesday, November 21, 2012; more than 18 months ago')
+      .assert.containsText('.alert-warning', 'This article was published on November 21, 2012; more than 18 months ago')
       .end()
   },
   'A post can have the outdated message turned off': function(client) {

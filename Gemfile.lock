@@ -16,7 +16,6 @@ GEM
     aws-sdk-resources (2.10.71)
       aws-sdk-core (= 2.10.71)
     aws-sigv4 (1.0.2)
-    chronic (0.10.2)
     colorator (1.1.0)
     colored (1.2)
     colorize (0.8.1)
@@ -109,7 +108,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  chronic
   html-proofer
   jekyll
   jekyll-archives

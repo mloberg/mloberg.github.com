@@ -12,7 +12,9 @@ layout: default
           <a class="post-category post-category-{{ slug }}" href="{{ site.baseurl }}/category/{{ slug }}">{{ category }}</a>
         {% endfor %}
       </p>
-      {% mark_old_posts 18 months ago %}
+      {% if page.mark_old_post != false %}
+        <div id="old-post" data-timestamp="{{ page.date|date_to_xmlschema }}" data-old-after="{{ page.mark_old_after|default:18 }}"></div>
+      {% endif %}
     </header>
 
     <div class="post-description">
@@ -48,3 +50,5 @@ layout: default
     {% endfor %}
   </ul>
 </div>
+
+<script src="{% asset assets/js/post.js %}"></script>
