@@ -19,7 +19,7 @@ build
 dist
 vendor
 tmp
-site/_drafts
-site/assets
+src/_drafts
+src/assets/js
 tests/reports
 selenium-debug.log

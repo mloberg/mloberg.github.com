@@ -1,17 +1,17 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'jekyll'
+gem "jekyll"
+gem "jekyll-theme-strata"
 
 group :jekyll_plugins do
-  gem 'jekyll-sitemap'
-  gem 'jekyll-feed'
-  gem 'jekyll-seo-tag'
-  gem 'jekyll-paginate'
-  gem 'jekyll-redirect-from'
-  gem 'jekyll-archives'
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
+  gem "jekyll-archives"
+  gem "jekyll-redirect-from"
 end
 
-group :deployment do
-  gem 'html-proofer'
-  gem 's3_website'
+group :ci do
+  gem "html-proofer"
+  gem "s3_website"
 end
