@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
 const imagemin = require('gulp-imagemin');
+const mozjpeg = require('imagemin-mozjpeg');
 const useref = require('gulp-useref');
 const uglify = require('gulp-uglify');
 const gulpif = require('gulp-if');
@@ -29,6 +30,7 @@ gulp.task('images', () =>
           {cleanupIDs: false},
         ],
       }),
+      mozjpeg({quality: 85}),
     ]))
     .pipe(gulp.dest('dist/assets/images'))
 );
