@@ -18,6 +18,7 @@ title: Containers
 * [Dockerfile Reference](https://docs.docker.com/engine/reference/builder/)
 * [Docker Compose Reference](https://docs.docker.com/compose/compose-file/)
 * [Kubernetes](https://kubernetes.io/)
+* [Best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 * [Docker Container Anti Patterns](http://blog.arungupta.me/docker-container-anti-patterns/)
 * [Docker Anti Patterns](https://gist.github.com/Faheetah/a2a401a01d2d56fa7d1a9d7ab0d2831b)
 * [Docker multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/)
