@@ -60,6 +60,8 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-archives (2.1.1)
       jekyll (>= 2.4)
+    jekyll-compose (0.8.0)
+      jekyll (~> 3.0)
     jekyll-feed (0.10.0)
       jekyll (~> 3.3)
     jekyll-redirect-from (0.14.0)
@@ -123,6 +125,7 @@ DEPENDENCIES
   html-proofer
   jekyll
   jekyll-archives
+  jekyll-compose
   jekyll-feed
   jekyll-redirect-from
   jekyll-seo-tag
