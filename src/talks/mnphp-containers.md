@@ -2,9 +2,7 @@
 layout: page
 title: Containers
 ---
-<p class="align-center">
-    <iframe src="//slides.com/matthewloberg/docker/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</p>
+{% include slides.html slides="//slides.com/matthewloberg/docker/embed" %}
 
 ### References
 
