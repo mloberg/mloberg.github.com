@@ -17,10 +17,10 @@
     "gulp-htmlmin": "^4.0.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^4.1.0",
-    "gulp-uglify": "^3.0.0",
+    "gulp-uglify": "^3.0.1",
     "gulp-useref": "^3.1.5",
-    "webpack": "^4.16.0",
-    "webpack-cli": "^3.0.8"
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
   },
   "optionalDependencies": {
     "backstopjs": "^3.2.19",
