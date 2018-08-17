@@ -3,10 +3,9 @@
   "private": true,
   "scripts": {
     "test": "backstop test",
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "clean": "rm -rf dist src/assets/js",
-    "dist": "gulp"
+    "build": "encore dev",
+    "watch": "encore dev --watch",
+    "prod": "encore production"
   },
   "dependencies": {
     "moment": "^2.22.2"

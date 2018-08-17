@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 
 gem "jekyll"
-gem "jekyll-theme-strata"
 
 group :jekyll_plugins do
   gem "jekyll-feed"

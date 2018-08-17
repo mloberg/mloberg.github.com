@@ -407,3 +407,4 @@ please share them in the comments.
 [travisci]: https://travis-ci.org/
 [encrypted-variables]: https://docs.travis-ci.com/user/environment-variables/#Defining-encrypted-variables-in-.travis.yml
 [nightwatch]: http://nightwatchjs.org/
+[html-proofer]: https://github.com/gjtorikian/html-proofer

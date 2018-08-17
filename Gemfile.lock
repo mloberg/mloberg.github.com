@@ -72,10 +72,6 @@ GEM
       jekyll (~> 3.3)
     jekyll-sitemap (1.2.0)
       jekyll (~> 3.3)
-    jekyll-theme-strata (0.1.4)
-      jekyll (~> 3.5)
-      jekyll-feed (~> 0.9)
-      jekyll-seo-tag (~> 2.1)
     jekyll-watch (2.0.0)
       listen (~> 3.0)
     jmespath (1.4.0)
@@ -130,7 +126,6 @@ DEPENDENCIES
   jekyll-redirect-from
   jekyll-seo-tag
   jekyll-sitemap
-  jekyll-theme-strata
   s3_website
 
 BUNDLED WITH

@@ -5,9 +5,6 @@ description: >
 baseurl: ""
 url: "https://mlo.io"
 
-# Theme settings
-theme: jekyll-theme-strata
-
 disqus:
   shortname: mattwritescode
 
