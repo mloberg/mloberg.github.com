@@ -1,4 +1,5 @@
 const Encore = require('@symfony/webpack-encore');
+const webpack = require('webpack');
 
 Encore
   .setOutputPath('src/assets')
@@ -8,6 +9,7 @@ Encore
   .cleanupOutputBeforeBuild()
   .enableSourceMaps(!Encore.isProduction())
   .enableVersioning(Encore.isProduction())
+  .addPlugin(new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/))
 ;
 
 module.exports = Encore.getWebpackConfig();
