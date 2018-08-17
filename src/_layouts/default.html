@@ -27,10 +27,11 @@
         <h2 class="mb-2">
           <a class="no-underline text-blue hover:text-blue-light transition-linear" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
         </h2>
+        <img class="rounded-full" height="100" width="100" src="{% asset assets/images/profile.jpg %}" alt="{{ site.title }}">
         {{ site.description | markdownify }}
         <ul class="list-reset flex items-center py-4">
           {%- for icon in site.icons -%}
-            <li class="mr-4">
+            <li class="mr-2">
                 <a class="text-blue-dark hover:text-blue transition-linear" href="{{ icon.href }}">
                   <i class="{{ icon.icon }} fa-lg"></i>
                 </a>

@@ -8,7 +8,7 @@ excerpt: >
   deploy changes automatically.
 redirect_from: /blog/2016/11/15/advance-jekyll.html
 hero:
-  image: assets/images/hero-advance-jekyll.jpg
+  image: assets/images/hero-jekyll-series.jpg
   photographer: rawpixel
   link: https://unsplash.com/photos/znT2Mwt9ypo
 ---

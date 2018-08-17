@@ -6,6 +6,10 @@ excerpt: >
   In this post we'll talk about what static sites are and the benefits and
   drawbacks compared to "normal" site.
 redirect_from: /blog/2016/01/13/why-static-site-generators.html
+hero:
+  image: assets/images/hero-jekyll-series.jpg
+  photographer: rawpixel
+  link: https://unsplash.com/photos/znT2Mwt9ypo
 ---
 This is a 3 part series about static site generators and [Jekyll][jekyll] in
 specific.

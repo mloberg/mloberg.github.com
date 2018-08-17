@@ -20,6 +20,6 @@ dist
 vendor
 tmp
 src/_drafts
-src/assets/js
+src/assets
 tests/reports
 selenium-debug.log
