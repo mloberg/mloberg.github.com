@@ -28,7 +28,7 @@ before_script:
 
 script:
   - bundle exec jekyll doctor
-  - bundle exec htmlproofer ./dist
+  - bundle exec htmlproofer --http-status-ignore 301,302 ./dist
   # - npm run test
 
 # https://docs.travis-ci.com/user/deployment/script
