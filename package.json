@@ -15,7 +15,9 @@
     "@symfony/webpack-encore": "^0.20.1",
     "autoprefixer": "^9.1.1",
     "postcss-loader": "^3.0.0",
-    "tailwindcss": "^0.6.5"
+    "tailwindcss": "^0.6.5",
+    "tailwindcss-aspect-ratio": "^1.0.1",
+    "tailwindcss-responsive-embed": "^0.2.2"
   },
   "optionalDependencies": {
     "backstopjs": "^3.2.19",

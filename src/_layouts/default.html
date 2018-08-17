@@ -15,7 +15,7 @@
       <h1 class="inline-block bg-white font-title text-5xl text-black my-8 py-2 px-4">{{ page.title | default: site.title | escape }}</h1>
     </div>
     <a class="absolute pin-t pin-l bg-white p-1" href="{{ "/" | relative_url }}">
-      <img src="{% asset assets/images/icon.png %}">
+      <img src="{% asset assets/images/icon.png %}" alt="Home">
     </a>
   </header>
   <div class="container mx-auto mt-8 flex">
@@ -29,35 +29,30 @@
         </h2>
         {{ site.description | markdownify }}
         <ul class="list-reset flex items-center py-4">
-          <li class="mx-2">
-            <a class="text-blue-dark hover:text-blue transition-linear" href="#">
-              <i class="fab fa-twitter fa-2x"></i>
-            </a>
-          </li>
-          <li class="mx-2">
-            <a class="text-blue-dark hover:text-blue transition-linear" href="#">
-              <i class="fab fa-github fa-2x"></i>
-            </a>
-          </li>
+          {%- for icon in site.icons -%}
+            <li class="mr-4">
+                <a class="text-blue-dark hover:text-blue transition-linear" href="{{ icon.href }}">
+                  <i class="{{ icon.icon }} fa-lg"></i>
+                </a>
+            </li>
+          {%- endfor -%}
         </ul>
       </div>
     </div>
   </div>
-  <footer class="my-4">
+  <footer class="footer my-4">
     <ul class="list-reset flex justify-center items-center text-grey text-sm">
       <li class="mx-2">&copy; {{ site.time | date: '%Y' }} {{ site.title | escape }}</li>
-      <li>·</li>
+      <li class="text-grey-dark">·</li>
       <li class="mx-2">
-        Powered by
-        <a class="text-grey-dark hover:text-grey-darker transition-linear" href="#">Jekyll</a>
-        &
-        <a class="text-grey-dark hover:text-grey-darker transition-linear" href="#">Tailwind</a>
+        Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://tailwindcss.com/">Tailwind</a>
       </li>
-      <li>·</li>
+      <li class="text-grey-dark">·</li>
       <li class="mx-2">
-        Header photo by <a class="text-grey-dark hover:text-grey-darker transition-linear" href="https://unsplash.com/photos/g30P1zcOzXo">Daniel Leone</a> on <a class="text-grey-dark hover:text-grey-darker transition-linear" href="https://unsplash.com">Unsplash</a>
+        Header photo by <a href="https://unsplash.com/photos/g30P1zcOzXo">Daniel Leone</a> on <a href="https://unsplash.com">Unsplash</a>
       </li>
     </ul>
   </footer>
+  <script src="{% asset assets/app.js %}"></script>
 </body>
 </html>

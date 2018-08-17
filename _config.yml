@@ -3,27 +3,23 @@ title: Matt Loberg
 description: >
   Principal Software Engineer specializing in Open Source technologies and DevOps.
 baseurl: ""
-url: "http://mlo.io"
+url: "https://mlo.io"
 
 # Theme settings
 theme: jekyll-theme-strata
-show_excerpts: true
-# date_format: "%b %-d, %Y"
 
 disqus:
   shortname: mattwritescode
 
-twitter_username: mloberg
-github_username: mloberg
-dribbble_username: ~
-facebook_username: ~
-flickr_username: ~
-instagram_username: mloberg
-linkedin_username: ~
-pinterest_username: ~
-youtube_username: ~
-googleplus_username: ~
-rss: true
+icons:
+  - href: https://twitter.com/mloberg
+    icon: fab fa-twitter
+  - href: https://github.com/mloberg
+    icon: fab fa-github
+  - href: https://www.instagram.com/mloberg/
+    icon: fab fa-instagram
+  - href: https://mlo.io/feed.xml
+    icon: fas fa-rss
 
 permalink: /blog/:year/:month/:day/:title/
 
@@ -58,9 +54,6 @@ markdown: kramdown
 
 assets:
   manifest: src/assets/manifest.json
-
-sass:
-  style: compressed
 
 plugins:
   - jekyll-feed

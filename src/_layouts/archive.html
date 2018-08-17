@@ -1,35 +1,16 @@
 ---
 layout: default
 ---
-<div class="archive">
+{%- if page.type == 'year' -%}
+<h2 class="page-title">Posts from {{ page.date | date: "%Y" }}</h2>
+{%- elsif page.type == 'month' -%}
+<h2 class="page-title">Posts from {{ page.date | date: "%B %Y" }}</h2>
+{%- elsif page.type == 'day' -%}
+<h2 class="page-title">Posts from {{ page.date | date: "%B %-d, %Y" }}</h2>
+{%- else -%}
+<h2 class="page-title">Posts with {{ page.type }} {{ page.title }}</h2>
+{%- endif -%}
 
-  {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
-
-  <section class="post-list">
-    {%- if page.type == 'year' -%}
-      <h2 class="post-list-heading">Posts published in {{ page.date | date: "%Y" }}</h2>
-    {%- elsif page.type == 'month' -%}
-      <h2 class="post-list-heading">Posts published {{ page.date | date: "%B %Y" }}</h2>
-    {%- elsif page.type == 'day' -%}
-      <h2 class="post-list-heading">Posts published {{ page.date | date: "%B %-d, %Y" }}</h2>
-    {%- else -%}
-      <h2 class="post-list-heading">Posts with {{ page.type }} {{ page.title }}</h2>
-    {%- endif -%}
-    {%- for post in page.posts -%}
-      <hr>
-      <section>
-        <header>
-          <h3><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          <p class="post-meta">{{ post.date | date: date_format }}</p>
-        </header>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-          <ul class="actions">
-            <li><a href="{{ post.url | relative_url }}" class="button">Continue Reading</a></li>
-          </ul>
-        {%- endif -%}
-      </section>
-    {%- endfor -%}
-  </section>
-
-</div>
+{%- for post in page.posts -%}
+  {% include post-list.html %}
+{%- endfor -%}

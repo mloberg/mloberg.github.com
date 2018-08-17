@@ -8,6 +8,10 @@
   background-image: url('../images/background.jpg');
 }
 
+.page-title {
+  @apply pb-4 text-base font-bold text-grey;
+}
+
 .transition-linear {
   transition: all .1s linear;
 }
@@ -46,4 +50,16 @@
 
 .post__content p > code {
   @apply bg-grey-lighter p-1;
+}
+
+.footer a {
+  @apply text-grey-dark transition-linear;
+}
+
+.footer a:hover {
+  @apply text-grey-darker;
+}
+
+.old-post-warning {
+  @apply mt-6 bg-yellow-lighter py-4 px-6 italic text-yellow-darkest border-yellow-dark border-l-4;
 }
