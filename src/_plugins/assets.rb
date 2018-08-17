@@ -9,15 +9,15 @@ module Jekyll
 
     def render(context)
       @src = context[@src[1..-1].strip] if @src.start_with? '@'
-      manifest = context.registers[:site].config['assets']['manifest']
+      manifest = context.registers[:site].config['assets']['manifest'] || {}
       manifest.key?(@src) ? manifest[@src] : @src
     end
   end
 end
 
-Jekyll::Hooks.register :site, :after_init do |site|
-  assets = JSON.parse(File.read(site.config['assets']['manifest']))
-  site.config['assets']['manifest'] = assets
+Jekyll::Hooks.register :site, :pre_render do |site|
+  manifest_path = site.config['assets']['json_manifest_path']
+  site.config['assets']['manifest'] = JSON.parse(File.read(manifest_path)) if File.exists? manifest_path
 end
 
 Liquid::Template.register_tag('asset', Jekyll::AssetUrlTag)

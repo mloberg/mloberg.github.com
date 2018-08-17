@@ -59,7 +59,7 @@ destination: dist
 markdown: kramdown
 
 assets:
-  manifest: src/assets/manifest.json
+  json_manifest_path: src/assets/manifest.json
 
 compress_html:
   clippings: all
