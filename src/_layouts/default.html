@@ -11,19 +11,19 @@
 </head>
 <body class="font-sans font-normal antialiased bg-white text-grey-darker">
   <header class="hero pt-32 pb-32 bg-center bg-no-repeat bg-cover relative">
-    <div class="container mx-auto">
+    <div class="container mx-auto px-4">
       <h1 class="inline-block bg-white font-title text-5xl text-black my-8 py-2 px-4">{{ page.title | default: site.title | escape }}</h1>
     </div>
     <a class="absolute pin-t pin-l bg-white p-1" href="{{ "/" | relative_url }}">
       <img src="{% asset assets/images/icon.png %}" alt="Home">
     </a>
   </header>
-  <div class="container mx-auto mt-8 flex">
-    <main class="w-3/4 pr-4">
+  <div class="container mx-auto mt-8 md:flex px-4">
+    <main class="w-full md:w-3/4 md:pr-4 mb-4">
       {{ content }}
     </main>
-    <div class="w-1/4">
-      <div class="border-l pl-4 py-8">
+    <div class="w-full md:w-1/4">
+      <div class="border-t md:border-t-0 md:border-l md:pl-4 py-8">
         <h2 class="mb-2">
           <a class="no-underline text-blue hover:text-blue-light transition-linear" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
         </h2>
@@ -40,14 +40,14 @@
       </div>
     </div>
   </div>
-  <footer class="footer my-4">
-    <ul class="list-reset flex justify-center items-center text-grey text-sm">
+  <footer class="footer container mx-auto my-4 px-4">
+    <ul class="list-reset md:flex justify-center items-center text-grey text-sm">
       <li class="mx-2">&copy; {{ site.time | date: '%Y' }} {{ site.title | escape }}</li>
-      <li class="text-grey-dark">·</li>
+      <li class="hidden md:block text-grey-dark">·</li>
       <li class="mx-2">
         Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://tailwindcss.com/">Tailwind</a>
       </li>
-      <li class="text-grey-dark">·</li>
+      <li class="hidden md:block text-grey-dark">·</li>
       <li class="mx-2">
         Header photo by <a href="https://unsplash.com/photos/g30P1zcOzXo">Daniel Leone</a> on <a href="https://unsplash.com">Unsplash</a>
       </li>
