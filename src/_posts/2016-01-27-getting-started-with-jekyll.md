@@ -7,7 +7,7 @@ excerpt: >
   Then dive into how to create a post and publish it to GitHub pages.
 redirect_from: /blog/2016/01/27/getting-started-with-jekyll.html
 hero:
-  image: assets/images/hero-jekyll-series.jpg
+  image: assets/images/hero-znT2Mwt9ypo.jpg
   photographer: rawpixel
   link: https://unsplash.com/photos/znT2Mwt9ypo
 ---
