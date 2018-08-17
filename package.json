@@ -5,7 +5,9 @@
     "test": "backstop test",
     "build": "encore dev",
     "watch": "encore dev --watch",
-    "prod": "encore production"
+    "prod": "encore production",
+    "proof": "markdown-proofing",
+    "proof:drafts": "markdown-proofing src/_drafts/*.md"
   },
   "dependencies": {
     "moment": "^2.22.2"
@@ -13,6 +15,7 @@
   "devDependencies": {
     "@symfony/webpack-encore": "^0.20.1",
     "autoprefixer": "^9.1.1",
+    "markdown-proofing": "^1.0.2",
     "postcss-loader": "^3.0.0",
     "purgecss-webpack-plugin": "^1.2.1",
     "tailwindcss": "^0.6.5",
