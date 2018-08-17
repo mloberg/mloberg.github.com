@@ -23,16 +23,15 @@ before_script:
   - nvm install 8.11
   - nvm use 8.11
   - npm install
-  - npm run build
+  - npm run prod
   - bundle exec jekyll build
-  - npm run dist
   - ./node_modules/.bin/http-server --silent -a localhost -p 4000 dist &
   - sleep 3
 
 script:
   - bundle exec jekyll doctor
   - bundle exec htmlproofer --http-status-ignore 301,302 --url-swap //mlo.io://localhost:4000 --assume-extension ./dist
-  # - npm run test
+  - npm run test
 
 # https://docs.travis-ci.com/user/deployment/script
 deploy:

@@ -61,6 +61,15 @@ markdown: kramdown
 assets:
   manifest: src/assets/manifest.json
 
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: [development]
+  blanklines: false
+  startings: [html, head, body]
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
