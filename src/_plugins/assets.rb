@@ -8,6 +8,7 @@ module Jekyll
     end
 
     def render(context)
+      @src = context[@src[1..-1].strip] if @src.start_with? '@'
       manifest = context.registers[:site].config['assets']['manifest']
       manifest.key?(@src) ? manifest[@src] : @src
     end

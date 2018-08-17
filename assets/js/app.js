@@ -3,7 +3,8 @@ require('../css/app.css');
 
 // Include images
 require('../images/automate-all-the-things.jpg');
-require('../images/background.jpg');
+require('../images/hero.jpg');
+require('../images/hero-advance-jekyll.jpg');
 require('../images/icon.png');
 require('../images/profile.jpg');
 require('../images/travis-builds.png');

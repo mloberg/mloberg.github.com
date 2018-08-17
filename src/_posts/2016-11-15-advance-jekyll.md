@@ -7,8 +7,12 @@ excerpt: >
   organize your site, write your own plugins, build assets, test your site, and
   deploy changes automatically.
 redirect_from: /blog/2016/11/15/advance-jekyll.html
+hero:
+  image: assets/images/hero-advance-jekyll.jpg
+  photographer: rawpixel
+  link: https://unsplash.com/photos/znT2Mwt9ypo
 ---
-This is part two in a three part series on static site generators.
+This is the final part in a three part series on static site generators.
 
 1. [Why Static Site Generators]({% post_url 2016-01-13-why-static-site-generators %})
 2. [Getting Starting With Jekyll]({% post_url 2016-01-27-getting-started-with-jekyll %})

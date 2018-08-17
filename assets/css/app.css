@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .hero {
-  background-image: url('../images/background.jpg');
+  @apply bg-center bg-no-repeat bg-cover;
 }
 
 .page-title {

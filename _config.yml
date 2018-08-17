@@ -21,6 +21,15 @@ icons:
   - href: https://mlo.io/feed.xml
     icon: fas fa-rss
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      hero:
+        image: assets/images/hero.jpg
+        photographer: Daniel Leone
+        link: https://unsplash.com/photos/g30P1zcOzXo
+
 permalink: /blog/:year/:month/:day/:title/
 
 jekyll-archives:
