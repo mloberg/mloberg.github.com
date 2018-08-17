@@ -1,10 +1,13 @@
-const path = require('path');
+const Encore = require('@symfony/webpack-encore');
 
-module.exports = {
-    mode: 'development',
-    entry: './webpack/post.js',
-    output: {
-        filename: 'post.js',
-        path: path.resolve(__dirname, 'src/assets/js')
-    }
-};
+Encore
+  .setOutputPath('src/assets')
+  .setPublicPath('/assets')
+  .addEntry('app', './assets/js/app.js')
+  .enablePostCssLoader()
+  .cleanupOutputBeforeBuild()
+  .enableSourceMaps(!Encore.isProduction())
+  .enableVersioning(Encore.isProduction())
+;
+
+module.exports = Encore.getWebpackConfig();

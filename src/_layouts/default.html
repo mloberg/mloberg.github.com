@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  {% seo %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway">
+  <link rel="stylesheet" href="{% asset assets/app.css %}">
+  <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
+</head>
+<body class="font-sans font-normal antialiased bg-white text-grey-darker">
+  <header class="hero pt-32 pb-32 bg-center bg-no-repeat bg-cover relative">
+    <div class="container mx-auto">
+      <h1 class="inline-block bg-white font-title text-5xl text-black my-8 py-2 px-4">{{ page.title | default: site.title | escape }}</h1>
+    </div>
+    <a class="absolute pin-t pin-l bg-white p-1" href="{{ "/" | relative_url }}">
+      <img src="{% asset assets/images/icon.png %}">
+    </a>
+  </header>
+  <div class="container mx-auto mt-8 flex">
+    <main class="w-3/4 pr-4">
+      {{ content }}
+    </main>
+    <div class="w-1/4">
+      <div class="border-l pl-4 py-8">
+        <h2 class="mb-2">
+          <a class="no-underline text-blue hover:text-blue-light transition-linear" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+        </h2>
+        {{ site.description | markdownify }}
+        <ul class="list-reset flex items-center py-4">
+          <li class="mx-2">
+            <a class="text-blue-dark hover:text-blue transition-linear" href="#">
+              <i class="fab fa-twitter fa-2x"></i>
+            </a>
+          </li>
+          <li class="mx-2">
+            <a class="text-blue-dark hover:text-blue transition-linear" href="#">
+              <i class="fab fa-github fa-2x"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <footer class="my-4">
+    <ul class="list-reset flex justify-center items-center text-grey text-sm">
+      <li class="mx-2">&copy; {{ site.time | date: '%Y' }} {{ site.title | escape }}</li>
+      <li>·</li>
+      <li class="mx-2">
+        Powered by
+        <a class="text-grey-dark hover:text-grey-darker transition-linear" href="#">Jekyll</a>
+        &
+        <a class="text-grey-dark hover:text-grey-darker transition-linear" href="#">Tailwind</a>
+      </li>
+      <li>·</li>
+      <li class="mx-2">
+        Header photo by <a class="text-grey-dark hover:text-grey-darker transition-linear" href="https://unsplash.com/photos/g30P1zcOzXo">Daniel Leone</a> on <a class="text-grey-dark hover:text-grey-darker transition-linear" href="https://unsplash.com">Unsplash</a>
+      </li>
+    </ul>
+  </footer>
+</body>
+</html>

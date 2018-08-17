@@ -1,5 +1,5 @@
 # Site settings
-title: Matthew Loberg
+title: Matt Loberg
 description: >
   Principal Software Engineer specializing in Open Source technologies and DevOps.
 baseurl: ""
@@ -44,7 +44,7 @@ twitter:
   username: mloberg
 
 social:
-  name: Matthew Loberg
+  name: Matt Loberg
   links:
     - https://twitter.com/mloberg
     - https://github.com/mloberg
@@ -55,6 +55,9 @@ timezone: America/Chicago
 source: src
 destination: dist
 markdown: kramdown
+
+assets:
+  manifest: src/assets/manifest.json
 
 sass:
   style: compressed
