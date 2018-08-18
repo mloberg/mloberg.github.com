@@ -9,6 +9,7 @@ require('../images/hero-znT2Mwt9ypo.jpg');
 require('../images/icon.png');
 require('../images/profile.jpg');
 require('../images/travis-builds.png');
+require('../images/twitter.png');
 
 // Old posts
 const moment = require('moment');

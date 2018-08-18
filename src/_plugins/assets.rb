@@ -15,9 +15,15 @@ module Jekyll
   end
 end
 
-Jekyll::Hooks.register :site, :pre_render do |site|
+Jekyll::Hooks.register :site, :after_init do |site|
   manifest_path = site.config['assets']['json_manifest_path']
   site.config['assets']['manifest'] = JSON.parse(File.read(manifest_path)) if File.exists? manifest_path
+end
+
+Jekyll::Hooks.register :pages, :post_init do |page|
+  image = page.data['image']
+  manifest = page.site.config['assets']['manifest']
+  page.data['image'] = manifest.key?(image) ? manifest[image] : image
 end
 
 Liquid::Template.register_tag('asset', Jekyll::AssetUrlTag)
