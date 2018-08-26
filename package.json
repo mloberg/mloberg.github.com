@@ -15,16 +15,14 @@
   "devDependencies": {
     "@symfony/webpack-encore": "^0.20.1",
     "autoprefixer": "^9.1.1",
+    "backstopjs": "^3.5.6",
+    "http-server": "^0.11.1",
     "markdown-proofing": "^1.0.2",
     "postcss-loader": "^3.0.0",
     "purgecss-webpack-plugin": "^1.2.1",
     "tailwindcss": "^0.6.5",
     "tailwindcss-aspect-ratio": "^1.0.1",
     "tailwindcss-responsive-embed": "^0.2.2"
-  },
-  "optionalDependencies": {
-    "backstopjs": "^3.2.19",
-    "http-server": "^0.11.1"
   },
   "browserslist": [
     "last 2 versions",
