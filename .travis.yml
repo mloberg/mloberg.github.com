@@ -31,7 +31,7 @@ before_script:
 script:
   - bundle exec jekyll doctor
   - bundle exec htmlproofer --check-html --http-status-ignore 301,302 --url-swap "https\://mlo.io:http\://localhost:4000" --assume-extension ./dist
-  - npm run test
+  # - npm run test
 
 # https://docs.travis-ci.com/user/deployment/script
 deploy:

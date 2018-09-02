@@ -236,7 +236,7 @@ for more information.
 [yfm]: http://jekyllrb.com/docs/frontmatter/
 [permalinks]: http://jekyllrb.com/docs/permalinks/
 [assets]: http://jekyllrb.com/docs/assets/
-[drafts]: http://jekyllrb.com/docs/drafts/
+[drafts]: https://jekyllrb.com/docs/posts/#drafts
 [collections]: http://jekyllrb.com/docs/collections/
 [datafiles]: http://jekyllrb.com/docs/datafiles/
 [pagination]: http://jekyllrb.com/docs/pagination/
