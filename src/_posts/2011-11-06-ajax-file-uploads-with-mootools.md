@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ajax File Uploads With MooTools
-category: js
+categories: javascript
 redirect_from: /blog/2011/11/06/ajax-file-uploads-with-mootools.html
 ---
 I've been working on redoing my personal site; making it responsive and easier for me to update (because even though I can edit the source, having a CMS is way easier). I thought it was going to be a pretty easy project (besides the design) because I knew what browser I was going to be using and don't have to include all these hacks for older browsers. But instead of just putting something really ugly together for the CMS admin, I've put a lot of time into making it look good. It's also become a place to test out some technologies. So far I created a modal plugin for MooTools (my preferred JS library) which was originally suppose to work on both mobile and desktop devices (but there were so many variables in the end it didn't work out). Tonight I just finished up a plugin for Ajax file uploads.

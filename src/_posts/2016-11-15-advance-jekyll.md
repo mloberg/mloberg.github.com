@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Advance Jekyll
-category: jekyll
+categories: jekyll
 excerpt: >
   Bring your Jekyll site to the next level. Learn how to manage dependencies,
   organize your site, write your own plugins, build assets, test your site, and

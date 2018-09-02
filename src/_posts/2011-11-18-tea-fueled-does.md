@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tea-Fueled Does
-category: php
+categories: php
 redirect_from: /blog/2011/11/18/tea-fueled-does.html
 ---
 _Editor's Note: Since posting this, Tea-Fueled Does has been deprecated. We recommend to check out [Symfony](https://symfony.com/doc/current/book/index.html) or [Laravel](http://laravel.com/). These are awesome and modern PHP frameworks._

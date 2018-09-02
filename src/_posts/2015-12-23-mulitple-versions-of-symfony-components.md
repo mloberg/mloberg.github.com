@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Supporting Multiple Versions of Symfony Components
-category: symfony
+categories: symfony
 excerpt: >
   With the release of Symfony 3.0 how do you support users that may be running
   either 2 or 3? We talk about how to support multiple versions of Symfony

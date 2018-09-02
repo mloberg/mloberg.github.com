@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Why Static Site Generators
-category: jekyll
+categories: jekyll
 excerpt: >
   In this post we'll talk about what static sites are and the benefits and
   drawbacks compared to "normal" site.

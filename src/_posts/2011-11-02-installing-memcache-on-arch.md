@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installing Memcache On Arch
-category: devops
+categories: devops
 redirect_from: /blog/2011/11/02/installing-memcache-on-arch.html
 ---
 This is a simple guide to get [Memcached](http://memcached.org/) and the Memcache/Memcached module(s) for PHP installed on Arch Linux.

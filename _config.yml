@@ -29,7 +29,10 @@ permalink: /blog/:year/:month/:day/:title/
 
 jekyll-archives:
   enabled: all
-  layout: 'archive'
+  layout: archive
+  layouts:
+    category: category
+    tag: category
   permalinks:
     year: '/blog/:year/'
     month: '/blog/:year/:month/'

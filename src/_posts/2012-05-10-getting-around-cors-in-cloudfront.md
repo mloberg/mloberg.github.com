@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Around CORS in CloudFront
-category: devops
+categories: devops
 redirect_from: /blog/2012/05/10/getting-around-cors-in-cloudfront.html
 ---
 We ran into an issue at work the other day with CloudFront and S3. We were trying to load assets via Ajax from our CloudFront distribution, but kept getting an "Origin http://example.com is not allowed by Access-Control-Allow-Origin" error. There is a W3 spec called CORS (Cross-Origin Resource Sharing) that prevents retrieving data from another site. To get around this, you would normally set an "Access-Control-Allow-Origin" header, but S3 limits the headers you can set, and that's not one of them.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Composer Version Alias Hack
-category: php
+categories: php
 excerpt: Quickly solve version dependency differences in composer.
 redirect_from: /blog/2017/12/23/composer-version-alias-hack.html
 ---

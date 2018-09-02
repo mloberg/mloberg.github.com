@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started With Jekyll
-category: jekyll
+categories: jekyll
 excerpt: >
   Learn how to setup a Jekyll site complete with layouts, includes, and basic assets.
   Then dive into how to create a post and publish it to GitHub pages.

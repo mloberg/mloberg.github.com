@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<h2 class="page-title">Posts with {{ page.type }} {{ page.title }}</h2>
+
+{%- for post in page.posts -%}
+  {%- assign currentyear = post.date | date: "%Y" -%}
+  {%- if currentyear != year -%}
+    <h3 class="text-3xl mb-4 {% unless forloop.first %}mt-8{% endunless %}">{{ currentyear }}</h3>
+    {% assign year = currentyear %}
+  {%- endif -%}
+  {% include post-list.html %}
+{%- endfor -%}
