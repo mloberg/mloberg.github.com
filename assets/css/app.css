@@ -52,6 +52,14 @@
   @apply bg-grey-lighter p-1;
 }
 
+.social-sharing a {
+  @apply no-underline text-blue-dark transition-linear mx-1;
+}
+
+.social-sharing a:hover {
+  @apply text-blue;
+}
+
 .footer a {
   @apply text-grey-dark transition-linear;
 }

@@ -13,9 +13,23 @@ layout: default
       {{ content }}
   </div>
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus.html -%}
-  {%- endif -%}
+  <div class="border-t md:border-b py-6 md:flex justify-between">
+    <div>
+      <p>Comments? I'm <a href="https://twitter.com/mloberg">@mloberg</a> on Twitter.</p>
+    </div>
+    <div class="social-sharing mt-3 md:mt-0">
+      <span class="mr-1">Share:</span>
+      <a href="https://twitter.com/intent/tweet?text={{ page.title | escape }}&url={{ page.url | absolute_url }}&via=mloberg">
+        <i class="fab fa-twitter fa-lg"></i>
+      </a>
+      <a href="http://www.facebook.com/sharer.php?u={{ page.url | absolute_url }}">
+        <i class="fab fa-facebook fa-lg"></i>
+      </a>
+      <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}">
+        <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+    </div>
+  </div>
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
