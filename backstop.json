@@ -22,11 +22,39 @@
   "scenarios": [
     {
       "label": "home",
-      "url": "http://localhost:4000"
+      "url": "http://mloio/",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
     },
     {
-      "label": "post",
-      "url": "http://localhost:4000/blog/2016/11/15/advance-jekyll/"
+      "label": "Post",
+      "url": "http://mloio/blog/2016/11/15/advance-jekyll/",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
     }
   ],
   "paths": {
@@ -35,10 +63,6 @@
     "engine_scripts": "tests/backstop/engine",
     "html_report": "build/backstop/html_report",
     "ci_report": "build/backstop/ci_report"
-  },
-  "ci": {
-    "report": "junit",
-    "testSuiteName": "backstopJS"
   },
   "report": ["CI"],
   "engine": "puppeteer",
