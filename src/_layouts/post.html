@@ -8,17 +8,17 @@ layout: default
       {{- page.date | date: "%B %-d, %Y" -}}
     </time>
     {% unless page.categories == empty %}
-      <span class="ml-2">
-        Posted in:
-        <ul class="list-reset inline-block">
+      <div class="post__categories">
+        <span>Posted in:</span>
+        <ul>
           {% for category in page.categories %}
-            <li class="inline"><a class="no-underline text-blue-dark hover:text-blue transition-linear" href="/blog/category/{{ category }}">#{{ category }}</a></li>
+            <li><a href="/blog/category/{{ category }}">#{{ category }}</a></li>
           {% endfor %}
           {% for tag in page.tags %}
-            <li class="inline"><a class="no-underline text-blue-dark hover:text-blue transition-linear" href="/blog/tag/{{ tag }}">#{{ tag }}</a></li>
+            <li><a href="/blog/tag/{{ tag }}">#{{ tag }}</a></li>
           {% endfor %}
         </ul>
-      </span>
+      </div>
     {% endunless %}
   </header>
 
@@ -26,9 +26,9 @@ layout: default
       {{ content }}
   </div>
 
-  <div class="border-t md:border-b py-6 md:flex justify-between">
+  <div class="border-t md:border-b pt-6 pb-2 md:pb-6 md:flex justify-between">
     <div>
-      <p>Comments? I'm <a href="https://twitter.com/mloberg">@mloberg</a> on Twitter.</p>
+      <p>Comments? I'm <a class="no-underline text-blue-dark hover:text-blue transition-linear" href="https://twitter.com/mloberg">@mloberg</a> on Twitter.</p>
     </div>
     <div class="social-sharing mt-3 md:mt-0">
       <span class="mr-1">Share:</span>

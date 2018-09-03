@@ -1,0 +1,48 @@
+{
+  "id": "mlo.io",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "Homepage",
+      "url": "http://mloio/"
+    },
+    {
+      "label": "Post",
+      "url": "http://mloio/blog/2016/11/15/advance-jekyll/"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "tests/backstop/reference",
+    "bitmaps_test": "build/backstop/bitmaps",
+    "engine_scripts": "tests/backstop/scripts",
+    "html_report": "build/backstop/html_report",
+    "ci_report": "build/backstop/ci_report"
+  },
+  "report": ["CI"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

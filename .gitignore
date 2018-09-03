@@ -13,6 +13,7 @@
 .jekyll-metadata
 .ruby-version
 .tmp
+.env
 node_modules
 bower_components
 build

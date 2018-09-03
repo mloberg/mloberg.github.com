@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  jekyll:
+    image: jekyll/jekyll:3.8
+    command: jekyll serve
+    environment:
+      - ALGOLIA_API_KEY
+    volumes:
+      - ./vendor/bundle:/usr/local/bundle
+      - .:/srv/jekyll:cached
+    ports:
+      - 4000:4000
+
+  assets:
+    image: node:8
+    working_dir: /src
+    command: sh -c "npm install && npm run watch"
+    volumes:
+      - .:/src:cached
+
+  mloio:
+    image: nginx:alpine
+    volumes:
+      - ./dist:/usr/share/nginx/html:ro
+
+  test:
+    image: backstopjs/backstopjs
+    volumes:
+      - .:/src
+
+  deploy:
+    image: jess/awscli
+    working_dir: /usr/src/blog
+    environment:
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - AWS_DEFAULT_REGION
+    volumes:
+      - ./dist:/usr/src/blog:ro

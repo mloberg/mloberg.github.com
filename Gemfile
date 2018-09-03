@@ -14,5 +14,4 @@ end
 
 group :ci do
   gem "html-proofer"
-  gem "s3_website"
 end

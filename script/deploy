@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-set -ex
-
-# Index Algolia
-bundle exec jekyll algolia
-
-# Deploy
-bundle exec s3_website push

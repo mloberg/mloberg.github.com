@@ -17,7 +17,8 @@ end
 
 Jekyll::Hooks.register :site, :after_init do |site|
   manifest_path = site.config['assets']['json_manifest_path']
-  site.config['assets']['manifest'] = JSON.parse(File.read(manifest_path)) if File.exists? manifest_path
+  sleep(1) until File.exists? manifest_path
+  site.config['assets']['manifest'] = JSON.parse(File.read(manifest_path))
 end
 
 Jekyll::Hooks.register :pages, :post_init do |page|

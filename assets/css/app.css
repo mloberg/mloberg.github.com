@@ -16,6 +16,26 @@
   transition: all .1s linear;
 }
 
+.post__categories {
+  @apply mt-4;
+}
+
+.post__categories ul {
+  @apply list-reset inline-block;
+}
+
+.post__categories li {
+  @apply inline;
+}
+
+.post__categories a {
+  @apply no-underline text-blue-dark transition-linear;
+}
+
+.post__categories a:hover {
+  @apply text-blue;
+}
+
 .post__content {
   @apply font-sans font-normal leading-loose text-justify;
 }
@@ -70,4 +90,10 @@
 
 .old-post-warning {
   @apply mt-6 bg-yellow-lighter py-4 px-6 italic text-yellow-darkest border-yellow-dark border-l-4;
+}
+
+@screen md {
+  .post__categories {
+    @apply ml-2 inline;
+  }
 }
