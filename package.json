@@ -9,6 +9,7 @@
     "proof:drafts": "markdown-proofing src/_drafts/*.md"
   },
   "dependencies": {
+    "instantsearch.js": "^2.10.1",
     "moment": "^2.22.2"
   },
   "devDependencies": {

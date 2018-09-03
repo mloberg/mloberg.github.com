@@ -13,6 +13,7 @@ Encore
   .setOutputPath('src/assets')
   .setPublicPath('/assets')
   .addEntry('app', './assets/js/app.js')
+  .addEntry('search', './assets/js/search.js')
   .enablePostCssLoader()
   .cleanupOutputBeforeBuild()
   .enableSourceMaps(!Encore.isProduction())
@@ -31,7 +32,7 @@ if (Encore.isProduction()) {
         extensions: ['html', 'js', 'md']
       }
     ],
-    whitelistPatternsChildren: [/highlight/, /post__content/]
+    whitelistPatternsChildren: [/highlight/, /post__content/, /ais/]
   }))
 }
 

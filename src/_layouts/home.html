@@ -1,13 +1,51 @@
 ---
 layout: default
 ---
-<h2 class="page-title">{{ page.title | default: "Latest Posts" | escape }}</h2>
+<div class="flex justify-between">
+  <h2 class="page-title transition-linear">{{ page.title | default: "Latest Posts" | escape }}</h2>
+  <span>
+    <a id="show-search" class="text-grey-darkest hover:text-blue transition-linear no-underline js-search-hide" href="#">
+      <i class="fas fa-search"></i> Search
+    </a>
+    <a id="hide-search" class="hidden text-grey-darkest hover:text-blue transition-linear no-underline js-search-show" href="#">
+      <i class="fas fa-arrow-circle-left"></i> Post list
+    </a>
+  </span>
+</div>
 
-{%- for post in site.posts -%}
-  {%- assign currentyear = post.date | date: "%Y" -%}
-  {%- if currentyear != year -%}
-    <h3 class="text-3xl mb-4 {% unless forloop.first %}mt-8{% endunless %}">{{ currentyear }}</h3>
-    {% assign year = currentyear %}
-  {%- endif -%}
-  {% include post-list.html %}
-{%- endfor -%}
+<div class="hidden transition-linear js-search-show">
+  <div id="search-box"></div>
+  <div id="search-hits" class="mt-6"></div>
+</div>
+
+<div class="transition-linear js-search-hide">
+  {%- for post in site.posts -%}
+    {%- assign currentyear = post.date | date: "%Y" -%}
+    {%- if currentyear != year -%}
+      <h3 class="text-3xl mb-4 {% unless forloop.first %}mt-8{% endunless %}">{{ currentyear }}</h3>
+      {% assign year = currentyear %}
+    {%- endif -%}
+    {% include post-list.html %}
+  {%- endfor -%}
+</div>
+
+<script src="{% asset assets/search.js %}"></script>
+<link rel="stylesheet" href="{% asset assets/search.css %}">
+<script>
+const search = new BlogSearch({
+  appId: '{{ site.algolia.application_id }}',
+  apiKey: '{{ site.algolia.search_only_api_key }}',
+  indexName: '{{ site.algolia.index_name }}'
+});
+const pageTitle = document.querySelector('.page-title').textContent;
+document.getElementById("show-search").onclick = function (event) {
+  event.preventDefault();
+  search.show();
+  document.querySelector('.page-title').textContent = "Search";
+};
+document.getElementById("hide-search").onclick = function (event) {
+  event.preventDefault();
+  search.hide();
+  document.querySelector('.page-title').textContent = pageTitle;
+};
+</script>

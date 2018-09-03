@@ -8,6 +8,12 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    algolia_html_extractor (2.6.1)
+      json (~> 2.0)
+      nokogiri (~> 1.8.2)
+    algoliasearch (1.23.2)
+      httpclient (~> 2.8, >= 2.8.3)
+      json (>= 1.5.1)
     aws-sdk (2.11.89)
       aws-sdk-resources (= 2.11.89)
     aws-sdk-core (2.11.89)
@@ -32,6 +38,7 @@ GEM
       ffi (>= 1.3.0)
     eventmachine (1.2.7)
     ffi (1.9.25)
+    filesize (0.1.1)
     forwardable-extended (2.6.0)
     html-proofer (3.9.1)
       activesupport (>= 4.2, < 6.0)
@@ -43,6 +50,7 @@ GEM
       typhoeus (~> 1.3)
       yell (~> 2.0)
     http_parser.rb (0.6.0)
+    httpclient (2.8.3)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     jekyll (3.8.3)
@@ -58,6 +66,15 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
+    jekyll-algolia (1.4.7)
+      algolia_html_extractor (~> 2.6)
+      algoliasearch (~> 1.18)
+      filesize (~> 0.1)
+      jekyll (~> 3.0)
+      json (~> 2.0)
+      nokogiri (~> 1.6)
+      progressbar (~> 1.9)
+      verbal_expressions (~> 0.1.5)
     jekyll-archives (2.1.1)
       jekyll (>= 2.4)
     jekyll-compose (0.8.0)
@@ -75,6 +92,7 @@ GEM
     jekyll-watch (2.0.0)
       listen (~> 3.0)
     jmespath (1.4.0)
+    json (2.1.0)
     kramdown (1.17.0)
     liquid (4.0.0)
     listen (3.1.5)
@@ -89,6 +107,7 @@ GEM
     parallel (1.12.1)
     pathutil (0.16.1)
       forwardable-extended (~> 2.6)
+    progressbar (1.10.0)
     public_suffix (3.0.2)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
@@ -112,6 +131,7 @@ GEM
       ethon (>= 0.9.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
+    verbal_expressions (0.1.5)
     yell (2.0.7)
 
 PLATFORMS
@@ -120,6 +140,7 @@ PLATFORMS
 DEPENDENCIES
   html-proofer
   jekyll
+  jekyll-algolia
   jekyll-archives
   jekyll-compose
   jekyll-feed
