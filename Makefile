@@ -10,6 +10,20 @@ stop:
 	docker-compose down
 .PHONY: stop
 
+draft:
+	@test ${NAME}
+	docker-compose run --rm jekyll jekyll draft ${NAME}
+.PHONY: draft
+
+proof:
+	docker-compose run --rm assets npm run proof:drafts
+.PHONY: proof
+
+post:
+	@test ${DRAFT}
+	docker-compose run --rm jekyll jekyll publish ${DRAFT}
+.PHONY: post
+
 clean:
 	rm -rf dist
 	rm -rf src/assets
