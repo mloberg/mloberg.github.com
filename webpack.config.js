@@ -13,6 +13,7 @@ Encore
   .setOutputPath('src/assets')
   .setPublicPath('/assets')
   .addEntry('app', './assets/js/app.js')
+  .addEntry('post', './assets/js/post.js')
   .addEntry('search', './assets/js/search.js')
   .enablePostCssLoader()
   .cleanupOutputBeforeBuild()
