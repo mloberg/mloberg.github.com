@@ -32,13 +32,13 @@ layout: default
     </div>
     <div class="social-sharing mt-3 md:mt-0">
       <span class="mr-1">Share:</span>
-      <a href="https://twitter.com/intent/tweet?text={{ page.title | escape }}&url={{ page.url | absolute_url }}&via=mloberg" target="_blank">
+      <a href="https://twitter.com/intent/tweet?text={{ page.title | escape }}&url={{ page.url | absolute_url }}&via=mloberg" target="_blank" rel="noopener" aria-label="Tweet this">
         <i class="fab fa-twitter fa-lg"></i>
       </a>
-      <a href="http://www.facebook.com/sharer.php?u={{ page.url | absolute_url }}" target="_blank">
+      <a href="http://www.facebook.com/sharer.php?u={{ page.url | absolute_url }}" target="_blank" rel="noopener" aria-label="Share on Facebook">
         <i class="fab fa-facebook fa-lg"></i>
       </a>
-      <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}" target="_blank">
+      <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
         <i class="fab fa-linkedin fa-lg"></i>
       </a>
     </div>

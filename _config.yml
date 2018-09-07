@@ -8,12 +8,16 @@ url: "https://mlo.io"
 icons:
   - href: https://twitter.com/mloberg
     icon: fab fa-twitter
+    label: Follow me on Twitter
   - href: https://github.com/mloberg
     icon: fab fa-github
+    label: View my GitHub profile
   - href: https://www.instagram.com/mloberg/
     icon: fab fa-instagram
+    label: Follow me on Instagram
   - href: https://mlo.io/feed.xml
     icon: fas fa-rss
+    label: RSS Feed
 
 defaults:
   - scope:

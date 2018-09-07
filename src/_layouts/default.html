@@ -35,7 +35,7 @@ layout: compress
         <ul class="list-reset flex items-center py-4">
           {%- for icon in site.icons -%}
             <li class="mr-2">
-                <a class="text-blue-dark hover:text-blue transition-linear" href="{{ icon.href }}">
+                <a class="text-blue-dark hover:text-blue transition-linear" href="{{ icon.href }}" aria-label="{{ icon.label }}">
                   <i class="{{ icon.icon }} fa-lg"></i>
                 </a>
             </li>
