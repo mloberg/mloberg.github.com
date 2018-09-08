@@ -33,7 +33,7 @@ if (Encore.isProduction()) {
         extensions: ['html', 'js', 'md']
       }
     ],
-    whitelistPatternsChildren: [/highlight/, /post/, /ais/]
+    whitelistPatternsChildren: [/highlight/, /post/, /ais/, /hero/]
   }))
 }
 
