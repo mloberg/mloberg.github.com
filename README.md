@@ -2,31 +2,21 @@
 
 Jekyll site for [mlo.io](http://mlo.io)
 
-## Develop
+## Assets
 
-    make
-
-## Test
-
-    make test
-    make test-report # to view test report if it failed
-    make test-approve # to approve changes
-
-## Publish
-
-    make publish
+    npm run build
+    # Or watch for changes and rebuild
+    npm run watch
 
 ## Creating a New Post
 
-1. `make draft NAME=post-name`
+1. `jekyll draft NAME`
 2. Write the post
-3. Proof it (`make proof`)
+3. Proof it (`make proof:drafts`)
 4. Find a hero image (usually from [Unsplash](https://unsplash.com/))
-5. Save as `assets/images/hero-{id}.jpg`
-6. Edit photo to be _1900px wide_
-7. Run through [ImageOptim](http://imageoptim.com/)
-8. Run any other post images through ImageOptim
-9. Publish the draft (`make post DRAFT=path/to/draft`)
-10. Update BackstopJS references (`make test && make test-report && make test-approve`)
-11. Publish site (`make publish`)
-12. 💵 Profit 💵
+5. Generate hero images (`script/hero IMAGE NAME`)
+6. Add hero name to _tailwind.config.js_
+7. Optimize images (`npm run optimize`)
+8. Publish the draft (`jekyll publish DRAFT`)
+9. Commit & push
+10. 💵 Profit 💵
