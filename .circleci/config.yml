@@ -35,7 +35,7 @@ jobs:
           command: bundle exec jekyll build
       - run:
           name: Test with HTMLProofer
-          command: bundle exec htmlproofer ./dist --check-html --http-status-ignore 301,302 --url-ignore "/mlo.io/" --assume-extension
+          command: bundle exec htmlproofer ./dist --check-html --disable-external --assume-extension
       - run:
           name: Update Algolia index
           command: bundle exec jekyll algolia
