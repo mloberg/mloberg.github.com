@@ -3,7 +3,7 @@ layout: post
 title: Using UUID Client IDs in Laravel Passport
 categories: laravel
 hero:
-  image: assets/images/hero-i6VBVfcerso.jpg
+  name: i6VBVfcerso
   photographer: Peter Conlan
   link: https://unsplash.com/photos/i6VBVfcerso
 ---

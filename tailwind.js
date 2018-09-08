@@ -133,6 +133,29 @@ module.exports = {
 
   /*
   |-----------------------------------------------------------------------------
+  | Heroes
+  |-----------------------------------------------------------------------------
+  |
+  | Hero images for the site. This generates responsive background images for
+  | each supplied hero name.
+  |
+  | It is assumed that each hero has an image corresponding to a screen size.
+  | For example hero-foo should have an image for medium screens at
+  | /images/hero/main-md.jpg.
+  |
+  | Class name: .hero-{name}
+  |
+  */
+
+  heroes: [
+    'main',
+    'i6VBVfcerso',
+    'znT2Mwt9ypo',
+  ],
+
+
+  /*
+  |-----------------------------------------------------------------------------
   | Colors                                  https://tailwindcss.com/docs/colors
   |-----------------------------------------------------------------------------
   |
@@ -955,6 +978,29 @@ module.exports = {
         '21/9': [21, 9],
       }
     }),
+    // Hero images
+    function ({ addComponents, config }) {
+      const _ = require('lodash')
+      const screens = config('screens', [])
+      const heroes = config('heroes', [])
+
+      _.map(heroes, hero => {
+        const mediaQueries = _.map(screens, (width, name) => {
+          return {
+            [`@media (min-width: ${width})`]: {
+              [`.hero-${hero}`]: {
+                'background-image': `url("/images/hero/${hero}-${name}.jpg")`,
+              },
+            },
+          }
+        })
+
+        addComponents([
+          { [`.hero-${hero}`]: { 'background-image': `url("/images/hero/${hero}.jpg")` } },
+          mediaQueries
+        ])
+      })
+    }
   ],
 
 

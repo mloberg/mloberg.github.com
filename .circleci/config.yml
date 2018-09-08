@@ -56,8 +56,11 @@ jobs:
           name: Deploy to S3
           command: aws s3 sync site/dist s3://mlo.io --acl public-read --cache-control max-age=86400 --storage-class REDUCED_REDUNDANCY
       - run:
-          name: Increase cache for assets
+          name: Increase cache for css/js
           command: aws s3 cp s3://mlo.io/assets/ s3://mlo.io/assets/ --recursive --metadata-directive REPLACE --cache-control max-age=31536000 --storage-class REDUCED_REDUNDANCY --acl public-read
+      - run:
+          name: Increase cache for images
+          command: aws s3 cp s3://mlo.io/images/ s3://mlo.io/images/ --recursive --metadata-directive REPLACE --cache-control max-age=31536000 --storage-class REDUCED_REDUNDANCY --acl public-read
       - run:
           name: Invalidate CloudFront cache
           command: aws cloudfront create-invalidation --distribution-id $AWS_CF_DISTRIBUTION_ID --paths '/*' >/dev/null

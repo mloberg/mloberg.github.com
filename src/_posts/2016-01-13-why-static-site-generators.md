@@ -7,7 +7,7 @@ excerpt: >
   drawbacks compared to "normal" site.
 redirect_from: /blog/2016/01/13/why-static-site-generators.html
 hero:
-  image: assets/images/hero-znT2Mwt9ypo.jpg
+  name: znT2Mwt9ypo
   photographer: rawpixel
   link: https://unsplash.com/photos/znT2Mwt9ypo
 ---

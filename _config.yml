@@ -23,9 +23,9 @@ defaults:
   - scope:
       path: ""
     values:
-      image: assets/images/twitter.png
+      image: /images/twitter.png
       hero:
-        image: assets/images/hero.jpg
+        name: main
         photographer: Daniel Leone
         link: https://unsplash.com/photos/g30P1zcOzXo
 
@@ -45,7 +45,7 @@ jekyll-archives:
     category: '/blog/category/:name/'
 
 # Jekyll SEO
-logo: /assets/images/profile.jpg
+logo: /images/profile.jpg
 
 twitter:
   username: mloberg

@@ -13,12 +13,12 @@ layout: compress
   <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
 </head>
 <body class="font-sans font-normal antialiased bg-white text-grey-darker">
-  <header class="hero pt-32 pb-32 relative" style="background-image: url('{% asset @page.hero.image %}')">
+  <header class="hero hero-{{ page.hero.name | default: "main" }} pt-32 pb-32 relative">
     <div class="container mx-auto px-4">
       <h1 class="inline-block bg-white font-title text-5xl text-black my-8 py-2 px-4">{{ page.title | default: site.title | escape }}</h1>
     </div>
     <a class="absolute pin-t pin-l bg-white p-1" href="{{ "/" | relative_url }}">
-      <img src="{% asset assets/images/icon.png %}" alt="Home">
+      <img src="/images/icon.png" alt="Home">
     </a>
   </header>
   <div class="container mx-auto mt-8 md:flex px-4">
@@ -30,7 +30,7 @@ layout: compress
         <h2 class="mb-2">
           <a class="no-underline text-blue hover:text-blue-light transition-linear" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
         </h2>
-        <img class="rounded-full" height="100" width="100" src="{% asset assets/images/profile.jpg %}" alt="{{ site.title }}">
+        <img class="rounded-full" height="100" width="100" src="/images/profile.jpg" alt="{{ site.title }}">
         {{ site.description | markdownify }}
         <ul class="list-reset flex items-center py-4">
           {%- for icon in site.icons -%}
