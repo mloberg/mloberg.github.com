@@ -1,0 +1,74 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/mloio
+    docker:
+      - image: circleci/ruby:2.5.1-node
+    environment:
+      JEKYLL_ENV: production
+      NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+    steps:
+      - checkout
+      - restore_cache:
+          key: mlo-assets-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run:
+          name: Install npm dependencies
+          command: npm install
+      - save_cache:
+          key: mlo-assets-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Generate assets
+          command: npm run prod
+      - restore_cache:
+          key: mlo-gems-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: Install Ruby dependencies
+          command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
+      - save_cache:
+          key: mlo-gems-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - ./vendor/bundle
+      - run:
+          name: Build the Jekyll site
+          command: bundle exec jekyll build
+      - run:
+          name: Test with HTMLProofer
+          command: bundle exec htmlproofer ./dist --check-html --http-status-ignore 301,302 --url-ignore "/mlo.io/" --assume-extension
+      - run:
+          name: Update Algolia index
+          command: bundle exec jekyll algolia
+      - store_artifacts:
+          path: dist/
+          destination: site
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - dist
+  deploy:
+    docker:
+      - image: cibuilds/aws:1.15.73
+    steps:
+      - attach_workspace:
+          at: ./site
+      - run:
+          name: Deploy to S3
+          command: aws s3 sync site/dist s3://mlo.io --acl public-read --cache-control max-age=86400 --storage-class REDUCED_REDUNDANCY
+      - run:
+          name: Increase cache for assets
+          command: aws s3 cp s3://mlo.io/assets/ s3://mlo.io/assets/ --recursive --metadata-directive REPLACE --cache-control max-age=31536000 --storage-class REDUCED_REDUNDANCY --acl public-read
+      - run:
+          name: Invalidate CloudFront cache
+          command: aws cloudfront create-invalidation --distribution-id $AWS_CF_DISTRIBUTION_ID --paths '/*'
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
