@@ -5,9 +5,11 @@
     "build": "encore dev",
     "watch": "encore dev --watch",
     "prod": "encore production",
+    "clean": "rm -rf dist && rm -rf src/assets",
     "proof": "markdown-proofing",
     "proof:drafts": "markdown-proofing src/_drafts/*.md",
-    "optimize": "open -a ImageOptim src/images"
+    "optimize": "open -a ImageOptim src/images",
+    "purgecss": "purgecss --config purgecss.config.js --out dist/assets"
   },
   "dependencies": {
     "instantsearch.js": "^2.10.1",
@@ -18,7 +20,7 @@
     "autoprefixer": "^9.1.5",
     "markdown-proofing": "^1.0.2",
     "postcss-loader": "^3.0.0",
-    "purgecss-webpack-plugin": "^1.2.1",
+    "purgecss": "^1.1.0",
     "tailwindcss": "^0.6.5",
     "tailwindcss-aspect-ratio": "^1.0.1",
     "tailwindcss-responsive-embed": "^0.2.2"

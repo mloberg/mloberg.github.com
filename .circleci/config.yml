@@ -34,6 +34,9 @@ jobs:
           name: Build the Jekyll site
           command: bundle exec jekyll build
       - run:
+          name: Optimize CSS
+          command: npm run purgecss
+      - run:
           name: Test with HTMLProofer
           command: bundle exec htmlproofer ./dist --check-html --disable-external --assume-extension
       - run:
