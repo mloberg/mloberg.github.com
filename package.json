@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "instantsearch.js": "^2.10.1",
-    "moment": "^2.22.2"
+    "moment": "^2.22.2",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@symfony/webpack-encore": "^0.20.1",
