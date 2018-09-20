@@ -14,5 +14,10 @@ for (let file of files) {
     minify: true,
     css: css,
     ignore: ['@font-face',/url\(/]
+  }, (err, output) => {
+    if (err) {
+      console.log(err);
+      process.exit(1);
+    }
   });
 }
