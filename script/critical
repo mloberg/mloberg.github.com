@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+const glob = require('glob');
+const critical = require('critical');
+
+const files = glob.sync('**/*.html', { cwd: 'dist' });
+const css = glob.sync('dist/**/*.css');
+
+for (let file of files) {
+  critical.generate({
+    inline: true,
+    base: 'dist/',
+    src: file,
+    dest: file,
+    minify: true,
+    css: css,
+    ignore: ['@font-face',/url\(/]
+  });
+}

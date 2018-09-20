@@ -37,6 +37,9 @@ jobs:
           name: Optimize CSS
           command: npm run purgecss
       - run:
+          name: Critical CSS
+          command: script/critical
+      - run:
           name: Test with HTMLProofer
           command: bundle exec htmlproofer ./dist --check-html --disable-external --assume-extension
       - run:
