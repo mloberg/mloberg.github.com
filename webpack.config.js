@@ -7,6 +7,7 @@ Encore
   .addEntry('app', './assets/js/app.js')
   .addEntry('post', './assets/js/post.js')
   .addEntry('search', './assets/js/search.js')
+  .addEntry('name-generator', './assets/js/name-generator.js')
   .enablePostCssLoader()
   .cleanupOutputBeforeBuild()
   .enableSourceMaps(!Encore.isProduction())
