@@ -18,9 +18,6 @@ jobs:
           key: mlo-assets-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
             - ./node_modules
-      - run:
-          name: Generate assets
-          command: npm run prod
       - restore_cache:
           key: mlo-gems-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
       - run:
@@ -31,11 +28,17 @@ jobs:
           paths:
             - ./vendor/bundle
       - run:
-          name: Build the Jekyll site
+          name: Generate assets
+          command: npm run build
+      - run:
+          name: Build site
           command: bundle exec jekyll build
       - run:
-          name: Optimize CSS
-          command: npm run purgecss
+          name: Generate ptimized assets
+          command: npm run prod
+      - run:
+          name: Build production site
+          command: bundle exec jekyll build
       - run:
           name: Test with HTMLProofer
           command: bundle exec htmlproofer ./dist --check-html --disable-external --assume-extension
