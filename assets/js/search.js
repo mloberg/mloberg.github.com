@@ -44,7 +44,7 @@ class BlogSearch {
 
     return `
       <article class="pb-4">
-        <span class="block text-grey text-sm">${date}</span>
+        <span class="block text-grey-darker text-sm">${date}</span>
         <h4 class="font-normal"><a class="text-grey-darkest hover:text-blue transition-linear no-underline text-2xl" href="${url}">${title}</a></h4>
         <div class="post__content pt-2">
           ${content}
