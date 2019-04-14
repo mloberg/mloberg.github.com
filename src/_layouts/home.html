@@ -33,17 +33,16 @@ layout: default
 <link rel="stylesheet" href="{% asset assets/search.css %}">
 <script>
 const search = new BlogSearch({
-  appId: '{{ site.algolia.application_id }}',
-  apiKey: '{{ site.algolia.search_only_api_key }}',
-  indexName: '{{ site.algolia.index_name }}'
+  appId: "{{ site.algolia.application_id }}",
+  apiKey: "{{ site.algolia.search_only_api_key }}",
+  indexName: "{{ site.algolia.index_name }}"
 });
-const pageTitle = document.querySelector('.page-title').textContent;
 document.getElementById("show-search").onclick = function() {
   search.show();
-  document.querySelector('.page-title').textContent = "Search";
+  document.querySelector(".page-title").textContent = "Search";
 };
 document.getElementById("hide-search").onclick = function() {
   search.hide();
-  document.querySelector('.page-title').textContent = pageTitle;
+  document.querySelector(".page-title").textContent = document.querySelector(".page-title").textContent;
 };
 </script>

@@ -11,6 +11,7 @@ layout: compress
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="{% asset assets/app.css %}">
   <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
+  <script src="{% asset assets/runtime.js %}"></script>
 </head>
 <body class="font-sans font-normal antialiased bg-white text-grey-darker">
   <header class="hero hero-{{ page.hero.name | default: "main" }} pt-32 pb-32 relative">
@@ -57,7 +58,6 @@ layout: compress
       </li>
     </ul>
   </footer>
-  <script src="{% asset assets/runtime.js %}"></script>
   <script src="{% asset assets/app.js %}"></script>
 </body>
 </html>
