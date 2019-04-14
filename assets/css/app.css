@@ -9,7 +9,7 @@
 }
 
 .page-title {
-  @apply pb-4 text-base font-bold text-grey;
+  @apply pb-4 text-base font-bold text-grey-darker;
 }
 
 .transition-linear {
@@ -81,11 +81,11 @@
 }
 
 .footer a {
-  @apply text-grey-dark transition-linear;
+  @apply text-grey-darker transition-linear;
 }
 
 .footer a:hover {
-  @apply text-grey-darker;
+  @apply text-grey-darkest;
 }
 
 .old-post-warning {
