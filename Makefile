@@ -20,6 +20,7 @@ draft: ## Start draft post
 
 .PHONY: publish
 publish: ## Publish a draft
+	@ls src/_drafts
 	@read -p "Draft: " draft; \
 	docker-compose run --rm jekyll jekyll publish src/_drafts/$$draft.md
 
