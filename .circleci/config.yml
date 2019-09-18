@@ -28,15 +28,6 @@ jobs:
           paths:
             - ./vendor/bundle
       - run:
-          name: Generate assets
-          command: npm run build
-      - run:
-          name: Build site
-          command: bundle exec jekyll build
-      - run:
-          name: Generate ptimized assets
-          command: npm run prod
-      - run:
           name: Build production site
           command: bundle exec jekyll build
       - run:

@@ -65,9 +65,6 @@ source: src
 destination: dist
 markdown: kramdown
 
-assets:
-  json_manifest_path: src/assets/manifest.json
-
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
@@ -83,3 +80,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-archives
   - jekyll-redirect-from
+
+exclude:
+  - assets/entrypoints.json
+  - assets/manifest.json

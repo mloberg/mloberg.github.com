@@ -12,10 +12,10 @@ layout: default
         <span>Posted in:</span>
         <ul>
           {% for category in page.categories %}
-            <li><a href="/blog/category/{{ category }}">#{{ category }}</a></li>
+            <li class="pl-1"><a href="/blog/category/{{ category }}">#{{ category }}</a></li>
           {% endfor %}
           {% for tag in page.tags %}
-            <li><a href="/blog/tag/{{ tag }}">#{{ tag }}</a></li>
+            <li class="pl-1"><a href="/blog/tag/{{ tag }}">#{{ tag }}</a></li>
           {% endfor %}
         </ul>
       </div>

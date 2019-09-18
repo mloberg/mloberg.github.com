@@ -9,22 +9,26 @@ module Jekyll
 
     def render(context)
       @src = context[@src[1..-1].strip] if @src.start_with? '@'
-      manifest = context.registers[:site].config['assets']['manifest'] || {}
-      manifest.key?(@src) ? manifest[@src] : @src
+      context.registers[:site].config['_assets'].fetch(@src, @src)
     end
   end
 end
 
-Jekyll::Hooks.register :site, :after_init do |site|
-  manifest_path = site.config['assets']['json_manifest_path']
-  sleep(1) until File.exists? manifest_path
-  site.config['assets']['manifest'] = JSON.parse(File.read(manifest_path))
-end
-
-Jekyll::Hooks.register :pages, :post_init do |page|
-  image = page.data['image']
-  manifest = page.site.config['assets']['manifest']
-  page.data['image'] = manifest.key?(image) ? manifest[image] : image
-end
-
 Liquid::Template.register_tag('asset', Jekyll::AssetUrlTag)
+
+Jekyll::Hooks.register(:site, :after_init) do |site|
+  env = Jekyll.env == "production" ? "production" : "dev"
+  raise RuntimeError unless system("./node_modules/.bin/encore #{env}")
+end
+
+Jekyll::Hooks.register(:site, :after_init) do |site|
+  manifest = "src/assets/manifest.json"
+  raise RuntimeError, "Manifest file #{manifest} not found." unless File.exists?(manifest)
+  site.config['_assets'] = JSON.parse(File.read(manifest))
+end
+
+Jekyll::Hooks.register(:site, :post_write) do |site|
+  if Jekyll.env == "production"
+    raise RuntimeError unless system("./node_modules/.bin/purgecss --config ./purgecss.config.js --out dist/assets")
+  end
+end
