@@ -29,8 +29,8 @@ layout: default
   {%- endfor -%}
 </div>
 
-<script src="{% asset assets/search.js %}"></script>
-<link rel="stylesheet" href="{% asset assets/search.css %}">
+<script src="{{ "assets/search.js" | asset | relative_url }}"></script>
+<link rel="stylesheet" href="{{ "assets/search.css" | asset | relative_url }}">
 <script>
 const search = new BlogSearch({
   appId: "{{ site.algolia.application_id }}",

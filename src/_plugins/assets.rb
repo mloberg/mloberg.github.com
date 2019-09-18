@@ -1,20 +1,15 @@
 require 'json'
 
 module Jekyll
-  class AssetUrlTag < Liquid::Tag
-    def initialize(tag_name, src, tokens)
-      super
-      @src = src.strip
-    end
-
-    def render(context)
-      @src = context[@src[1..-1].strip] if @src.start_with? '@'
-      context.registers[:site].config['_assets'].fetch(@src, @src)
+  module AssetFilter
+    def asset(input)
+      manifest = @context.registers[:site].config['_assets']
+      manifest.fetch(input, input)
     end
   end
 end
 
-Liquid::Template.register_tag('asset', Jekyll::AssetUrlTag)
+Liquid::Template.register_filter(Jekyll::AssetFilter)
 
 Jekyll::Hooks.register(:site, :after_init) do |site|
   env = Jekyll.env == "production" ? "production" : "dev"

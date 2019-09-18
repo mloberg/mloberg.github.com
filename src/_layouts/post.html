@@ -47,4 +47,4 @@ layout: default
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
 
-<script src="{% asset assets/post.js %}"></script>
+<script src="{{ "assets/post.js" | asset | relative_url }}"></script>
