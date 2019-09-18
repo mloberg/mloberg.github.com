@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/mloio
     docker:
-      - image: circleci/ruby:2.5.1-node
+      - image: circleci/ruby:2.6.4-node
     environment:
       JEKYLL_ENV: production
       NOKOGIRI_USE_SYSTEM_LIBRARIES: true

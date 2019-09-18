@@ -63,7 +63,6 @@ algolia:
 timezone: America/Chicago
 source: src
 destination: dist
-markdown: kramdown
 
 compress_html:
   clippings: all
@@ -73,13 +72,6 @@ compress_html:
     envs: [development]
   blanklines: false
   startings: [html, head, body]
-
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-archives
-  - jekyll-redirect-from
 
 exclude:
   - assets/entrypoints.json
