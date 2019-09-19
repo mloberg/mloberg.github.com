@@ -1,6 +1,0 @@
-@import "instantsearch/instantsearch.css";
-@import "instantsearch/instantsearch-theme-algolia.css";
-
-.ais-search-box {
-  max-width: 100%;
-}

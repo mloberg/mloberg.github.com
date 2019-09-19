@@ -33,9 +33,6 @@ jobs:
       - run:
           name: Test with HTMLProofer
           command: bundle exec htmlproofer ./dist --check-html --disable-external --assume-extension
-      - run:
-          name: Update Algolia index
-          command: bundle exec jekyll algolia
       - store_artifacts:
           path: dist/
           destination: site
