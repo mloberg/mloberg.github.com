@@ -6,8 +6,6 @@
     "watch": "encore dev --watch",
     "prod": "encore production",
     "clean": "rm -rf dist && rm -rf src/assets",
-    "proof": "markdown-proofing",
-    "proof:drafts": "markdown-proofing src/_drafts/*.md",
     "optimize": "open -a ImageOptim src/images"
   },
   "dependencies": {
@@ -17,7 +15,6 @@
     "@symfony/webpack-encore": "^0.28.0",
     "autoprefixer": "^9.6.1",
     "lodash": "^4.17.15",
-    "markdown-proofing": "^1.0.2",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "purgecss": "^1.4.0",
