@@ -4,17 +4,17 @@ Jekyll site for [mlo.io](http://mlo.io)
 
 ## development
 
-    make up
+    npm install
+    bundle install --path=vendor/bundle --jobs=4 --retry=3
+    bundle exec jekyll serve
 
 ## writing a new post
 
-1. `make draft`
-2. Write the post
-3. Proof it (`make proof`)
-4. Find a hero image (usually from [Unsplash](https://unsplash.com/))
-5. Generate hero images (`script/hero IMAGE NAME`)
-6. Add hero name to _tailwind.config.js_
-7. Optimize images (`npm run optimize`)
-8. Publish the draft (`make publish`)
-9. Commit & push
-10. 💵 Profit 💵
+1. `bundle exec jekyll draft "Post Name"`
+2. Write
+3. Find a hero image (usually from [Unsplash](https://unsplash.com/))
+4. Generate hero images (`bin/hero IMAGE NAME`)
+5. Add hero name to _tailwind.config.js_
+6. Optimize images (`npm run optimize`)
+7. Publish the draft (`bundle exec jekyll publish [path]`)
+8. Commit & push
