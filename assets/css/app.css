@@ -44,6 +44,8 @@
   text-align: center;
   /* opacity: .8; */
 
+  line-height: 1em;
+
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
@@ -53,11 +55,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-search:before { content: '\e800'; } /* '' */
-.icon-left-circled:before { content: '\f0a8'; } /* '' */
 .icon-rss-squared:before { content: '\f143'; } /* '' */
 .icon-github-squared:before { content: '\f300'; } /* '' */
 .icon-twitter-squared:before { content: '\f304'; } /* '' */
+.icon-facebook-squared:before { content: '\f308'; } /* '' */
+.icon-linkedin-squared:before { content: '\f30c'; } /* '' */
+.icon-lg { font-size: 150%; }
 .icon-xl { font-size: 200%; }
 
 h6 {

@@ -26,20 +26,20 @@ layout: default
       {{ content }}
   </div>
 
-  <div class="border-t md:border-b pt-6 pb-2 md:pb-6 md:flex justify-between">
-    <div>
+  <div class="border-t md:border-b pt-4 pb-2 md:pb-6 md:flex justify-between">
+    <div class="mt-2">
       <p>Comments? I'm <a class="no-underline text-blue-700 hover:text-blue-500 transition-linear" href="https://twitter.com/mloberg">@mloberg</a> on Twitter.</p>
     </div>
     <div class="social-sharing mt-3 md:mt-0">
       <span class="mr-1">Share:</span>
       <a href="https://twitter.com/intent/tweet?text={{ page.title | escape }}&url={{ page.url | absolute_url }}&via=mloberg" target="_blank" rel="noopener" aria-label="Tweet this">
-        <i class="fab fa-twitter fa-lg"></i>
+        <i class="icon-twitter-squared icon-lg"></i>
       </a>
       <a href="http://www.facebook.com/sharer.php?u={{ page.url | absolute_url }}" target="_blank" rel="noopener" aria-label="Share on Facebook">
-        <i class="fab fa-facebook fa-lg"></i>
+        <i class="icon-facebook-squared icon-lg"></i>
       </a>
       <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
-        <i class="fab fa-linkedin fa-lg"></i>
+        <i class="icon-linkedin-squared icon-lg"></i>
       </a>
     </div>
   </div>
