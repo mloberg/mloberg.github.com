@@ -16,15 +16,15 @@
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
-    "@symfony/webpack-encore": "^0.27.0",
-    "autoprefixer": "^9.1.5",
+    "@symfony/webpack-encore": "^0.28.0",
+    "autoprefixer": "^9.6.1",
     "glob-all": "^3.1.0",
+    "lodash": "^4.17.15",
     "markdown-proofing": "^1.0.2",
+    "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "purgecss": "^1.4.0",
-    "tailwindcss": "^0.7.4",
-    "tailwindcss-aspect-ratio": "^1.0.1",
-    "tailwindcss-responsive-embed": "^0.2.2"
+    "tailwindcss": "^1.1.2"
   },
   "browserslist": [
     "> 0.5%",

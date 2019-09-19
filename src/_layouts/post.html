@@ -4,7 +4,7 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post__meta mb-8">
     <h1 class="hidden" itemprop="name headline">{{ page.title | escape }}</h1>
-    <time class="bg-blue-dark text-white text-sm p-2" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+    <time class="bg-blue-700 text-white text-sm p-2" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
       {{- page.date | date: "%B %-d, %Y" -}}
     </time>
     {% unless page.categories == empty %}
@@ -28,7 +28,7 @@ layout: default
 
   <div class="border-t md:border-b pt-6 pb-2 md:pb-6 md:flex justify-between">
     <div>
-      <p>Comments? I'm <a class="no-underline text-blue-dark hover:text-blue transition-linear" href="https://twitter.com/mloberg">@mloberg</a> on Twitter.</p>
+      <p>Comments? I'm <a class="no-underline text-blue-700 hover:text-blue-500 transition-linear" href="https://twitter.com/mloberg">@mloberg</a> on Twitter.</p>
     </div>
     <div class="social-sharing mt-3 md:mt-0">
       <span class="mr-1">Share:</span>

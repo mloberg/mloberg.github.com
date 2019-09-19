@@ -7,13 +7,13 @@ url: "https://mlo.io"
 
 icons:
   - href: https://twitter.com/mloberg
-    icon: fab fa-twitter
+    icon: icon-twitter-squared
     label: Follow me on Twitter
   - href: https://github.com/mloberg
-    icon: fab fa-github
+    icon: icon-github-squared
     label: View my GitHub profile
   - href: https://mlo.io/feed.xml
-    icon: fas fa-rss
+    icon: icon-rss-squared
     label: RSS Feed
 
 defaults:

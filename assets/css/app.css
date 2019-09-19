@@ -1,15 +1,112 @@
 @import "syntax.css";
 
-@tailwind preflight;
-@tailwind components;
-@tailwind utilities;
+@tailwind base;
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: local("Raleway"), local("Raleway-Regular"),
+    url("/assets/fonts/raleway.woff2") format("woff2"),
+    url("/assets/fonts/raleway.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"),
+    url("/assets/fonts/montserrat.woff2") format("woff2"),
+    url("/assets/fonts/montserrat-v14-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("/assets/fonts/fontello.woff2") format("woff2"),
+    url("/assets/fonts/fontello.woff") format("woff");
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before { content: '\e800'; } /* '' */
+.icon-left-circled:before { content: '\f0a8'; } /* '' */
+.icon-rss-squared:before { content: '\f143'; } /* '' */
+.icon-github-squared:before { content: '\f300'; } /* '' */
+.icon-twitter-squared:before { content: '\f304'; } /* '' */
+.icon-xl { font-size: 200%; }
+
+h6 {
+  @apply text-lg;
+}
+h5 {
+  @apply text-xl;
+}
+h4 {
+  @apply text-2xl;
+}
+h3 {
+  @apply text-3xl;
+}
+h2 {
+  @apply text-4xl;
+}
+h1 {
+  @apply text-5xl;
+}
+
+.embed-responsive {
+  position: relative;
+  overflow: hidden;
+}
+
+.embed-responsive-16\/9 {
+  padding-top: 56.25%;
+}
+
+.embed-responsive-4\/3 {
+  padding-top: 75%;
+}
+
+.embed-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
 .hero {
   @apply bg-center bg-no-repeat bg-cover;
 }
 
 .page-title {
-  @apply pb-4 text-base font-bold text-grey-darker;
+  @apply pb-4 text-base font-bold text-gray-700;
 }
 
 .transition-linear {
@@ -21,7 +118,7 @@
 }
 
 .post__categories ul {
-  @apply list-reset inline-block;
+  @apply inline-block;
 }
 
 .post__categories li {
@@ -29,11 +126,11 @@
 }
 
 .post__categories a {
-  @apply no-underline text-blue-dark transition-linear;
+  @apply no-underline text-blue-700 transition-linear;
 }
 
 .post__categories a:hover {
-  @apply text-blue;
+  @apply text-blue-500;
 }
 
 .post__content {
@@ -46,7 +143,15 @@
 .post__content h4,
 .post__content h5,
 .post__content h6 {
-  @apply font-bold mb-6 text-grey-darkest;
+  @apply font-bold mb-6 text-gray-900;
+}
+
+.post__content ul {
+  @apply list-disc pl-4;
+}
+
+.post__content ol {
+  @apply list-decimal pl-4;
 }
 
 .post__content p,
@@ -57,11 +162,11 @@
 }
 
 .post__content a {
-  @apply no-underline text-blue-dark transition-linear;
+  @apply no-underline text-blue-700 transition-linear;
 }
 
 .post__content a:hover {
-  @apply text-blue;
+  @apply text-blue-500;
 }
 
 .post__content .highlight pre {
@@ -69,27 +174,27 @@
 }
 
 .post__content p > code {
-  @apply bg-grey-lighter p-1;
+  @apply bg-gray-200 p-1;
 }
 
 .social-sharing a {
-  @apply no-underline text-blue-dark transition-linear mx-1;
+  @apply no-underline text-blue-700 transition-linear mx-1;
 }
 
 .social-sharing a:hover {
-  @apply text-blue;
+  @apply text-blue-500;
 }
 
 .footer a {
-  @apply text-grey-darker transition-linear;
+  @apply text-gray-700 transition-linear;
 }
 
 .footer a:hover {
-  @apply text-grey-darkest;
+  @apply text-gray-900;
 }
 
 .old-post-warning {
-  @apply mt-6 bg-yellow-lighter py-4 px-6 italic text-yellow-darkest border-yellow-dark border-l-4;
+  @apply mt-6 bg-yellow-300 py-4 px-6 italic text-yellow-900 border-yellow-700 border-l-4;
 }
 
 @screen md {
@@ -97,3 +202,7 @@
     @apply ml-2 inline;
   }
 }
+
+@tailwind components;
+
+@tailwind utilities;

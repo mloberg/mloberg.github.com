@@ -1,13 +1,13 @@
 <footer class="footer container mx-auto my-4 px-4">
-  <ul class="list-reset md:flex justify-center items-center text-grey-darker text-sm">
+  <ul class="md:flex justify-center items-center text-gray-800 text-sm">
     <li class="mx-2">&copy; {{ site.time | date: '%Y' }} {{ site.title | escape }}</li>
-    <li class="hidden md:block text-grey-darker">·</li>
+    <li class="hidden md:block text-gray-800">·</li>
     <li class="mx-2">
-      Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://tailwindcss.com/">Tailwind</a>
+      Powered by <a class="underline" href="https://jekyllrb.com/">Jekyll</a> & <a class="underline" href="https://tailwindcss.com/">Tailwind</a>
     </li>
-    <li class="hidden md:block text-grey-darker">·</li>
+    <li class="hidden md:block text-gray-800">·</li>
     <li class="mx-2">
-      Header photo by <a href="{{ page.hero.link }}">{{ page.hero.photographer }}</a>
+      Header photo by <a class="underline" href="{{ page.hero.link }}">{{ page.hero.photographer }}</a>
     </li>
   </ul>
 </footer>
