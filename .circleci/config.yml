@@ -56,6 +56,9 @@ jobs:
           name: Increase cache for images
           command: aws s3 cp s3://mlo.io/images/ s3://mlo.io/images/ --recursive --metadata-directive REPLACE --cache-control max-age=31536000 --storage-class REDUCED_REDUNDANCY --acl public-read
       - run:
+          name: Increase cache for favicon
+          command: aws s3 cp s3://mlo.io/favicon.ico s3://mlo.io/favicon.ico --metadata-directive REPLACE --cache-control max-age=31536000 --storage-class REDUCED_REDUNDANCY --acl public-read
+      - run:
           name: Invalidate CloudFront cache
           command: aws cloudfront create-invalidation --distribution-id $AWS_CF_DISTRIBUTION_ID --paths '/*' >/dev/null
 workflows:
