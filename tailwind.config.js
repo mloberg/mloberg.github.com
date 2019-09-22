@@ -6,6 +6,7 @@ module.exports = {
       "main",
       "i6VBVfcerso",
       "znT2Mwt9ypo",
+      "hFzIoD0Fi8",
     ],
     fontFamily: {
       title: ["Raleway", "sans-serif"],
