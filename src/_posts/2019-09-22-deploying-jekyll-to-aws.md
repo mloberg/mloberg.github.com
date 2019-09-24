@@ -21,6 +21,10 @@ Thanks to [JekyllConf](https://jekyllconf.com/) and
 
 {% include slides.html slides="//speakerdeck.com/player/a0f072e29cc840f4b9f766bdf22ce4ad" %}
 
+## Video
+
+{% include video.html video="https://www.youtube-nocookie.com/embed/6eiAjAtSGqw" %}
+
 ## Resources
 
 * [AWS Documentation on Static Sites](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html)
