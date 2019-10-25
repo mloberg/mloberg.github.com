@@ -26,6 +26,7 @@ module.exports = {
   },
   variants: {},
   plugins: [
+    require("tailwindcss-skip-link")(),
     function({ addComponents, theme}) {
       const screens = theme("screens", {});
       _.map(theme("heroes", []), hero => {
