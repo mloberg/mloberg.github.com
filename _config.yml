@@ -41,6 +41,15 @@ jekyll-archives:
     tag: '/blog/tag/:name/'
     category: '/blog/category/:name/'
 
+jekyll_compose:
+  # This will change to default_front_matter.drafts in an upcoming version
+  draft_default_front_matter:
+    categories:
+    hero:
+      name: main
+      photographer: Daniel Leone
+      link: https://unsplash.com/photos/g30P1zcOzXo
+
 # Jekyll SEO
 logo: /images/profile.jpg
 

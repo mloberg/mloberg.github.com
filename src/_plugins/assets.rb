@@ -12,8 +12,10 @@ end
 Liquid::Template.register_filter(Jekyll::AssetFilter)
 
 Jekyll::Hooks.register(:site, :after_init) do |site|
-  env = Jekyll.env == "production" ? "production" : "dev"
-  raise RuntimeError unless system("./node_modules/.bin/encore #{env}")
+  unless ENV.key?("SKIP_ASSETS")
+    env = Jekyll.env == "production" ? "production" : "dev"
+    raise RuntimeError unless system("./node_modules/.bin/encore #{env}")
+  end
 end
 
 Jekyll::Hooks.register(:site, :after_init) do |site|
