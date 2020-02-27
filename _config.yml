@@ -63,11 +63,6 @@ social:
     - https://github.com/mloberg
     - https://www.instagram.com/mloberg
 
-algolia:
-  application_id: PRNXO4ZLOA
-  index_name: jekyll
-  search_only_api_key: 9bda0d4302c544799c7025e310ffebd1
-
 # Build settings
 timezone: America/Chicago
 source: src
