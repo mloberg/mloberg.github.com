@@ -7,6 +7,7 @@ module.exports = {
       "i6VBVfcerso",
       "znT2Mwt9ypo",
       "hFzIoD0Fi8",
+      "jb1Mc1lv8X0",
       // additional hero images here
     ],
     fontFamily: {
