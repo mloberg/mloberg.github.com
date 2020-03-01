@@ -1,16 +1,21 @@
 #!/usr/bin/env bash
+#
+# Requires ImageMagick (brew install imagemagick)
 set -e
 
 IMG="$1"
-NAME="$2"
 
-if [ -z "$NAME" ]; then
-  echo "usage: $0 IMAGE NAME"
-  exit 1
-fi
+[ -f "$IMG" ] || (>&2 echo "could not find image" && exit 1)
+
+filename="$(basename -- "$IMG")"
+NAME="${filename%.*}"
 
 convert -resize 2500 "${IMG}" "src/images/hero/${NAME}-xl.jpg"
 convert -resize 1200 "${IMG}" "src/images/hero/${NAME}-lg.jpg"
 convert -resize 992 "${IMG}" "src/images/hero/${NAME}-md.jpg"
 convert -resize 768 "${IMG}" "src/images/hero/${NAME}-sm.jpg"
 convert -resize 576 "${IMG}" "src/images/hero/${NAME}.jpg"
+
+# Save hero in Tailwind config
+awk "/additional hero images here/{print \"      \\\"$NAME\\\",\"}1" tailwind.config.js > tailwind.config.js.new
+mv tailwind.config.js.new tailwind.config.js

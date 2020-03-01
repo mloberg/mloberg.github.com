@@ -7,6 +7,7 @@ module.exports = {
       "i6VBVfcerso",
       "znT2Mwt9ypo",
       "hFzIoD0Fi8",
+      // additional hero images here
     ],
     fontFamily: {
       title: ["Raleway", "sans-serif"],
