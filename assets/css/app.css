@@ -105,7 +105,7 @@ h1 {
 }
 
 .transition-linear {
-  transition: all .1s linear;
+  @apply transition ease-linear duration-100;
 }
 
 body {

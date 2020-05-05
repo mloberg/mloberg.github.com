@@ -1,6 +1,11 @@
 const _ = require("lodash");
 
 module.exports = {
+  purge: [
+    "./src/**/*.html",
+    "./src/**/*.md",
+    "./assets/**/*.js",
+  ],
   theme: {
     heroes: [
       "main",
@@ -29,7 +34,7 @@ module.exports = {
   variants: {},
   plugins: [
     require("tailwindcss-skip-link")(),
-    function({ addComponents, theme}) {
+    function({ addComponents, theme }) {
       const screens = theme("screens", {});
       _.map(theme("heroes", []), hero => {
         const mediaQueries = _.map(screens, (width, name) => {

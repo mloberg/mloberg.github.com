@@ -1,6 +1,8 @@
 const Encore = require("@symfony/webpack-encore");
 const webpack = require("webpack");
 
+process.env.NODE_ENV = Encore.isProduction() ? "production": "dev";
+
 Encore
   .setOutputPath("src/assets")
   .setPublicPath("/assets")

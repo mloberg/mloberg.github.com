@@ -9,18 +9,17 @@
     "optimize": "imageoptim -a src/images"
   },
   "dependencies": {
-    "moment": "^2.22.2"
+    "moment": "^2.25.3"
   },
   "devDependencies": {
-    "@symfony/webpack-encore": "^0.28.3",
-    "autoprefixer": "^9.7.4",
+    "@symfony/webpack-encore": "^0.29.1",
+    "autoprefixer": "^9.7.6",
     "browser-sync": "^2.26.7",
     "imageoptim-cli": "^3.0.2",
     "lodash": "^4.17.15",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
-    "purgecss": "^1.4.2",
-    "tailwindcss": "^1.2.0",
+    "tailwindcss": "^1.4.4",
     "tailwindcss-skip-link": "^1.0.1"
   },
   "browserslist": [
