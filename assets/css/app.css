@@ -184,6 +184,10 @@ body {
   @apply bg-gray-200 p-1;
 }
 
+.post__content hr {
+  @apply mb-6;
+}
+
 .social-sharing a {
   @apply no-underline text-blue-700 transition-linear mx-1;
 }

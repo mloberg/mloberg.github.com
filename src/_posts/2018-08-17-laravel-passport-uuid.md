@@ -7,6 +7,11 @@ hero:
   photographer: Peter Conlan
   link: https://unsplash.com/photos/i6VBVfcerso
 ---
+__Update May 6th, 2020__: Laravel has released Passport 9.0, which supports
+[UUIDs](https://laravel.com/docs/7.x/passport#client-uuids) out of the box!
+
+---
+
 By default, [Laravel Passport](https://laravel.com/docs/5.6/passport) uses auto
 increment IDs for client IDs. There have been [numerous][issue-14]
 [requests][issue-764] to [change][issue-576] this [field][issue-469] to be a
