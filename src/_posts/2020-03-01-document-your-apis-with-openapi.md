@@ -26,8 +26,8 @@ your API. Start documenting and iterating on that design.
 
 After you've come to an agreement on the documentation, you have an artifact that
 all parties can start building to. The backend team can start building out the
-database models at the same time frontend or mobile developers build integration.
-You can even use that documentation to generate [mock data](https://openapi.tools/#mock)
+database models at the same time frontend or mobile developers build out their
+integration. You can even use that documentation to generate [mock data](https://openapi.tools/#mock)
 to work with.
 
 Another benefit is that your API doesn't become tightly coupled to your database.
@@ -39,15 +39,14 @@ your database schema changes.
 API documentation has come a long ways in five years. When we started working on
 our API, the options were Swagger, RAML, Blueprint, SASS solutions, or to build
 our own. Swagger had some trouble spots for us (or probably a lack of
-understanding the specification) and the other systems seemed way more complex.
-Against our better judgment, we wrote our spec using a static site generator.
-It gave us a nice documentation site, but when it came to tooling, we were on
-our own.
+understanding the specification) and the other systems were too complex. Against
+our better judgment, we wrote our spec using a static site generator. It gave us
+a nice documentation site, but when it came to tooling, we were on our own.
 
 Had we stuck with Swagger from the beginning and not given up at the first issue
 we encountered, we would be in a much better spot today. We still have endpoints
-using our old documentation and making updates to those endpoints take extra
-effort because of it.
+using our old documentation and making updates to those takes extra effort
+because of it.
 
 We learned our lesson and started writing our new API specification in OpenAPI.
 Working with our spec has become much easier. By using OpenAPI, we can use
