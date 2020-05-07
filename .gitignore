@@ -1,27 +1,17 @@
-.DS_Store
+# vendors
+/.bundle
+/dist
+/node_modules
+/vendor
 
-# Thumbnails
-._*
-
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
-
-.bundle
-.sass-cache
-.asset-cache
+# Jekyll
 .jekyll-metadata
 .jekyll-cache
-.ruby-version
-.tmp
-.env
-node_modules
-bower_components
-build
-dist
-vendor
-tmp
-src/_drafts
-src/assets
-tests/reports
-selenium-debug.log
+
+# Site specific
+/src/_drafts
+/src/assets
+
+# Infra
+/infra/.terraform
+/infra/.tfplan
