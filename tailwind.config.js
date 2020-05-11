@@ -29,7 +29,11 @@ module.exports = {
         "sans-serif",
       ],
     },
-    extend: {},
+    extend: {
+      screens: {
+        "dark": {"raw": "(prefers-color-scheme: dark)"},
+      },
+    },
   },
   variants: {},
   plugins: [

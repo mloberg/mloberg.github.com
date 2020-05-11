@@ -4,7 +4,7 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post__meta mb-8">
     <h1 class="hidden" itemprop="name headline">{{ page.title | escape }}</h1>
-    <time class="bg-blue-700 text-white text-sm p-2" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+    <time class="bg-blue-700 dark:bg-yellow-600 text-white dark:text-black text-sm p-2" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
       {{- page.date | date: "%B %-d, %Y" -}}
     </time>
     {% unless page.categories == empty %}

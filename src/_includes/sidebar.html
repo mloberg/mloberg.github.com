@@ -1,13 +1,13 @@
 <div class="border-t md:border-t-0 md:border-l md:pl-4 py-8">
   <h2 class="text-2xl mb-2 text-center">
-    <a class="no-underline text-blue-700 hover:text-blue-400 transition-linear" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <a class="no-underline text-blue-700 dark:text-gray-300 hover:text-blue-400 transition-linear" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
   </h2>
   <img class="mr-auto ml-auto mb-2 rounded-full" height="100" width="100" src="/images/profile.jpg" alt="{{ site.title }}">
   <span class="text-center">{{ site.description | markdownify }}</span>
   <ul class="flex justify-center mt-2">
     {%- for icon in site.icons -%}
       <li class="mr-1 ml-1">
-          <a class="text-blue-800 hover:text-blue-500 transition-linear" href="{{ icon.href }}" aria-label="{{ icon.label }}">
+          <a class="text-blue-800 dark:text-gray-300 hover:text-blue-500 transition-linear" href="{{ icon.href }}" aria-label="{{ icon.label }}">
             <i class="{{ icon.icon }} icon-xl"></i>
           </a>
       </li>
