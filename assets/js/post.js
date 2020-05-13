@@ -1,18 +1,24 @@
-const moment = require('moment');
-const postTime = document.querySelector('time[itemprop="datePublished"]');
+const twoYears = 63115200000;
 
-if (postTime) {
-  const published = moment(postTime.getAttribute('datetime'));
-  const outdated = moment().subtract(18, 'months');
+(() => {
+  const postTime = document.querySelector("time[itemprop=\"datePublished\"]");
+  if (!postTime) {
+    return;
+  }
 
-  if (published.isBefore(outdated, 'day')) {
-    const warning = document.createElement('div');
-    warning.innerHTML = `<p>This article was published ${published.fromNow()}.
+  const now = new Date();
+  const published = new Date(postTime.getAttribute("datetime"));
+
+  if (now - published < twoYears) {
+    return;
+  }
+
+  const warning = document.createElement("div");
+  warning.innerHTML = `<p>This article was published more than two years ago.
 This means the content may be out of date or no longer relevant. You should
 verify that any technical information in this article is still current before
 relying upon it for your own purposes.</p>`;
-    warning.classList.add('old-post-warning');
+  warning.classList.add("old-post-warning");
 
-    document.querySelector('.post__meta').appendChild(warning);
-  }
-}
+  document.querySelector(".post__meta").appendChild(warning);
+})();
