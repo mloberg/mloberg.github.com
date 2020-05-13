@@ -1,0 +1,45 @@
+name: Deploy
+
+on:
+  push: [ master ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '13'
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - uses: actions/cache@v1
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+      - run: npm ci
+      - run: bundle install --path=vendor/bundle --jobs=4 --retry=3
+      - run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+      - run: bundle exec htmlproofer ./dist --check-html --disable-external --assume-extension
+      - name: Deploy
+        run: |
+          aws s3 sync dist s3://mlo.io --acl public-read --cache-control max-age=86400 --storage-class REDUCED_REDUNDANCY
+          aws s3 cp s3://mlo.io/assets/ s3://mlo.io/assets/ --recursive --metadata-directive REPLACE --cache-control max-age=31536000 --storage-class REDUCED_REDUNDANCY --acl public-read
+          aws s3 cp s3://mlo.io/images/ s3://mlo.io/images/ --recursive --metadata-directive REPLACE --cache-control max-age=31536000 --storage-class REDUCED_REDUNDANCY --acl public-read
+          aws s3 cp s3://mlo.io/favicon.ico s3://mlo.io/favicon.ico --metadata-directive REPLACE --cache-control max-age=31536000 --storage-class REDUCED_REDUNDANCY --acl public-read
+          aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_DISTRIBUTION --paths '/*' >/dev/null
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_CLOUDFRONT_DISTRIBUTION: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION }}
