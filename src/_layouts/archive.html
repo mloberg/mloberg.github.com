@@ -3,7 +3,7 @@ layout: default
 ---
 <h2 class="pb-4 text-base font-bold text-gray-700 dark:text-gray-300">
   {%- if page.type == 'year' -%}
-    Posts from {{ page.date | date: "%Y" }}</h2>
+    Posts from {{ page.date | date: "%Y" }}
   {%- elsif page.type == 'month' -%}
     Posts from {{ page.date | date: "%B %Y" }}
   {%- elsif page.type == 'day' -%}
