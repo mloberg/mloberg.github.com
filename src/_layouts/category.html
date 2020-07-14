@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<h2 class="page-title">Posts with {{ page.type }} {{ page.title }}</h2>
+<h2 class="pb-4 text-base font-bold text-gray-700 dark:text-gray-300">Posts with {{ page.type }} {{ page.title }}</h2>
 
 {%- for post in page.posts -%}
   {%- assign currentyear = post.date | date: "%Y" -%}

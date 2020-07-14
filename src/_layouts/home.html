@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<h2 class="page-title transition-linear">{{ page.title | default: "Latest Posts" | escape }}</h2>
+<h2 class="pb-4 text-base font-bold text-gray-700 dark:text-gray-300">{{ page.title | default: "Latest Posts" | escape }}</h2>
 
 {%- for post in site.posts -%}
   {%- assign currentyear = post.date | date: "%Y" -%}

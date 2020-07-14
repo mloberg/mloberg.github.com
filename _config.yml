@@ -5,17 +5,6 @@ description: >
 baseurl: ""
 url: "https://mlo.io"
 
-icons:
-  - href: https://twitter.com/mloberg
-    icon: icon-twitter-squared
-    label: Follow me on Twitter
-  - href: https://github.com/mloberg
-    icon: icon-github-squared
-    label: View my GitHub profile
-  - href: https://mlo.io/feed.xml
-    icon: icon-rss-squared
-    label: RSS Feed
-
 defaults:
   - scope:
       path: ""
