@@ -2,24 +2,29 @@
   "name": "mlo.io",
   "private": true,
   "scripts": {
+    "start": "concurrently -k --restart-tries 3 --restart-after 3000 -p [{name}] -n webpack,jekyll -c yellow.bold,cyan.bold npm:watch:webpack npm:watch:jekyll",
     "build": "encore dev",
-    "watch": "encore dev --watch",
+    "watch:webpack": "encore dev --watch",
+    "watch:jekyll": "bundle exec jekyll browsersync --drafts --open",
     "prod": "encore production",
     "clean": "rm -rf dist && rm -rf src/assets",
-    "optimize": "imageoptim -a src/images"
+    "optimize": "imageoptim -a src/images",
+    "postinstall": "bundle install --path=vendor/bundle --jobs=4 --retry=3"
   },
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "@symfony/webpack-encore": "^0.30.2",
     "@tailwindcss/typography": "^0.1.2",
     "autoprefixer": "^9.7.6",
-    "browser-sync": "^2.26.7",
-    "imageoptim-cli": "^3.0.2",
     "lodash": "^4.17.19",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "tailwindcss": "^1.4.4",
     "tailwindcss-skip-link": "^1.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "concurrently": "^5.2.0",
+    "imageoptim-cli": "^3.0.2"
   },
   "browserslist": [
     "> 0.5%",

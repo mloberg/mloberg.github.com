@@ -12,12 +12,11 @@ help:
 setup: ## Setup project
 	@echo "+ $@"
 	@npm install
-	@bundle install --path=vendor/bundle --jobs=4 --retry=3
 .PHONY: setup
 
 dev: ## Serve the project
 	@echo "+ $@"
-	@bundle exec jekyll browsersync --drafts --open
+	@npm start
 .PHONY: dev
 
 draft: ## Create a new draft
