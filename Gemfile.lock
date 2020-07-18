@@ -46,7 +46,7 @@ GEM
       tty-which (~> 0.4.1)
     jekyll-compose (0.11.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-feed (0.12.1)
+    jekyll-feed (0.15.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-redirect-from (0.15.0)
       jekyll (>= 3.3, < 5.0)
