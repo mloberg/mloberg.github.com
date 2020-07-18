@@ -5,7 +5,7 @@
     "start": "concurrently -k --restart-tries 3 --restart-after 3000 -p [{name}] -n webpack,jekyll -c yellow.bold,cyan.bold npm:watch:webpack npm:watch:jekyll",
     "build": "encore dev",
     "watch:webpack": "encore dev --watch",
-    "watch:jekyll": "bundle exec jekyll browsersync --drafts --open",
+    "watch:jekyll": "bundle exec jekyll serve --livereload --drafts --open",
     "prod": "encore production",
     "clean": "rm -rf dist && rm -rf src/assets",
     "optimize": "imageoptim -a src/images",
@@ -22,7 +22,6 @@
     "tailwindcss-skip-link": "^1.0.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.10",
     "concurrently": "^5.2.0",
     "imageoptim-cli": "^3.0.2"
   },

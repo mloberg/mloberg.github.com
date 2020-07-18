@@ -41,9 +41,6 @@ GEM
       terminal-table (~> 1.8)
     jekyll-archives (2.2.1)
       jekyll (>= 3.6, < 5.0)
-    jekyll-browsersync (1.0.0)
-      jekyll (>= 3.0.0, < 5.0)
-      tty-which (~> 0.4.1)
     jekyll-compose (0.12.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-feed (0.15.0)
@@ -87,7 +84,6 @@ GEM
       ffi (~> 1.9)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
-    tty-which (0.4.1)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
     unicode-display_width (1.7.0)
@@ -100,7 +96,6 @@ DEPENDENCIES
   html-proofer
   jekyll
   jekyll-archives
-  jekyll-browsersync
   jekyll-compose
   jekyll-feed
   jekyll-redirect-from
