@@ -13,6 +13,7 @@ module.exports = {
       "znT2Mwt9ypo",
       "hFzIoD0Fi8",
       "jb1Mc1lv8X0",
+      "gE08jRp3Qw4",
       // additional hero images here
     ],
     fontFamily: {

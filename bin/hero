@@ -8,7 +8,7 @@ IMG="$1"
 [ -f "$IMG" ] || (>&2 echo "could not find image" && exit 1)
 
 filename="$(basename -- "$IMG")"
-NAME="${filename%.*}"
+NAME="${2:-${filename%.*}}"
 
 convert -resize 2500 "${IMG}" "src/images/hero/${NAME}-xl.jpg"
 convert -resize 1200 "${IMG}" "src/images/hero/${NAME}-lg.jpg"
