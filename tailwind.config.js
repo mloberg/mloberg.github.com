@@ -1,11 +1,16 @@
 const _ = require("lodash");
 
 module.exports = {
-  purge: [
-    "./src/**/*.html",
-    "./src/**/*.md",
-    "./assets/**/*.js",
-  ],
+  purge: {
+    content: [
+      "./src/**/*.html",
+      "./src/**/*.md",
+      "./assets/**/*.js",
+    ],
+    options: {
+      whitelistPatterns: [/^hero-/],
+    },
+  },
   theme: {
     heroes: [
       "main",
@@ -94,4 +99,8 @@ module.exports = {
       });
     },
   ],
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
 };
