@@ -1,5 +1,4 @@
 const Encore = require("@symfony/webpack-encore");
-const webpack = require("webpack");
 
 process.env.NODE_ENV = Encore.isProduction() ? "production": "dev";
 
@@ -18,7 +17,6 @@ Encore
   .cleanupOutputBeforeBuild()
   .enableSourceMaps(!Encore.isProduction())
   .enableVersioning(Encore.isProduction())
-  .addPlugin(new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/))
 ;
 
 module.exports = Encore.getWebpackConfig();

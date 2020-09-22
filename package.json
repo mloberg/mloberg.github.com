@@ -12,13 +12,14 @@
     "postinstall": "bundle install --path=vendor/bundle --jobs=4 --retry=3"
   },
   "dependencies": {
-    "@symfony/webpack-encore": "^0.30.2",
+    "@symfony/webpack-encore": "^0.31.0",
     "@tailwindcss/typography": "^0.2.0",
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^10.0.0",
     "lodash": "^4.17.20",
+    "postcss": "^8.0.6",
     "postcss-import": "^12.0.1",
-    "postcss-loader": "^3.0.0",
-    "tailwindcss": "^1.8.7",
+    "postcss-loader": "^4.0.2",
+    "tailwindcss": "^1.8.10",
     "tailwindcss-skip-link": "^1.0.1"
   },
   "devDependencies": {
