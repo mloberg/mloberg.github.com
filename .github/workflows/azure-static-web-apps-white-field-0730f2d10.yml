@@ -16,21 +16,43 @@ jobs:
     name: Build and Deploy Job
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2.1.2
         with:
-          submodules: true
-      - name: Build And Deploy
+          node-version: '14'
+      - uses: actions/setup-ruby@v1.1.2
+        with:
+          ruby-version: 2.6
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+      - name: Dependencies (Node)
+        run: npm ci
+      - name: Dependencies (Ruby)
+        run: bundle install --path=vendor/bundle --jobs=4 --retry=3
+      - name: Build
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+      - name: Test
+        run: bundle exec htmlproofer ./dist --check-html --disable-external --assume-extension
+      - name: Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v0.0.1-preview
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WHITE_FIELD_0730F2D10 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
-          action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match you app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/" # App source code path
-          api_location: "api" # Api source code path - optional
-          app_artifact_location: "" # Built app content directory - optional
-          ###### End of Repository/Build Configurations ######
+          action: upload
+          app_location: dist
+          # app_artifact_location: dist
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
