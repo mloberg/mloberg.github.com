@@ -2,7 +2,6 @@
 layout: post
 title: Why I Do Side Projects
 comments: false
-redirect_from: /blog/2012/11/20/why-i-do-side-projects.html
 ---
 I, like every other developer, have side projects. Why work on side projects? I think there are four primary reasons. 1) learn an existing language or tool better, 2) learn a new language or tool, 3) make some extra income, or 4) fill a need you have.
 

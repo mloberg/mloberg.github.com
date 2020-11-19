@@ -3,7 +3,6 @@ layout: post
 title: Composer Version Alias Hack
 categories: php
 excerpt: Quickly solve version dependency differences in composer.
-redirect_from: /blog/2017/12/23/composer-version-alias-hack.html
 ---
 With the release of Symfony 4 last month, we've slowly been seeing package
 maintainers update their packages to support the latest version of Symfony

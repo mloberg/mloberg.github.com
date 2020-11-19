@@ -2,7 +2,6 @@
 layout: post
 title: Popcorn Source Code Plugin
 categories: javascript
-redirect_from: /blog/2011/11/14/popcorn-source-code-plugin.html
 ---
 Last week I heard about [popcorn.js](http://popcornjs.org/), a Mozilla project to bring interactivity to videos on the web. It's a really interesting idea and one I can see actually being used. Being able to pull in Tweets, show a Google Map or a Wikipedia article without having to leave the video, is something that can add a lot to a video. There are [multiple plugins available](https://mozilla.github.io/popcorn-docs/plugins/) and you have the ability to write your own (though documentation is a little sparse).
 

@@ -2,7 +2,6 @@
 layout: post
 title: "Quick Tip: Protect Important EC2 Instances"
 categories: devops
-redirect_from: /blog/2013/02/26/quick-tip-protect-important-ec2-instances.html
 ---
 I did something really stupid today. I was doing a load test with [Bees With Machine Guns!](https://github.com/newsapps/beeswithmachineguns) that I thought was only going to hit Apache, and not the database. Turns out there is a small database call on the page I was hitting, and caused the database to spike. I tried exiting out of Bees, but it wouldn't. The site started to crash, so I went to terminate the bee instances in the AWS console, but didn't realize I had the production database selected. After hitting terminate, all hell broke loose.
 
