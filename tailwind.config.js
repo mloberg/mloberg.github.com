@@ -8,9 +8,10 @@ module.exports = {
       "./assets/**/*.js",
     ],
     options: {
-      whitelistPatterns: [/^hero-/],
+      safelist: [/^hero-/],
     },
   },
+  darkMode: 'media',
   theme: {
     heroes: [
       "main",
@@ -35,52 +36,51 @@ module.exports = {
         "sans-serif",
       ],
     },
-    typography: {
-      dark: {
-        css: {
-          color: "#fff",
-          h1: {
-            color: "#e2e8f0",
-          },
-          h2: {
-            color: "#e2e8f0",
-          },
-          h3: {
-            color: "#e2e8f0",
-          },
-          h4: {
-            color: "#e2e8f0",
-          },
-          h5: {
-            color: "#e2e8f0",
-          },
-          h6: {
-            color: "#e2e8f0",
-          },
-          a: {
+    extend: {
+      typography: {
+        dark: {
+          css: {
             color: "#fff",
-          },
-          strong: {
-            color: "#fff",
-          },
-          code: {
-            color: "#e2e8f0",
+            h1: {
+              color: "#e2e8f0",
+            },
+            h2: {
+              color: "#e2e8f0",
+            },
+            h3: {
+              color: "#e2e8f0",
+            },
+            h4: {
+              color: "#e2e8f0",
+            },
+            h5: {
+              color: "#e2e8f0",
+            },
+            h6: {
+              color: "#e2e8f0",
+            },
+            a: {
+              color: "#fff",
+            },
+            strong: {
+              color: "#fff",
+            },
+            code: {
+              color: "#e2e8f0",
+            },
           },
         },
       },
     },
-    extend: {
-      screens: {
-        "dark": {"raw": "(prefers-color-scheme: dark)"},
-      },
-    },
   },
-  variants: {},
+  variants: {
+    typography: ["dark"],
+  },
   plugins: [
     require("@tailwindcss/typography"),
     require("tailwindcss-skip-link")(),
     function({ addComponents, theme }) {
-      const screens = theme("screens", {});
+      const screens = _.omit(theme("screens", {}), ["dark", "2xl"]);
       _.map(theme("heroes", []), hero => {
         const mediaQueries = _.map(screens, (width, name) => {
           return {
@@ -99,10 +99,4 @@ module.exports = {
       });
     },
   ],
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-    defaultLineHeights: true,
-    standardFontWeights: true,
-  },
 };
