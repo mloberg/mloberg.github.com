@@ -13,13 +13,13 @@
   },
   "dependencies": {
     "@symfony/webpack-encore": "^0.31.0",
-    "@tailwindcss/typography": "^0.2.0",
+    "@tailwindcss/typography": "^0.3.1",
     "autoprefixer": "^10.0.2",
     "lodash": "^4.17.20",
     "postcss": "^8.1.7",
     "postcss-import": "^13.0.0",
-    "postcss-loader": "^4.0.4",
-    "tailwindcss": "^1.9.6",
+    "postcss-loader": "^4.1.0",
+    "tailwindcss": "^2.0.1",
     "tailwindcss-skip-link": "^1.0.1"
   },
   "devDependencies": {
