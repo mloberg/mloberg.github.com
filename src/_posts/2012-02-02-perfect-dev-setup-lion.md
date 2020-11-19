@@ -2,7 +2,6 @@
 layout: post
 title: The Perfect Dev Setup on OS X Lion 10.7
 categories: devops
-redirect_from: /blog/2012/02/02/perfect-dev-setup-lion.html
 ---
 A while back, I upgraded my work computer to Lion. Instead of doing a normal install, I installed Lion onto a flash drive and did a clean install. This gave me a chance to make my system exactly how I wanted it. I managed to get an almost perfect development setup. When my laptop's Ruby install got a little funny, I decided to do a clean install of Lion and follow the same setup, and document it set by set this time.
 

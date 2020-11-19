@@ -6,7 +6,6 @@ excerpt: >
   Bring your Jekyll site to the next level. Learn how to manage dependencies,
   organize your site, write your own plugins, build assets, test your site, and
   deploy changes automatically.
-redirect_from: /blog/2016/11/15/advance-jekyll.html
 hero:
   name: znT2Mwt9ypo
   photographer: rawpixel

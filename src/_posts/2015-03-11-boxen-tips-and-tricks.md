@@ -7,7 +7,6 @@ excerpt: >
   the same software on your work computer as your personal computer. Or how do
   you make sure you have the same settings on your desktop as you do on your
   laptop? We'll look at Boxen and how to set it up to get the most out of it.
-redirect_from: /blog/2015/03/11/boxen-tips-and-tricks.html
 ---
 ![Automate all the things!](/images/automate-all-the-things.jpg)
 

@@ -2,7 +2,6 @@
 layout: post
 title: My Adventures With Ruby
 categories: ruby
-redirect_from: /blog/2011/12/22/my-adventures-with-ruby.html
 ---
 A couple weeks ago, as I was finishing up my TFD v2, I started to look at learning another language. After deciding between Python and Ruby, I went with Ruby.
 
