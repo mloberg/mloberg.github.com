@@ -68,6 +68,9 @@ module.exports = {
             code: {
               color: "#e2e8f0",
             },
+            blockquote: {
+              color: '#fff',
+            },
           },
         },
       },
