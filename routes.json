@@ -4,5 +4,11 @@
       "route": "/docker",
       "serve": "/blog/category/docker/"
     }
+  ],
+  "platformErrorOverrides": [
+    {
+      "errorType": "NotFound",
+      "serve": "/404.html"
+    }
   ]
 }
