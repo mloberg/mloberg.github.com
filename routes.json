@@ -1,0 +1,8 @@
+{
+  "routes": [
+    {
+      "route": "/docker",
+      "serve": "/blog/category/docker/"
+    }
+  ]
+}

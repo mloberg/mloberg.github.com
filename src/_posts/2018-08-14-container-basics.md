@@ -1,12 +1,19 @@
 ---
-layout: page
-title: Containers
+layout: post
+title: Container Basics
+categories: docker
+redirect_from: /talks/mnphp-containers
 ---
+I talked about containers and Docker at a local PHP User Group. Below are the
+slides and resources from the talk.
+
+## Slides
+
 {% include slides.html slides="//slides.com/matthewloberg/docker/embed" %}
 
 [Demo code](https://github.com/mloberg/laravel-docker-compose-example)
 
-### References
+## References
 
 * [Containers vs. VMs: What's the difference?](https://blog.netapp.com/blogs/containers-vs-vms/)
 * [Why Containers?](https://pantheon.io/platform/why-containers)
