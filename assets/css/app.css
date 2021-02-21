@@ -17,7 +17,7 @@
   font-display: fallback;
   src: local("Montserrat Regular"), local("Montserrat-Regular"),
     url("/assets/fonts/montserrat.woff2") format("woff2"),
-    url("/assets/fonts/montserrat-v14-latin-regular.woff") format("woff");
+    url("/assets/fonts/montserrat.woff") format("woff");
 }
 
 h6 {
