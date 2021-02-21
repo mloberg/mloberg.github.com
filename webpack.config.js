@@ -12,6 +12,7 @@ Encore
     from: "./assets/fonts",
     to: "fonts/[path][name].[ext]"
   })
+  .configureCssLoader((config) => config.url = false)
   .disableSingleRuntimeChunk()
   .enablePostCssLoader()
   .cleanupOutputBeforeBuild()
