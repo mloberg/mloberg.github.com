@@ -17,10 +17,10 @@
     "autoprefixer": "^10.2.5",
     "file-loader": "^6.2.0",
     "lodash": "^4.17.21",
-    "postcss": "^8.2.8",
-    "postcss-import": "^14.0.0",
+    "postcss": "^8.2.10",
+    "postcss-import": "^14.0.1",
     "postcss-loader": "^5.2.0",
-    "tailwindcss": "^2.0.4",
+    "tailwindcss": "^2.1.1",
     "tailwindcss-skip-link": "^1.0.1"
   },
   "devDependencies": {
