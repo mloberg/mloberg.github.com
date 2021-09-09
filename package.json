@@ -20,7 +20,7 @@
     "postcss": "^8.3.6",
     "postcss-import": "^14.0.2",
     "postcss-loader": "^6.1.1",
-    "tailwindcss": "^2.2.12",
+    "tailwindcss": "^2.2.14",
     "tailwindcss-skip-link": "^1.0.1"
   },
   "devDependencies": {
