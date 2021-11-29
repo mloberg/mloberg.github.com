@@ -19,7 +19,7 @@
     "lodash": "^4.17.21",
     "postcss": "^8.3.11",
     "postcss-import": "^14.0.2",
-    "postcss-loader": "^6.2.0",
+    "postcss-loader": "^6.2.1",
     "tailwindcss": "^2.2.19",
     "tailwindcss-skip-link": "^1.0.1"
   },
