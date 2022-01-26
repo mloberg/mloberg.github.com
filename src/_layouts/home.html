@@ -1,12 +1,17 @@
 ---
 layout: default
 ---
-<h2 class="pb-4 text-base font-bold text-gray-700 dark:text-gray-300">{{ page.title | default: "Latest Posts" | escape }}</h2>
+
+<h2 class="pb-4 text-base font-bold text-gray-700 dark:text-gray-300">
+  {{ page.title | default: "Latest Posts" | escape }}
+</h2>
 
 {%- for post in site.posts -%}
   {%- assign currentyear = post.date | date: "%Y" -%}
   {%- if currentyear != year -%}
-    <h3 class="text-3xl mb-4 {% unless forloop.first %}mt-8{% endunless %}">{{ currentyear }}</h3>
+    <h3 class="{% unless forloop.first %}mt-8{% endunless %} mb-4 text-3xl">
+      {{ currentyear }}
+    </h3>
     {% assign year = currentyear %}
   {%- endif -%}
   {% include post-list.html %}

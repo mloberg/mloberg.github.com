@@ -3,7 +3,10 @@ layout: page
 title: Name Generator
 redirect_from: /name-generator/
 ---
+
 <p id="js-generated-name"></p>
 
-<script src="{{ "assets/names.js" | asset | relative_url }}"></script>
-<script>document.getElementById("js-generated-name").innerHTML = generateName()</script>
+<script src="{{ 'assets/names.js' | asset | relative_url }}"></script>
+<script>
+  document.getElementById('js-generated-name').innerHTML = generateName();
+</script>
