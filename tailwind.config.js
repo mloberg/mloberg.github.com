@@ -1,17 +1,21 @@
 const _ = require("lodash");
 
 module.exports = {
-  purge: {
-    content: [
-      "./src/**/*.html",
-      "./src/**/*.md",
-      "./assets/**/*.js",
-    ],
-    options: {
-      safelist: [/^hero-/],
-    },
-  },
-  darkMode: 'media',
+  content: [
+    "./assets/**/*.js",
+    // https://tailwindcss.com/docs/content-configuration#styles-rebuild-in-an-infinite-loop
+    "./src/_includes/**/*.html",
+    "./src/_layouts/**/*.html",
+    "./src/_posts/**/*.{html,md}",
+    "./src/talks/**/*.{html,md}",
+    "./src/404.html",
+    "./src/index.html",
+    "./src/name.html",
+    "./src/secrets.html",
+  ],
+  safelist: [
+    { pattern: /^hero-/ },
+  ],
   theme: {
     heroes: [
       "main",
@@ -36,48 +40,7 @@ module.exports = {
         "sans-serif",
       ],
     },
-    extend: {
-      typography: {
-        dark: {
-          css: {
-            color: "#fff",
-            h1: {
-              color: "#e2e8f0",
-            },
-            h2: {
-              color: "#e2e8f0",
-            },
-            h3: {
-              color: "#e2e8f0",
-            },
-            h4: {
-              color: "#e2e8f0",
-            },
-            h5: {
-              color: "#e2e8f0",
-            },
-            h6: {
-              color: "#e2e8f0",
-            },
-            a: {
-              color: "#fff",
-            },
-            strong: {
-              color: "#fff",
-            },
-            code: {
-              color: "#e2e8f0",
-            },
-            blockquote: {
-              color: '#fff',
-            },
-          },
-        },
-      },
-    },
-  },
-  variants: {
-    typography: ["dark"],
+    extend: {},
   },
   plugins: [
     require("@tailwindcss/typography"),
