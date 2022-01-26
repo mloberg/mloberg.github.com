@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@symfony/webpack-encore": "^1.8.1",
-    "@tailwindcss/typography": "^0.4.1",
+    "@tailwindcss/typography": "^0.5.0",
     "autoprefixer": "^10.4.2",
     "file-loader": "^6.2.0",
     "lodash": "^4.17.21",
