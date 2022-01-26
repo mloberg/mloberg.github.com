@@ -1,20 +1,21 @@
 ---
 layout: compress
 ---
-<!doctype html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-{% include head.html %}
-<body class="font-sans font-normal antialiased bg-white dark:bg-gray-900 text-gray-700 dark:text-white">
-  <a href="#main-content" class="skip-link text-white bg-black px-2">Skip to main content</a>
-  {% include header.html %}
-  <div id="main-content" class="container mx-auto mt-8 md:flex px-4">
-    <main class="w-full md:w-3/4 md:pr-4 mb-4">
-      {{ content }}
-    </main>
-    <div class="w-full md:w-1/4">
-      {% include sidebar.html %}
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  {% include head.html %}
+  <body
+    class="bg-white font-sans font-normal text-gray-700 antialiased dark:bg-gray-900 dark:text-white"
+  >
+    <a href="#main-content" class="skip-link bg-black px-2 text-white">
+      Skip to main content
+    </a>
+    {% include header.html %}
+    <div id="main-content" class="container mx-auto mt-8 px-4 md:flex">
+      <main class="mb-4 w-full md:w-3/4 md:pr-4">{{ content }}</main>
+      <div class="w-full md:w-1/4">{% include sidebar.html %}</div>
     </div>
-  </div>
-  {% include footer.html %}
-</body>
+    {% include footer.html %}
+  </body>
 </html>

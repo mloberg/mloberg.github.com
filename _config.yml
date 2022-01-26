@@ -2,12 +2,12 @@
 title: Matt Loberg
 description: >
   Software Engineer passionate about DevOps and Open Source.
-baseurl: ""
-url: "https://mlo.io"
+baseurl: ''
+url: 'https://mlo.io'
 
 defaults:
   - scope:
-      path: ""
+      path: ''
     values:
       image: /images/twitter.png
       hero:
@@ -59,7 +59,7 @@ destination: dist
 
 compress_html:
   clippings: all
-  comments: ["<!-- ", " -->"]
+  comments: ['<!-- ', ' -->']
   endings: all
   ignore:
     envs: [development]

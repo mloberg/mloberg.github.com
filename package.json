@@ -9,7 +9,9 @@
     "prod": "encore production",
     "clean": "rm -rf dist && rm -rf src/assets",
     "optimize": "imageoptim -a src/images",
-    "postinstall": "bundle install --path=vendor/bundle --jobs=4 --retry=3"
+    "postinstall": "bundle install --path=vendor/bundle --jobs=4 --retry=3",
+    "lint": "prettier --check .",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@symfony/webpack-encore": "^1.8.1",
@@ -24,7 +26,9 @@
   },
   "devDependencies": {
     "concurrently": "^7.0.0",
-    "imageoptim-cli": "^3.0.7"
+    "imageoptim-cli": "^3.0.7",
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwindcss": "^0.1.4"
   },
   "browserslist": [
     "> 0.5%",
