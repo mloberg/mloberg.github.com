@@ -16,7 +16,7 @@
   "dependencies": {
     "@symfony/webpack-encore": "^1.8.2",
     "@tailwindcss/typography": "^0.5.2",
-    "autoprefixer": "^10.4.4",
+    "autoprefixer": "^10.4.7",
     "file-loader": "^6.2.0",
     "lodash": "^4.17.21",
     "postcss": "^8.4.12",
@@ -25,7 +25,7 @@
     "tailwindcss-skip-link": "^1.0.1"
   },
   "devDependencies": {
-    "concurrently": "^7.2.0",
+    "concurrently": "^7.2.1",
     "imageoptim-cli": "^3.0.7",
     "prettier": "^2.6.2",
     "prettier-plugin-tailwindcss": "^0.1.10"
