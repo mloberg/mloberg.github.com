@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@symfony/webpack-encore": "^1.8.2",
-    "@tailwindcss/typography": "^0.5.2",
+    "@tailwindcss/typography": "^0.5.4",
     "autoprefixer": "^10.4.7",
     "file-loader": "^6.2.0",
     "lodash": "^4.17.21",
@@ -28,7 +28,7 @@
     "concurrently": "^7.2.2",
     "imageoptim-cli": "^3.0.7",
     "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.11"
+    "prettier-plugin-tailwindcss": "^0.1.12"
   },
   "browserslist": [
     "> 0.5%",
