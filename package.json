@@ -9,7 +9,6 @@
     "prod": "encore production",
     "clean": "rm -rf dist && rm -rf src/assets",
     "optimize": "imageoptim -a src/images",
-    "postinstall": "bundle install --path=vendor/bundle --jobs=4 --retry=3",
     "lint": "prettier --check .",
     "format": "prettier --write ."
   },
