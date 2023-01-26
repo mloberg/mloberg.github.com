@@ -7,9 +7,10 @@ excerpt: >
   organize your site, write your own plugins, build assets, test your site, and
   deploy changes automatically.
 hero:
-  name: znT2Mwt9ypo
-  photographer: rawpixel
-  link: https://unsplash.com/photos/znT2Mwt9ypo
+  name: jb1Mc1lv8X0
+  photographer: Karsten Würth
+  link: https://unsplash.com/photos/jb1Mc1lv8X0
+proofer-ignore: true
 ---
 This is the final part in a three part series on static site generators.
 

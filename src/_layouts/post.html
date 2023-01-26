@@ -40,9 +40,11 @@ layout: default
     {% endunless %}
   </header>
 
+  <!-- prettier-ignore -->
   <div
     class="prose prose-lg mx-auto dark:prose-invert xl:prose-xl"
     itemprop="articleBody"
+    {% if page.proofer-ignore %}data-proofer-ignore{% endif %}
   >
     {{ content }}
   </div>
@@ -81,7 +83,7 @@ layout: default
         </svg>
       </a>
       <a
-        href="http://www.facebook.com/sharer.php?u={{ page.url | absolute_url }}"
+        href="https://www.facebook.com/sharer.php?u={{ page.url | absolute_url }}"
         target="_blank"
         rel="noopener"
         aria-label="Share on Facebook"
@@ -97,7 +99,7 @@ layout: default
         </svg>
       </a>
       <a
-        href="http://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}"
+        href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}"
         target="_blank"
         rel="noopener"
         aria-label="Share on LinkedIn"

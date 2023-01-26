@@ -2,6 +2,7 @@
 layout: post
 title: Securing Your Passwords
 categories: security
+proofer-ignore: true
 ---
 Today TutsPlus Premium got hacked. They used a third party plugin that stored passwords in plaintext. This is ironic, because NetTuts+, a sibling company posts about [security](http://net.tutsplus.com/tutorials/php/understanding-hash-functions-and-keeping-passwords-safe/) once in a while. It's also very frustrating for users (both present and past) because they have to change their password not only on Tuts+, but other sites as well.
 
