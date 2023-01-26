@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Containers
+proofer-ignore: true
 ---
 {% include slides.html slides="//slides.com/matthewloberg/docker/embed" %}
 

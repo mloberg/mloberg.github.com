@@ -41,7 +41,7 @@ This will also work with GitHub, Bitbucket, or GitLab.com.
 
     machine github.com login USERNAME password TOKEN
 
-One final thing that you'll have to do is set a [GOPRIVATE](https://golang.org/cmd/go/#hdr-Module_configuration_for_non_public_modules)
+One final thing that you'll have to do is set a [GOPRIVATE](https://pkg.go.dev/cmd/go#hdr-Configuration_for_downloading_non_public_code)
 environment variable. This contains a comma-separated list of module prefixes.
 Save this value to your `~/.bashrc` or `~/.zshrc`.
 

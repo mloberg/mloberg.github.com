@@ -6,9 +6,10 @@ excerpt: >
   Learn how to setup a Jekyll site complete with layouts, includes, and basic assets.
   Then dive into how to create a post and publish it to GitHub pages.
 hero:
-  name: znT2Mwt9ypo
-  photographer: rawpixel
-  link: https://unsplash.com/photos/znT2Mwt9ypo
+  name: jb1Mc1lv8X0
+  photographer: Karsten Würth
+  link: https://unsplash.com/photos/jb1Mc1lv8X0
+proofer-ignore: true
 ---
 This is part two in a three part series on static site generators.
 

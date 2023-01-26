@@ -7,6 +7,7 @@ hero:
   photographer: Karsten Würth
   link: https://unsplash.com/photos/jb1Mc1lv8X0
 date: 2020-03-01 14:13 -0600
+proofer-ignore: true
 ---
 Over the past 5 years I've worked on an API first application full time. And
 over those 5 years we've learned a lot about API design. In this post I'm going

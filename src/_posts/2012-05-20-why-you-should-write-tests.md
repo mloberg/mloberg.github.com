@@ -2,6 +2,7 @@
 layout: post
 title: Why You Should Write Tests
 categories: devops
+proofer-ignore: true
 ---
 Last week I started writing tests for my [framework](https://github.com/mloberg/Tea-Fueled-Does). I've got to be honest, I rarely write tests for my code. This was the first time I really wrote tests, but I recommend it.
 

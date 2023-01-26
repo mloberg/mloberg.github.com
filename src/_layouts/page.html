@@ -2,6 +2,7 @@
 layout: default
 ---
 
-<article class="post">
+<!-- prettier-ignore -->
+<article class="post"{% if page.proofer-ignore %} data-proofer-ignore{% endif %}>
   <div class="prose prose-lg dark:prose-invert xl:prose-xl">{{ content }}</div>
 </article>

@@ -3,6 +3,7 @@ layout: post
 title: Introducing OmniBot
 categories: javascript
 excerpt: OmniBot is an IRC chat bot written in Node and CoffeeScript.
+proofer-ignore: true
 ---
 Today I released OmniBot 0.2.1. OmniBot is an IRC chat bot written in NodeJS and CoffeeScript.
 
