@@ -14,14 +14,14 @@ jobs:
           cache: npm
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.7'
+          ruby-version: '3.1'
           bundler-cache: true
       - run: npm ci
       - run: npm run lint
       - run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
-      - run: bundle exec htmlproofer ./dist --check-html --disable-external --assume-extension
+      - run: bundle exec htmlproofer ./dist --disable-external
       - uses: actions/upload-artifact@v3
         with:
           name: site
