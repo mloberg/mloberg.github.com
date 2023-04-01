@@ -27,7 +27,7 @@
     "concurrently": "^7.6.0",
     "imageoptim-cli": "^3.0.7",
     "prettier": "^2.8.4",
-    "prettier-plugin-tailwindcss": "^0.2.3"
+    "prettier-plugin-tailwindcss": "^0.2.6"
   },
   "browserslist": [
     "> 0.5%",
