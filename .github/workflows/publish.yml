@@ -22,7 +22,7 @@ jobs:
         env:
           JEKYLL_ENV: production
       - run: bundle exec htmlproofer ./dist --disable-external
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: site
           path: dist/
