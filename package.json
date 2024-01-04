@@ -15,7 +15,7 @@
   "dependencies": {
     "@symfony/webpack-encore": "^4.5.0",
     "@tailwindcss/typography": "^0.5.9",
-    "autoprefixer": "^10.4.14",
+    "autoprefixer": "^10.4.16",
     "file-loader": "^6.2.0",
     "lodash": "^4.17.21",
     "postcss": "^8.4.31",
