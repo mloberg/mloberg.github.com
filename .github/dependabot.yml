@@ -4,10 +4,21 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    commit-message:
+      prefix: ci
+    groups:
+      actions:
+        patterns:
+          - "*"
   - package-ecosystem: npm
     directory: /
     schedule:
       interval: monthly
+    groups:
+      dev:
+        dependency-type: development
+      frontend:
+        dependency-type: production
   - package-ecosystem: bundler
     directory: /
     schedule:
