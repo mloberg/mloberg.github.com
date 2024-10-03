@@ -20,6 +20,6 @@ end
 
 Jekyll::Hooks.register(:site, :after_init) do |site|
   manifest = "src/assets/manifest.json"
-  raise RuntimeError, "Manifest file #{manifest} not found." unless File.exists?(manifest)
+  raise RuntimeError, "Manifest file #{manifest} not found." unless File.exist?(manifest)
   site.config['_assets'] = JSON.parse(File.read(manifest))
 end
