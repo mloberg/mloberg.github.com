@@ -43,13 +43,10 @@ jekyll_compose:
 # Jekyll SEO
 logo: /images/profile.jpg
 
-twitter:
-  username: mloberg
-
 social:
   name: Matt Loberg
   links:
-    - https://twitter.com/mloberg
+    - https://bsky.app/profile/mloberg.bsky.social
     - https://github.com/mloberg
 
 # Build settings
