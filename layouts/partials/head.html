@@ -1,25 +1,49 @@
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="{{ if hugo.IsProduction }}index, follow{{ else }}noindex, nofollow{{ end }}">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+/>
 
-<meta property="og:site_name" content="{{ .Site.Title }}">
-<meta property="og:locale" content="{{ .Site.Language.Lang }}">
-<meta property="og:title" content="{{ .Params.Title | default .Site.Title }}">
-<meta property="og:url" content="{{ .Permalink }}">
-<link rel="canonical" href="{{ .Permalink }}">
-<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
-<meta name="description" content="{{ .Description | default .Summary | default .Site.Params.description | plainify }}">
-<meta property="og:description" content="{{ .Description | default .Summary | default .Site.Params.description | plainify }}">
-<meta property="og:image" content="{{ printf "images/hero/%s.jpg" (.Params.hero.id | default .Site.Params.hero.id) | absURL }}">
+{{ $robots := "noindex, nofollow" }}
+{{ if hugo.IsProduction }}{{ $robots = "index, follow" }}{{ end }}
+<meta name="robots" content="{{ $robots }}" />
+
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:locale" content="{{ .Site.Language.Lang }}" />
+<meta property="og:title" content="{{ .Params.Title | default .Site.Title }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<link rel="canonical" href="{{ .Permalink }}" />
+
+{{ $type := "website" }}
+{{ if .IsPage }}{{ $type = "article" }}{{ end }}
+<meta property="og:type" content="{{ $type }}" />
+<meta
+  name="description"
+  content="{{ .Description | default .Summary | default .Site.Params.description | plainify }}"
+/>
+<meta
+  property="og:description"
+  content="{{ .Description | default .Summary | default .Site.Params.description | plainify }}"
+/>
+<meta
+  property="og:image"
+  content="{{ printf "images/hero/%s.jpg" (.Params.hero.id | default .Site.Params.hero.id) | absURL }}"
+/>
 
 {{ with resources.Get "css/main.css" | postCSS }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}">
+  <link rel="stylesheet" href="{{ .RelPermalink }}" />
 {{ end }}
 
-<link rel="icon" type="image/svg+xml" href="{{ absURL "favicon.svg" }}">
-<link rel="alternate icon" href="{{ absURL "favicon.ico" }}">
+
+<link rel="icon" type="image/svg+xml" href="{{ absURL "favicon.svg" }}" />
+<link rel="alternate icon" href="{{ absURL "favicon.ico" }}" />
 
 {{ range .AlternativeOutputFormats }}
-  <link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" title="{{ $.Site.Title }}" href="{{ .Permalink | safeURL }}">
+  <link
+    rel="{{ .Rel }}"
+    type="{{ .MediaType.Type | html }}"
+    title="{{ $.Site.Title }}"
+    href="{{ .Permalink | safeURL }}"
+  />
 {{ end }}

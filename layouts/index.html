@@ -1,6 +1,10 @@
 {{ define "main" }}
   {{ .Content }}
 
-  <h2 class="text-base font-bold text-gray-700 dark:text-gray-300">Latest Posts</h2>
+
+  <h2 class="text-base font-bold text-gray-700 dark:text-gray-300">
+    Latest Posts
+  </h2>
+
   {{ partial "list-by-date.html" (where site.RegularPages "Type" "posts") }}
 {{ end }}

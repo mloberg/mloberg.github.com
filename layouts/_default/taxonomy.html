@@ -4,14 +4,23 @@
   {{ .Content }}
 
   {{ with where .Pages "Type" "posts" }}
-    <h2 class="text-base font-bold text-gray-700 dark:text-gray-300">Posts about {{ lower $.Title }}</h2>
+    <h2 class="text-base font-bold text-gray-700 dark:text-gray-300">
+      Posts about
+      {{ lower $.Title }}
+    </h2>
     {{ partial "list-by-date.html" . }}
   {{ else }}
-    <h2 class="text-base font-bold text-gray-700 dark:text-gray-300">Site {{ .Title }}</h2>
+    <h2 class="text-base font-bold text-gray-700 dark:text-gray-300">
+      Site
+      {{ .Title }}
+    </h2>
     <div class="flex flex-wrap">
       {{ range .Data.Terms }}
-        <h3 class="text-xl mt-4 mr-4">
-          <a class="transition-linear text-gray-900 no-underline hover:text-blue-500 dark:text-gray-100" href="{{ .Page.RelPermalink }}">
+        <h3 class="mr-4 mt-4 text-xl">
+          <a
+            class="transition-linear text-gray-900 no-underline hover:text-blue-500 dark:text-gray-100"
+            href="{{ .Page.RelPermalink }}"
+          >
             {{ lower .Page.LinkTitle }} ({{ .Count }})
           </a>
         </h3>

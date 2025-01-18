@@ -1,12 +1,21 @@
 <div class="py-8 md:border-l md:pl-4">
   <h2 class="mb-2 text-center text-2xl">
-    <a class="transition-linear text-blue-700 no-underline hover:text-blue-400 dark:text-gray-300" href="{{ .Site.Home.RelPermalink }}">
+    <a
+      class="transition-linear text-blue-700 no-underline hover:text-blue-400 dark:text-gray-300"
+      href="{{ .Site.Home.RelPermalink }}"
+    >
       {{ .Site.Title }}
     </a>
   </h2>
   {{ with $i := resources.Get "images/profile.jpg" }}
     {{ with $i.Resize "150x Lanczos webp" }}
-      <img class="mr-auto ml-auto mb-2 rounded-full" height="{{ .Width }}" width="{{ .Height }}" src="{{ .RelPermalink }}" alt="{{ $.Site.Title }}">
+      <img
+        class="mb-2 ml-auto mr-auto rounded-full"
+        height="{{ .Width }}"
+        width="{{ .Height }}"
+        src="{{ .RelPermalink }}"
+        alt="{{ $.Site.Title }}"
+      />
     {{ end }}
   {{ end }}
   <span class="text-center">{{ .Site.Params.description | markdownify }}</span>

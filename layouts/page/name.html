@@ -1,6 +1,7 @@
 {{ define "main" }}
   {{ .Content }}
 
+
   <p id="js-generated-name"></p>
 
   {{ with resources.Get "js/name.js" | js.Build }}

@@ -1,11 +1,4 @@
 dist
-vendor
-
+public
+src
 *.md
-
-src/assets
-src/feed.json
-src/_layouts/archive.html
-src/_layouts/category.html
-src/_layouts/compress.html
-src/_layouts/home.html

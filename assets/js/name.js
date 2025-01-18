@@ -808,8 +808,9 @@ const right = [
 ];
 
 (() => {
+  const dom = document.getElementById('js-generated-name');
   const li = Math.floor(Math.random() * left.length);
   const ri = Math.floor(Math.random() * right.length);
 
-  document.getElementById('js-generated-name').innerHTML = `${left[li]}.${right[ri]}`;
+  dom.innerHTML = `${left[li]}.${right[ri]}`;
 })();
