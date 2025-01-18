@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#
+# Usage: hero <image> [name]
+set -e
+
+command -v magick >/dev/null 2>&1 || (>&2 echo "imagemagick not installed" && exit 1)
+
+img="$1"
+name="$2"
+
+[ -f "$img" ] || (>&2 echo "usage: $0 <image> [name]" && exit 1)
+[ -n "$name" ] || name=$(basename "$img" | sed 's/-unsplash.*//' | awk -F '-' '{print $NF}')
+
+echo "Generating images for $name..."
+magick "$img" -resize 2500 "static/images/hero/${name}-xl.webp"
+magick "$img" -resize 1200 "static/images/hero/${name}-lg.webp"
+magick "$img" -resize 992 "static/images/hero/${name}-md.webp"
+magick "$img" -resize 768 "static/images/hero/${name}-sm.webp"
+magick "$img" -resize 576 "static/images/hero/${name}.webp"
+
+# Save hero in Tailwind config
+awk "/additional hero images here/{print \"      \\\"$name\\\",\"}1" tailwind.config.js > tailwind.config.js.new
+mv tailwind.config.js.new tailwind.config.js

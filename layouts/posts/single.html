@@ -1,0 +1,34 @@
+{{ define "main" }}
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post__meta mb-8">
+      <h1 class="hidden" itemprop="name headline">{{ .Title }}</h1>
+      <time
+        class="bg-blue-700 p-2 text-sm text-white"
+        {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}
+        itemprop="datePublished"
+      >
+        {{ .Date.Format "January 2, 2006" }}
+      </time>
+      {{ with .GetTerms "categories" }}
+      <div class="mt-4 md:ml-2 md:inline">
+        <span>Posted in:</span>
+        {{ range . }}
+          <li class="inline pl-1">
+            <a href="{{ .RelPermalink }}" class="text-blue-700 no-underline dark:text-blue-500">#{{ lower .LinkTitle }}</a>
+          </li>
+        {{ end }}
+      </div>
+      {{ end }}
+    </header>
+
+    <div class="prose prose-lg mx-auto dark:prose-invert xl:prose-xl" itemprop="articleBody">
+      {{ .Content }}
+    </div>
+
+    <a class="u-url" href="{{ .RelPermalink }}" hidden></a>
+  </article>
+
+  {{ with resources.Get "js/post.js" | js.Build }}
+    <script src="{{ .RelPermalink }}"></script>
+   {{ end }}
+{{ end }}

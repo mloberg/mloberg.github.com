@@ -1,19 +1,15 @@
-const _ = require('lodash');
+import plugin from 'tailwindcss/plugin';
+import typography from '@tailwindcss/typography';
+import skipLink from 'tailwindcss-skip-link';
 
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+export default {
   content: [
     './assets/**/*.js',
-    // https://tailwindcss.com/docs/content-configuration#styles-rebuild-in-an-infinite-loop
-    './src/_includes/**/*.html',
-    './src/_layouts/**/*.html',
-    './src/_posts/**/*.{html,md}',
-    './src/talks/**/*.{html,md}',
-    './src/404.html',
-    './src/index.html',
-    './src/name.html',
-    './src/secrets.html',
+    './content/**/*.{html,js,md}',
+    './layouts/**/*.{html,js}',
   ],
-  safelist: [{ pattern: /^hero-/ }],
+  safelist: [{ pattern: /^hero-/ }, 'float-right'],
   theme: {
     heroes: [
       'main',
@@ -40,30 +36,30 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('@tailwindcss/typography'),
-    require('tailwindcss-skip-link')(),
-    function ({ addComponents, theme }) {
-      const screens = _.omit(theme('screens', {}), ['dark', '2xl']);
-      _.map(theme('heroes', []), (hero) => {
-        const mediaQueries = _.map(screens, (width, name) => {
-          return {
-            [`@media (min-width: ${width})`]: {
-              [`.hero-${hero}`]: {
-                'background-image': `url("/images/hero/${hero}-${name}.jpg")`,
-              },
-            },
-          };
-        });
+    typography,
+    skipLink(),
+    plugin(({ addComponents, theme }) => {
+      const heroes = theme('heroes', []);
+      const screens = theme('screens', {});
+      delete screens['2xl'];
 
-        addComponents([
-          {
-            [`.hero-${hero}`]: {
-              'background-image': `url("/images/hero/${hero}.jpg")`,
-            },
+      addComponents(
+        heroes.map((hero) => ({
+          [`.hero-${hero}`]: {
+            'background-image': `url("/images/hero/${hero}.webp")`,
           },
-          ...mediaQueries,
-        ]);
+        })),
+      );
+
+      Object.entries(screens).forEach(([name, width]) => {
+        addComponents({
+          [`@media (min-width: ${width})`]: heroes.map((hero) => ({
+            [`.hero-${hero}`]: {
+              'background-image': `url("/images/hero/${hero}-${name}.webp")`,
+            },
+          })),
+        });
       });
-    },
+    }),
   ],
 };

@@ -1,0 +1,40 @@
+title = 'Matt Loberg'
+baseURL = 'https://mlo.io'
+languageCode = 'en-us'
+copyright = 'Matt Loberg'
+
+enableRobotsTXT = true
+
+[params]
+description = 'Software Engineer passionate about DevOps and Open Source.'
+
+[params.hero]
+id = 'main'
+url = 'https://unsplash.com/photos/a-lake-surrounded-by-mountains-and-trees-vNVwg35VZrg'
+credit = 'Philipp Düsel'
+
+[frontmatter]
+date = [':filename', ':default']
+
+[taxonomies]
+category = 'categories'
+
+[permalinks.page]
+posts = '/blog/:year/:month/:day/:slug/'
+[permalinks.term]
+categories = '/blog/category/:slug/'
+
+[outputs]
+section = ['html']
+term = ['html']
+taxonomy = ['html']
+
+[outputFormats.RSS]
+baseName = 'feed'
+
+[[build.cachebusters]]
+source = '(postcss|tailwind)\.config\.js'
+target = '(css|styles|scss|sass)'
+[[build.cachebusters]]
+source = 'layouts/.*'
+target = '(css|styles|scss|sass)'

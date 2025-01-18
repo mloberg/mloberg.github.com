@@ -1,0 +1,15 @@
+{{ range .GroupByDate "2006" }}
+  <h3 class="mt-8 mb-4 text-3xl">{{ if eq .Key "0001" }}Other{{ else }}{{ .Key }}{{ end }}</h3>
+  {{ range .Pages }}
+    <article class="pb-4">
+      {{ if ne .Date.Year 1 }}
+        <span class="block text-sm text-gray-700 dark:text-gray-300">{{ .Date.Format "January 2" }}</span>
+      {{ end }}
+      <h4 class="font-normal">
+        <a class="transition-linear text-2xl text-gray-900 no-underline hover:text-blue-500 dark:text-gray-100" href="{{ .RelPermalink }}">
+          {{ .LinkTitle }}
+        </a>
+      </h4>
+    </article>
+  {{ end }}
+{{ end }}
