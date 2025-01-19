@@ -8,24 +8,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # for .GitInfo and .Lastmod
       - uses: actions/setup-node@v4
         with:
-          node-version-file: .tool-versions
+          node-version-file: package.json
           cache: npm
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: .tool-versions
-          bundler-cache: true
       - run: npm ci
       - run: npm run lint
-      - run: bundle exec jekyll build
-        env:
-          JEKYLL_ENV: production
-      - run: bundle exec htmlproofer ./dist --disable-external
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.141.0'
+          extended: true
+      - run: hugo build --minify
       - uses: actions/upload-artifact@v4
         with:
           name: site
-          path: dist/
+          path: public/
+      - uses: anishathalye/proof-html@v2
+        with:
+          directory: ./public
+          swap_urls: |
+            {"^https:\\/\\/mlo\\.io\\/": "/"}
   deploy:
     runs-on: ubuntu-latest
     needs: build
@@ -33,15 +37,14 @@ jobs:
       contents: read
       deployments: write
     steps:
-      - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with:
           name: site
-          path: dist
+          path: public
       - uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: mloberg
-          directory: dist
+          directory: public
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}

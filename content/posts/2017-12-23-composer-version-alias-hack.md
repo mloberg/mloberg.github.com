@@ -1,7 +1,7 @@
 +++
 title = 'Composer Version Alias Hack'
 categories = ['php']
-excerpt = 'Quickly solve version dependency differences in composer.'
+summary = 'Quickly solve version dependency differences in composer.'
 +++
 With the release of Symfony 4 last month, we've slowly been seeing package
 maintainers update their packages to support the latest version of Symfony

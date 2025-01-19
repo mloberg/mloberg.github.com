@@ -1,10 +1,11 @@
 +++
 title = 'Getting Started With Jekyll'
 categories = ['jekyll']
-excerpt = """
+summary = """
 Learn how to setup a Jekyll site complete with layouts, includes, and basic assets.
 Then dive into how to create a post and publish it to GitHub pages.
 """
+proof = false
 [hero]
   id = 'jb1Mc1lv8X0'
   url = 'https://unsplash.com/photos/jb1Mc1lv8X0'

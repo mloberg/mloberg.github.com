@@ -1,9 +1,8 @@
 +++
 title = 'Why Static Site Generators'
 categories = ['jekyll']
-excerpt = """
-In this post we'll talk about what static sites are and the benefits and drawbacks compared to "normal" site.
-"""
+summary = """In this post we'll talk about what static sites are and the benefits and drawbacks compared to "normal" site."""
+proof = false
 [hero]
   id = 'jb1Mc1lv8X0'
   url = 'https://unsplash.com/photos/jb1Mc1lv8X0'

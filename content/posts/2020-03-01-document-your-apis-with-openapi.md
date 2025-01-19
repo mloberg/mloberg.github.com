@@ -170,7 +170,7 @@ returned, matches what we've documented.
 ## Where To Start
 
 If you're new to OpenAPI, first check out the [official site](https://www.openapis.org/)
-and read up on the [specification](http://spec.openapis.org/oas/v3.0.2).
+and read up on the [specification](https://spec.openapis.org/oas/v3.0.2).
 
 If you want to start writing a spec with little to no knowledge, checkout
 [Stoplight Studio](https://stoplight.io/studio) or other [GUIs editors](https://openapi.tools/#gui-editors).

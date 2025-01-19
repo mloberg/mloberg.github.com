@@ -6,6 +6,9 @@
     "lint": "prettier --check .",
     "format": "prettier --write ."
   },
+  "engines": {
+    "node": "22"
+  },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
     "autoprefixer": "^10.4.20",

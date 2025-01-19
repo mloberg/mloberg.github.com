@@ -2,6 +2,7 @@
 title = 'Using UUID Client IDs in Laravel Passport'
 slug = 'laravel-passport-uuid'
 categories = ['laravel']
+proof = false
 [hero]
   id = 'i6VBVfcerso'
   url = 'https://unsplash.com/photos/i6VBVfcerso'

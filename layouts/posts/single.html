@@ -13,13 +13,14 @@
         <div class="mt-4 md:ml-2 md:inline">
           <span>Posted in:</span>
           {{ range . }}
-            <li class="inline pl-1">
+            <span class="pl-1">
               <a
                 href="{{ .RelPermalink }}"
                 class="text-blue-700 no-underline dark:text-blue-500"
-                >#{{ lower .LinkTitle }}</a
               >
-            </li>
+                #{{ lower .LinkTitle }}
+              </a>
+            </span>
           {{ end }}
         </div>
       {{ end }}
@@ -28,6 +29,7 @@
     <div
       class="prose prose-lg mx-auto xl:prose-xl dark:prose-invert"
       itemprop="articleBody"
+      {{ if eq .Params.proof false }}data-proofer-ignore{{ end }}
     >
       {{ .Content }}
     </div>

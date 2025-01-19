@@ -2,11 +2,12 @@
 title = 'Supporting Multiple Versions of Symfony Components'
 slug = 'mulitple-versions-of-symfony-components'
 categories = ['symfony', 'php']
-excerpt = """
+summary = """
 With the release of Symfony 3.0 how do you support users that may be running
 either 2 or 3? We talk about how to support multiple versions of Symfony
 components and dive into how to test it on TravisCI.
 """
+proof = false
 +++
 Symfony recently released version 3.0 of their components and framework. I use
 these components in a couple of my own packages, along with a bunch of other

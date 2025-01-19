@@ -1,12 +1,13 @@
 +++
 title = 'Boxen Tips and Tricks'
 categories = ['devops']
-excerpt = """
+summary = """
 Running multiple computers can be frustrating. How do you make sure you have
 the same software on your work computer as your personal computer. Or how do
 you make sure you have the same settings on your desktop as you do on your
 laptop? We'll look at Boxen and how to set it up to get the most out of it.
 """
+proof = false
 +++
 {{< image "automate-all-the-things.jpg" "Automate all the things!" "float-right" >}}
 

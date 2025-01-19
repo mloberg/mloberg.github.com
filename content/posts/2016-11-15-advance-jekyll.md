@@ -1,11 +1,12 @@
 +++
 title = 'Advance Jekyll'
 categories = ['jekyll']
-excerpt = """
+summary = """
 Bring your Jekyll site to the next level. Learn how to manage dependencies,
 organize your site, write your own plugins, build assets, test your site, and
 deploy changes automatically.
 """
+proof = false
 [hero]
   id = 'jb1Mc1lv8X0'
   url = 'https://unsplash.com/photos/jb1Mc1lv8X0'

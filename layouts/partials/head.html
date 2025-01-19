@@ -28,7 +28,7 @@
 />
 <meta
   property="og:image"
-  content="{{ printf "images/hero/%s.jpg" (.Params.hero.id | default .Site.Params.hero.id) | absURL }}"
+  content="{{ printf "images/hero/%s.webp" (.Params.hero.id | default .Site.Params.hero.id) | absURL }}"
 />
 
 {{ with resources.Get "css/main.css" | postCSS | minify | fingerprint }}

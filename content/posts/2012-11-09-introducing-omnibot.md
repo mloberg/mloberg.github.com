@@ -1,7 +1,8 @@
 +++
 title = 'Introducing OmniBot'
 categories = 'javascript'
-excerpt = 'OmniBot is an IRC chat bot written in Node and CoffeeScript.'
+summary = 'OmniBot is an IRC chat bot written in Node and CoffeeScript.'
+proof = false
 +++
 Today I released OmniBot 0.2.1. OmniBot is an IRC chat bot written in NodeJS and CoffeeScript.
 
