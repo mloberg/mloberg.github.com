@@ -31,8 +31,14 @@
   content="{{ printf "images/hero/%s.jpg" (.Params.hero.id | default .Site.Params.hero.id) | absURL }}"
 />
 
-{{ with resources.Get "css/main.css" | postCSS }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ with resources.Get "css/main.css" | postCSS | minify | fingerprint }}
+  <link
+    crossorigin="anonymous"
+    href="{{ .RelPermalink }}"
+    integrity="{{ .Data.Integrity }}"
+    rel="preload stylesheet"
+    as="style"
+  />
 {{ end }}
 
 

@@ -35,7 +35,12 @@
     <a class="u-url" href="{{ .RelPermalink }}" hidden></a>
   </article>
 
-  {{ with resources.Get "js/post.js" | js.Build }}
-    <script src="{{ .RelPermalink }}"></script>
+  {{ with resources.Get "js/post.js" | js.Build (dict "minify" hugo.IsProduction) | fingerprint }}
+    <script
+      defer
+      crossorigin="anonymous"
+      src="{{ .RelPermalink }}"
+      integrity="{{ .Data.Integrity }}"
+    ></script>
   {{ end }}
 {{ end }}

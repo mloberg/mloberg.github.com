@@ -4,6 +4,7 @@ languageCode = 'en-us'
 copyright = 'Matt Loberg'
 
 enableRobotsTXT = true
+cleanDestinationDir = true
 
 [params]
 description = 'Software Engineer passionate about DevOps and Open Source.'

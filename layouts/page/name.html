@@ -4,7 +4,12 @@
 
   <p id="js-generated-name"></p>
 
-  {{ with resources.Get "js/name.js" | js.Build }}
-    <script src="{{ .RelPermalink }}"></script>
+  {{ with resources.Get "js/name.js" | js.Build (dict "minify" hugo.IsProduction) | fingerprint }}
+    <script
+      defer
+      crossorigin="anonymous"
+      src="{{ .RelPermalink }}"
+      integrity="{{ .Data.Integrity }}"
+    ></script>
   {{ end }}
 {{ end }}
