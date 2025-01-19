@@ -2,6 +2,7 @@ title = 'Matt Loberg'
 baseURL = 'https://mlo.io'
 languageCode = 'en-us'
 copyright = 'Matt Loberg'
+timeZone = 'America/Chicago'
 
 enableRobotsTXT = true
 cleanDestinationDir = true
@@ -26,11 +27,14 @@ posts = '/blog/:year/:month/:day/:slug/'
 categories = '/blog/category/:slug/'
 
 [outputs]
+home = ['html', 'rss', 'json']
 section = ['html']
 term = ['html']
 taxonomy = ['html']
 
-[outputFormats.RSS]
+[outputFormats.rss]
+baseName = 'feed'
+[outputFormats.json]
 baseName = 'feed'
 
 [[build.cachebusters]]

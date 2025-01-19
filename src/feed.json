@@ -1,8 +1,0 @@
----
----
-{"posts":[
-{%- for post in site.posts limit: 10 -%}
-{"title":"{{ post.title | smartify | strip_html | normalize_whitespace | xml_escape }}","link":"{{ post.url | absolute_url }}","published":"{{ post.date | date_to_xmlschema }}","updated":"{{ post.last_modified_at | default: post.date | date_to_xmlschema }}"}
-{%- if forloop.last == false -%},{% endif %}
-{%- endfor -%}
-]}

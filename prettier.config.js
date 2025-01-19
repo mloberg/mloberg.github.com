@@ -4,7 +4,7 @@ export default {
   plugins: ['prettier-plugin-go-template', 'prettier-plugin-tailwindcss'],
   overrides: [
     {
-      files: ['*.html'],
+      files: ['*.html', 'layouts/index.json'],
       options: {
         parser: 'go-template',
       },
