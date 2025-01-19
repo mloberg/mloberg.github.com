@@ -1,0 +1,27 @@
+<footer class="footer container mx-auto my-4 px-4">
+  <ul
+    class="items-center justify-center text-sm text-gray-800 md:flex dark:text-gray-400"
+  >
+    <li class="mx-2">
+      <!-- prettier-ignore -->
+      <p>&copy; {{ .Page.Date | default time.Now | time.Format "2006" }} {{ .Site.Copyright | default .Site.Title }}</p>
+    </li>
+    <li class="hidden md:block">·</li>
+    <li class="mx-2">
+      <!-- prettier-ignore -->
+      <p>Powered by <a class="underline" href="https://gohugo.io/">Hugo</a> & <a class="underline" href="https://tailwindcss.com/">Tailwind</a></p>
+    </li>
+    <li class="hidden md:block">·</li>
+    <li class="mx-2">
+      <p>
+        Header photo by
+        <a
+          class="underline"
+          href="{{ .Params.hero.url | default .Site.Params.hero.url }}"
+        >
+          {{ .Params.hero.credit | default .Site.Params.hero.credit }}
+        </a>
+      </p>
+    </li>
+  </ul>
+</footer>

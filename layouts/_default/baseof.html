@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <!-- prettier-ignore -->
+    <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+    {{ partial "head.html" . }}
+  </head>
+  <body
+    class="bg-white font-sans font-normal text-gray-700 antialiased dark:bg-gray-900 dark:text-white"
+  >
+    <a href="#main-content" class="skip-link bg-black p-4 text-white">
+      Skip to content
+    </a>
+
+    {{ partial "header.html" . }}
+
+
+    <div id="main-content" class="container mx-auto mt-8 px-4 md:flex">
+      <main class="mb-4 w-full md:w-3/4 md:pr-4">
+        {{ block "main" . }}{{ end }}
+      </main>
+      <div class="w-full md:w-1/4">
+        {{ partial "sidebar.html" . }}
+      </div>
+    </div>
+
+    {{ partial "footer.html" . }}
+  </body>
+</html>

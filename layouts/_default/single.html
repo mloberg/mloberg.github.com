@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <article class="post">
+    <div
+      class="prose prose-lg xl:prose-xl dark:prose-invert"
+      {{ if eq .Params.proof false }}data-proofer-ignore{{ end }}
+    >
+      {{ .Content }}
+    </div>
+  </article>
+{{ end }}
