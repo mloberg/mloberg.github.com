@@ -1,6 +1,6 @@
 {{ with resources.Get (path.Join "images" (index .Params 0)) }}
   <img
-    {{ with index $.Params 2 }}class="{{ . }}"{{ end }}
+    {{ index $.Params 2 | safeHTMLAttr }}
     src="{{ .RelPermalink }}"
     width="{{ .Width }}"
     height="{{ .Height }}"

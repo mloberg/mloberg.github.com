@@ -9,7 +9,7 @@ export default {
     './content/**/*.{html,js,md}',
     './layouts/**/*.{html,js}',
   ],
-  safelist: [{ pattern: /^hero-/ }, 'float-right'],
+  safelist: [{ pattern: /^hero-/ }],
   theme: {
     heroes: [
       'main',
