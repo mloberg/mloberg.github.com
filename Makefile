@@ -60,6 +60,7 @@ hero: ## Create a hero image (IMAGE=path/to/image NAME=optional-name)
 	magick "$(IPATH)" -resize 576 "static/images/hero/$(NAME).webp"
 	@awk "/additional hero images here/{print \"      '$(NAME)',\"}1" tailwind.config.js > tailwind.config.js.new
 	@mv tailwind.config.js.new tailwind.config.js
+	@echo "Created hero $(NAME)"
 else
 hero:
 	@echo "usage: make hero IMAGE=path/to/image NAME=optional-name" >&2
@@ -71,8 +72,8 @@ ifneq ("$(wildcard $(POST))", "")
 write-good: ## Check a post for writing fixes and improvements
 	@echo "+ $@"
 	@aspell -M -x check "$(POST)"
-	@npx write-good "$(POST)"
-	@npx alex "$(POST)"
+	@npx write-good "$(POST)" || true
+	@npx alex "$(POST)" || true
 else
 write-good:
 	@echo "usage: make write-good POST=path/to/post" >&2
